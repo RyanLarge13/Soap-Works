@@ -1,0 +1,32 @@
+nav {
+  background-image: url("../../assets/images/navbg.jpg");
+  background-position: 100% 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: 250ms ease-in-out;
+  z-index: 900;
+}
+nav ul {
+  text-align: right;
+  transform: translateX(90%);
+}
+nav ul li {
+  margin: 8em 0;
+}
+nav ul li a {
+  padding: 1em;
+  color: #000;
+  font-size: 3em;
+}
+nav p {
+  margin-top: 4em;
+}
+
+nav.open {
+  opacity: 1;
+  pointer-events: all;
+}/*# sourceMappingURL=Nav.css.map */

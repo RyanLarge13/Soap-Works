@@ -1,0 +1,19 @@
+@import '../partials/Header/Header.css';
+@import '../partials/Nav/Nav.css';
+
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.flex-row {
+  /*justify-content: center;*/
+  align-items: center;
+}
+.sec {
+  width: 100vw;
+  height: 100vh;
+}
