@@ -15,11 +15,15 @@ app.set("view engine", "ejs");
 app.set("views", "views/pages");
 
 app.get("/", async (req, res) => {
-  const allSoaps = await mongoose.connection.collection("soaps");
-  const soapData = await allSoaps.find({}).toArray();
-  res.status(200).render("index", {
-  	soaps: soapData
-  });
+  try{
+    const allSoaps = mongoose.connection.collection("soaps");
+    const soapData = await allSoaps.find({}).toArray();
+    res.status(200).render("index", {
+      soaps: soapData,
+    });
+  } catch (err) {
+    console.log(err);
+  }
 });
 
 app.listen(port, "0.0.0.0", () =>
