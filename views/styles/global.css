@@ -1,5 +1,5 @@
-@import '../partials/Header/Header.css';
-@import '../partials/Nav/Nav.css';
+@import "../partials/Header/Header.css";
+@import "../partials/Nav/Nav.css";
 
 .flex {
   display: flex;
@@ -10,10 +10,13 @@
   align-items: center;
 }
 .flex-row {
-  /*justify-content: center;*/
   align-items: center;
 }
 .sec {
   width: 100vw;
   height: 100vh;
+}
+.hidden {
+  display: none;
+  opacity: 0;
 }

@@ -11,7 +11,7 @@
 <link rel="stylesheet" href="../styles/index/index.css" />
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script defer type="module" src="../js/global.js"></script>
-<script defer src="../js/index.js"></script>
+<script defer src="../js/index/index.js"></script>
 <title>Soap Works</title>
 </head>
 <body>
@@ -32,9 +32,38 @@ $<%=soap.Price%>
 </p>
 </div>
 <%})%>
+<div class="hidden">
+<%soaps.forEach((soap) => {
+%>
+<div class="descriptive-soap">
+<img src="<%=soap.ImageUrl%>" />
+<h2><%=soap.Title%></h2>
+<p>
+<%=soap.Price%>
+</p>
+<p>
+<%=soap.Description%>
+</p>
+<ul>
+<%soap.Ingredients.forEach((ingredient) => {
+%>
+<li><%=ingredient%></li>
+<%
+}) %>
+</ul>
+<div class="prev-next">
+<button class="prev">Prev</button>
+<button class="next">Next</button>
+</div>
+</div>
+<%
+})%>
+</div>
 </section>
 <h3 class="second-heading">Kits</h3>
-<p class="intro">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia doloribus iure nesciunt architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non et asperiores!</p>
+<p class="intro">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia doloribus iure nesciunt architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non et asperiores!
+</p>
 <h2>Shaving</h2>
 <section></section>
 </body>
