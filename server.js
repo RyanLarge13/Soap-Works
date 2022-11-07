@@ -17,9 +17,12 @@ app.set("views", "views/pages");
 app.get("/", async (req, res) => {
   try{
     const allSoaps = mongoose.connection.collection("soaps");
+    const allKits = mongoose.connection.collection("kits");
     const soapData = await allSoaps.find({}).toArray();
+    const kitData = await allKits.find({}).toArray();
     res.status(200).render("index", {
       soaps: soapData,
+      kits: kitData,
     });
   } catch (err) {
     console.log(err);
