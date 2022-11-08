@@ -1,9 +1,7 @@
 const soaps = document.querySelectorAll(".grid-item");
-const soapDetails = document.querySelectorAll(".descriptive-soap");
 
-const showDetailsSlide = (e) => {
-  e.preventDefault();
-  console.log(e.target);
+export const showDetailsSlide = (e) => {
+  e.target.classList.add("blow-up-soaps");
 };
 
 soaps.forEach((soap) => {

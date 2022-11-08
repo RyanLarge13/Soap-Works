@@ -25,44 +25,25 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit qui quam nobis fa
 <%soaps.forEach((soap) => {
 %>
 <div class="grid-item">
-<img src="<%=soap.ImageUrl%>" alt="<%=soap.Title%>" />
-<h2><%=soap.Title%></h2>
-<p>
+<img class="img" src="<%=soap.ImageUrl%>" alt="<%=soap.Title%>" />
+<h2 class="title"><%=soap.Title%></h2>
+<p class="price">
 $<%=soap.Price%>
 </p>
+<p class="desc hidden">
+<%=soap.Description%>
+</p>
+<ul class="ingredients hidden">
+<%soap.Ingredients.forEach((ingredient)=> {
+%>
+<li>
+<%=ingredient%>
+</li>
+<%
+}) %>
+</ul>
 </div>
 <%})%>
-</section>
-<section class="hidden soap-hidden-section">
-	<div class="soap-detail-container">
-		<%soaps.forEach((soap)=> {
-			%>
-			<img src="<%=soap.ImageUrl%>" />
-			<div class="descriptive-soap">
-				<h2>
-					<%=soap.Title%>
-				</h2>
-				<p class="descriptive-price">
-					<%=soap.Price%>
-				</p>
-				<p class="description">
-					<%=soap.Description%>
-				</p>
-				<ul class="ingredients">
-					<%soap.Ingredients.forEach((ingredient)=> {
-						%>
-						<li>
-							<%=ingredient%>
-						</li>
-						<% }) %>
-				</ul>
-				<div class="prev-next">
-					<button class="prev">Prev</button>
-					<button class="next">Next</button>
-				</div>
-			</div>
-			<% })%>
-	</div>
 </section>
 <h3 class="second-heading">Kits</h3>
 <p class="intro">
@@ -70,18 +51,18 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit paria
 </p>
 <h2>Kit Selections</h2>
 <section class="kits">
-	<%kits.forEach((kit)=> {
-		%>
-		<div class="kit-item">
-			<img src="<%=kit.ImageUrl%>" alt="<%=kit.Title%>" />
-			<h2>
-				<%=kit.Title%>
-			</h2>
-			<p>
-				<%=kit.Quantity%> kits <br /> available
-			</p>
-		</div>
-		<%})%>
+<%kits.forEach((kit)=> {
+%>
+<div class="kit-item">
+<img src="<%=kit.ImageUrl%>" alt="<%=kit.Title%>" />
+<h2>
+<%=kit.Title%>
+</h2>
+<p>
+<strong><%=kit.Quantity%></strong> kits available
+</p>
+</div>
+<%})%>
 </section>
 </body>
 </html>
