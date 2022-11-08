@@ -1,4 +1,4 @@
-//import { showDetailsSlide } from "./blowupView.js";
+import { showDetailsSlide } from "./blowupView.js";
 
 const soapGrid = document.querySelector(".soaps");
 const soapItems = document.querySelectorAll(".grid-item");
@@ -8,6 +8,9 @@ const getRandom = () => {
 soapItems.forEach((item) => {
   let random = getRandom();
   item.classList.add(`height-${random}`);
+});
+soapItems.forEach((soap) => {
+  soap.addEventListener("click", showDetailsSlide);
 });
 setTimeout(() => {
   const masonry = new Masonry(soapGrid, {

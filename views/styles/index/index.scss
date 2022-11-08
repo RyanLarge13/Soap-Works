@@ -22,6 +22,22 @@ body {
 	overflow-x: hidden;
 	padding-top: 25%;
 }
+.backdrop {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, 0.9);
+	z-index: 989;
+	pointer-events: none;
+	display: none;
+	opacity: 0;
+	transition: $trans-fast;
+}
+.backdrop.block {
+	display: flex;
+	opacity: 1;
+}
 .heading {
 	margin-left: 2%;
 	font-weight: 600;
@@ -42,17 +58,23 @@ h2 {
 	margin-top: 2em;
 	font-size: 5em;
 }
-.grid-item.blow-up-soaps {
-	position: absolute;
-	z-index: 999;
-	width: 95vw;
-	height: 90vh;
-	transition: $trans-fast;
-}
 .soaps {
 	width: 100vw;
 	padding: 0 2em;
 	margin-top: 5%;
+	.grid-item.blow-up-soaps {
+		top: 0;
+		position: fixed;
+		z-index: 990;
+		min-width: 90vw;
+		height: 90vh;
+		transition: $trans-fast;
+		isolation: unset;
+		img {
+			opacity: 0;
+			transition: $trans-med;
+		}
+	}
 	.grid-item {
 		opacity: 0;
 		position: relative;
@@ -62,8 +84,8 @@ h2 {
 		border-radius: 1em;
 		background-color: #eee;
 		box-shadow: $shadow-sm;
-		transition: $trans-med;
 		overflow-x: hidden;
+		transition: $trans-slo;
 		&:hover {
 			scale: 1.025;
 		}
@@ -72,6 +94,7 @@ h2 {
 			min-width: 100%;
 			height: 100%;
 			border-radius: 1em;
+			transition: $trans-med;
 		}
 		h2 {
 			position: absolute;

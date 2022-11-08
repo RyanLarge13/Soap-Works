@@ -1,9 +1,5 @@
-const soaps = document.querySelectorAll(".grid-item");
-
+const backdrop = document.querySelector(".backdrop");
 export const showDetailsSlide = (e) => {
-  e.target.classList.add("blow-up-soaps");
+  e.target.parentElement.classList.toggle("blow-up-soaps");
+  backdrop.classList.toggle('.block');
 };
-
-soaps.forEach((soap) => {
-  soap.addEventListener("click", showDetailsSlide);
-});
