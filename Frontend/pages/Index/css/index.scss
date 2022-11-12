@@ -22,22 +22,6 @@ body {
 	overflow-x: hidden;
 	padding-top: 25%;
 }
-.backdrop {
-	position: fixed;
-	top: 0;
-	width: 100vw;
-	height: 100vh;
-	background-color: rgba(0, 0, 0, 0.9);
-	z-index: 989;
-	pointer-events: none;
-	display: none;
-	opacity: 0;
-	transition: $trans-fast;
-}
-.backdrop.block {
-	display: flex;
-	opacity: 1;
-}
 .heading {
 	margin-left: 2%;
 	font-weight: 600;
@@ -62,77 +46,68 @@ h2 {
 	width: 100vw;
 	padding: 0 2em;
 	margin-top: 5%;
-	.grid-item.blow-up-soaps {
-		top: 0;
-		position: fixed;
-		z-index: 990;
-		min-width: 90vw;
-		height: 90vh;
-		transition: $trans-fast;
-		isolation: unset;
-		img {
-			opacity: 0;
-			transition: $trans-med;
-		}
+	img {
+		opacity: 1;
+		transition: $trans-med;
 	}
-	.grid-item {
-		opacity: 0;
-		position: relative;
-		margin: 1em 1em;
-		min-width: 42.5%;
-		max-width: 42.5%;
+}
+.grid-item {
+	opacity: 0;
+	position: relative;
+	margin: 1em 1em;
+	min-width: 42.5%;
+	max-width: 42.5%;
+	border-radius: 1em;
+	background-color: #eee;
+	box-shadow: $shadow-sm;
+	overflow-x: hidden;
+	transition: $trans-slo;
+	&:hover {
+		scale: 1.025;
+	}
+	img {
+		position: absolute;
+		min-width: 100%;
+		height: 100%;
 		border-radius: 1em;
-		background-color: #eee;
-		box-shadow: $shadow-sm;
-		overflow-x: hidden;
-		transition: $trans-slo;
-		&:hover {
-			scale: 1.025;
-		}
-		img {
-			position: absolute;
-			min-width: 100%;
-			height: 100%;
-			border-radius: 1em;
-			transition: $trans-med;
-		}
-		h2 {
-			position: absolute;
-			padding: 0.1em 0.3em;
-			bottom: 2%;
-			left: 0;
-			z-index: 1;
-			font-size: 3em;
-			font-weight: 600;
-			background-color: #fff;
-			border-radius: 0 1em 0 1em;
-			box-shadow: -0.1em 0.1em 0.25em 0 #000;
-		}
-		p {
-			position: absolute;
-			bottom: 0%;
-			right: 0%;
-			font-size: 3em;
-			font-weight: 600;
-			z-index: 1;
-			color: #fff;
-			padding: 0.25em;
-			border-radius: 0.25em 0 0.25em 0;
-			background-color: rgba(0, 0, 0, 0.7);
-		}
+		transition: $trans-med;
 	}
-	.height-0 {
-		height: 450px;
+	h2 {
+		position: absolute;
+		padding: 0.1em 0.3em;
+		bottom: 2%;
+		left: 0;
+		z-index: 1;
+		font-size: 3em;
+		font-weight: 600;
+		background-color: #fff;
+		border-radius: 0 1em 0 1em;
+		box-shadow: -0.1em 0.1em 0.25em 0 #000;
 	}
-	.height-1 {
-		height: 550px;
+	p {
+		position: absolute;
+		bottom: 0%;
+		right: 0%;
+		font-size: 3em;
+		font-weight: 600;
+		z-index: 1;
+		color: #fff;
+		padding: 0.25em;
+		border-radius: 0.25em 0 0.25em 0;
+		background-color: rgba(0, 0, 0, 0.7);
 	}
-	.height-2 {
-		height: 675px;
-	}
-	.height-3 {
-		height: 750px;
-	}
+}
+.height-0 {
+	height: 450px;
+}
+.height-1 {
+	height: 550px;
+}
+.height-2 {
+	height: 675px;
+}
+.height-3 {
+	height: 750px;
 }
 
 .kits {

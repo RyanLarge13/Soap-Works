@@ -10,12 +10,12 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 app.use(parser.urlencoded({ extended: false }));
-app.use(express.static("views/"));
+app.use(express.static("../Frontend"));
 app.set("view engine", "ejs");
-app.set("views", "views/pages");
+app.set("views", "../Frontend/pages/Index");
 
 app.get("/", async (req, res) => {
-  try{
+  try {
     const allSoaps = mongoose.connection.collection("soaps");
     const allKits = mongoose.connection.collection("kits");
     const soapData = await allSoaps.find({}).toArray();
