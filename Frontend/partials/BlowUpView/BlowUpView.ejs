@@ -1,0 +1,22 @@
+<div class="blowup-view">
+	<%soaps.forEach((soap) => {
+		%>
+		<div class="blowup-soap">
+			<img class="blowupsoap-img" src="<%=soap.ImageUrl%>" alt="Image for <%soap.Title%>" />
+		<h2><%=soap.Title%></h2>
+		<h3><%=soap.Description%></h3>
+		<p>
+			<%soap.Price%>
+		</p>
+		<ul class="ingredientList">
+			Ingredients
+			<%soap.Ingredients.forEach((item) => {
+				%>
+				<li><%=item%></li>
+				<%})%>
+				</ul>
+				<button>Add <strong><%=soap.Title%></strong> to cart</button>
+			</div>
+				<%
+			}); %>
+	</div>

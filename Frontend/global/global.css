@@ -1,5 +1,6 @@
 @import "../partials/Header/Header.css";
 @import "../partials/Nav/Nav.css";
+@import "../partials/BlowUpView/BlowUpView.css";
 
 .flex {
   display: flex;
