@@ -1,6 +1,26 @@
 @import "../partials/Header/Header.css";
 @import "../partials/Nav/Nav.css";
 @import "../partials/BlowUpView/BlowUpView.css";
+@import "../partials/Footer/Footer.css";
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Shalimar", cursive; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  overflow-x: hidden;
+  padding-top: 25%; }
+
 
 .flex {
   display: flex;

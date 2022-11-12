@@ -46,6 +46,9 @@ const translate = (index) => {
     });
     soap.addEventListener("touchmove", (e) => {
       end = e.touches[0].clientX;
+      setTimeout(() => {
+        end = undefined;
+      }, 250);
     });
     soap.addEventListener("touchend", move);
   });
@@ -62,8 +65,8 @@ const move = () => {
   }
   if (start < end - 250 && count !== 0) {
     count--;
-    return allDescriptiveSoaps.forEach((soap) => {
-      soap.style.transform = `translateX(-${90 * count}vw)`;
+    allDescriptiveSoaps.forEach((soap) => {
+      return (soap.style.transform = `translateX(-${90 * count}vw)`);
     });
   }
 };

@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/global/global.css" />
 <link rel="stylesheet" href="/pages/Index/css/index.css" />
+<script src="https://kit.fontawesome.com/a673862905.js" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 <script defer type="module" src="/global/global.js"></script>
 <script defer type="module" src="/pages/Index/js/index.js"></script>
@@ -18,8 +19,9 @@
 <%- include("../../partials/Header/Header.ejs") %>
 <%- include("../../partials/BlowUpView/BlowUpView.ejs") %>
 <h1 class="heading">Soap Works</h1> <p class="intro">
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit qui quam nobis facilis ex necessitatibus optio harum laudantium eos repellat? Suscipit libero ullam adipisci. Mollitia alias nulla voluptas tempora distinctio! </p> 
-<h2>Soaps</h2> 
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit qui quam nobis facilis ex necessitatibus optio harum laudantium eos repellat? Suscipit libero ullam adipisci. Mollitia alias nulla voluptas tempora distinctio!
+</p>
+<h2>Soaps</h2>
 <section class="soaps">
 <%soaps.forEach((soap) => {
 %>
@@ -32,6 +34,7 @@ $<%=soap.Price%>
 </div>
 <%})%>
 </section>
+<a href="/soaps" class="view-more-soaps">View More ...</a>
 <h3 class="second-heading">Kits</h3>
 <p class="intro">
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia doloribus iure nesciunt architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non et asperiores!
@@ -51,5 +54,7 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit paria
 </div>
 <%})%>
 </section>
+<a href="/kits" class="view-more-soaps">View More ...</a>
+<%- include('../../partials/Footer/Footer.ejs') %>
 </body>
 </html>

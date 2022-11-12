@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import parser from "body-parser";
 import mongoose from "mongoose";
+import { filteredRouter } from "./routes/filteredRouter.js";
 import { connectDB } from "./config/db.js";
 dotenv.config();
 connectDB();
@@ -11,8 +12,9 @@ const port = process.env.PORT || 8080;
 
 app.use(parser.urlencoded({ extended: false }));
 app.use(express.static("../Frontend"));
+app.use("/", filteredRouter);
 app.set("view engine", "ejs");
-app.set("views", "../Frontend/pages/Index");
+app.set("views", "../Frontend/pages/");
 
 app.get("/", async (req, res) => {
   try {
@@ -20,7 +22,7 @@ app.get("/", async (req, res) => {
     const allKits = mongoose.connection.collection("kits");
     const soapData = await allSoaps.find({}).toArray();
     const kitData = await allKits.find({}).toArray();
-    res.status(200).render("index", {
+    res.status(200).render("Index/index", {
       soaps: soapData,
       kits: kitData,
     });
