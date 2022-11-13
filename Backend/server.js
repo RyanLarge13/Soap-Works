@@ -20,11 +20,14 @@ app.get("/", async (req, res) => {
   try {
     const allSoaps = mongoose.connection.collection("soaps");
     const allKits = mongoose.connection.collection("kits");
+    const allSubs = mongoose.connection.collection("subscriptions");
     const soapData = await allSoaps.find({}).toArray();
     const kitData = await allKits.find({}).toArray();
+    const subData = await allSubs.find({}).toArray();
     res.status(200).render("Index/index", {
       soaps: soapData,
       kits: kitData,
+      subs: subData,
     });
   } catch (err) {
     console.log(err);

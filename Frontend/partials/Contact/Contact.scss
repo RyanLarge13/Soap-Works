@@ -1,0 +1,34 @@
+.main-contact {
+    margin: 10% 15% 0 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    input {
+        width: 100%;
+        font-size: 2em;
+        border-radius: 0.25em;
+        margin-bottom: 1em;
+        padding: 0.25em 0.5em;
+    }
+    textarea {
+        width: 100%;
+        font-size: 1.5em;
+        border-radius: 0.25em;
+        padding: 0.25em 0.5em;
+    }
+    button {
+        padding: 0.25em 1em;
+        border-radius: 0.5em;
+        background-color: #ffb6c1;
+        font-size: 1.5em;
+        margin-top: 1em;
+        align-self: flex-start;
+        box-shadow: 0 0.1em 0.25em 0 #4f4f4f;
+    }
+}
+.contact-heading {
+    text-align: center;
+    margin-top: 1em;
+}

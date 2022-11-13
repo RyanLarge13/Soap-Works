@@ -6,3 +6,4 @@ export const filteredRouter = express.Router();
 
 filteredRouter.route("/soaps").get(filter, filterSoaps);
 filteredRouter.route("/kits").get(filter, filterSoaps);
+filteredRouter.route('/subscriptions').get(filter, filterSoaps);

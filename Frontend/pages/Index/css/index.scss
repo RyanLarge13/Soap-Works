@@ -168,3 +168,61 @@ h2 {
 		}
 	}
 }
+
+.subs {
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	.sub {
+		margin: 5% 0 10% 0;
+		padding: 2.5em;
+		width: 90%;
+		height: 75vh;
+		border-radius: 1em;
+		box-shadow: 0 0.25em 0.5em 0 #4f4f4f;
+		img {
+			border-radius: 1em;
+		}
+		h2 {
+			font-size: 4em;
+			margin-left: 0;
+			margin-top: 1em;
+		}
+		h3 {
+			font-size: 2.5em;
+			margin-top: 0.5em;
+		}
+		p {
+			font-size: 3em;
+		}
+		.price {
+			font-weight: 600;
+		}
+		.sub-includes {
+			margin-top: 1em;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			align-items: center;
+		}
+		a {
+			font-size: 2em;
+			display: block;
+			margin: 10% 0 5% 0;
+			text-align: center;
+		}
+		button {
+			font-size: 2em;
+			padding: 1em 2em;
+			border-radius: 0.5em;
+			box-shadow: 0 0.25em 0.5em #4f4f4f;
+			background-color: #ffb6c1;
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
