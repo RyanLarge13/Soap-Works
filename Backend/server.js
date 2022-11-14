@@ -3,6 +3,8 @@ import dotenv from "dotenv";
 import parser from "body-parser";
 import mongoose from "mongoose";
 import { filteredRouter } from "./routes/filteredRouter.js";
+import { aboutRouter } from "./routes/aboutRouter.js";
+import { contactRouter } from "./routes/contactRouter.js";
 import { connectDB } from "./config/db.js";
 dotenv.config();
 connectDB();
@@ -12,7 +14,7 @@ const port = process.env.PORT || 8080;
 
 app.use(parser.urlencoded({ extended: false }));
 app.use(express.static("../Frontend"));
-app.use("/", filteredRouter);
+app.use("/", filteredRouter, aboutRouter, contactRouter);
 app.set("view engine", "ejs");
 app.set("views", "../Frontend/pages/");
 
