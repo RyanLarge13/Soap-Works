@@ -8,11 +8,46 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/global/global.css" />
-<script defer type="module" src="/global/global.js"></script>
-<title>Soap Works</title>
+<link rel="stylesheet" href="/pages/FilteredProducts/css/filteredProducts.css" />
+<script defer type="module" src="/global/global.js">
+</script>
+<script defer src="pages/FilteredProducts/js/filteredProducts.js"></script>
+<title>Soap Works </title>
 </head>
 <body>
 <%- include("../../partials/Header/Header.ejs") %>
 <%- include("../../partials/Nav/Nav.ejs") %>
+<%products.forEach((product) => {
+%>
+<div>
+<img class="bg-img" src="<%=product.ImageUrl%>" />
+
+</div>
+<%})%>
+<h1 class="filtered-title"></h1>
+<section class="filter-section">
+<%products.forEach((product) => {
+%>
+<div class="product">
+<h2>
+<%=product.Title%></h2>
+<p>
+<%= product.Quantity ? product.Quantity: null%>
+</p>
+<p>
+<%=product.Description%>
+</p>
+<ul>
+<%- product.Ingredients ? `<li class="ingredients" >${product.Ingredients}</li>`: null %>
+<%- product.Included ? `<li class="ingredient">${product.Included}</li>`: null %>
+</ul>
+<p>
+$<%=product.Price%>
+</p>
+</div>
+<%})%>
+</section>
+<%- include('../../partials/Contact/Contact.ejs')%>
+<%- include('../../partials/Footer/Footer.ejs')%>
 </body>
 </html>
