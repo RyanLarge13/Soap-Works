@@ -6,7 +6,8 @@ import { filteredRouter } from "./routes/filteredRouter.js";
 import { aboutRouter } from "./routes/aboutRouter.js";
 import { contactRouter } from "./routes/contactRouter.js";
 import { connectDB } from "./config/db.js";
-import { menWomenRouter } from './routes/mensWomensRouter.js';
+import { menWomenRouter } from "./routes/mensWomensRouter.js";
+import { addToCartRouter } from "./routes/addToCartRouter.js";
 dotenv.config();
 connectDB();
 
@@ -15,7 +16,14 @@ const port = process.env.PORT || 8080;
 
 app.use(parser.urlencoded({ extended: false }));
 app.use(express.static("../Frontend"));
-app.use("/", filteredRouter, aboutRouter, contactRouter, menWomenRouter);
+app.use(
+  "/",
+  filteredRouter,
+  aboutRouter,
+  contactRouter,
+  menWomenRouter,
+  addToCartRouter
+);
 app.set("view engine", "ejs");
 app.set("views", "../Frontend/pages/");
 

@@ -3,6 +3,22 @@ import { showSoap } from "../partials/BlowUpView/BlowUpView.js";
 import { date } from "../partials/Footer/Footer.js";
 import { showCart } from "../partials/Cart/Cart.js";
 
-const setStorage = (e => {});
+const buyBtns = document.querySelectorAll(".buy-btn");
 
-document.querySelectorAll(".buy-btn").addEventListener("click", setStorage);
+const setStorage = async (e) => {
+  const parent = e.target.parentElement;
+  const title = parent.querySelector("h2").innerText;
+
+  await fetch(`http://localhost:8080/addtocart/${title}`, {
+    method: "GET",
+  })
+    .then((res) => res.json())
+    .then((data) => {
+      const formattedData = data.foundProduct[0];
+      localStorage.setItem(`${title}`, JSON.stringify(formattedData));
+    });
+};
+
+buyBtns.forEach((btn) => {
+  btn.addEventListener("click", setStorage);
+});
