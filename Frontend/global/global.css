@@ -3,6 +3,7 @@
 @import "../partials/BlowUpView/BlowUpView.css";
 @import "../partials/Footer/Footer.css";
 @import '../partials/Contact/Contact.css';
+@import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
 
 *,
 ::after,
@@ -10,7 +11,8 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Shalimar", cursive; }
+  font-family: "Shalimar", cursive; 
+}
 
 li {
   list-style-type: none; }
