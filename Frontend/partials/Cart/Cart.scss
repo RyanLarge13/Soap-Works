@@ -1,0 +1,23 @@
+.cart {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(-150%);
+    width: 75vw;
+    height: 50vh;
+    z-index: 995;
+    background-color: #fff;
+    border-radius: 0.5em;
+    box-shadow: 0 0.1em 0.25em 0 #000;
+    padding: 2em;
+    transition: 500ms ease-out;
+}
+.cart-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+}
