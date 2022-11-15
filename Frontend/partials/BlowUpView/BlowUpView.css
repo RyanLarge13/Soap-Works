@@ -33,7 +33,10 @@
       top: 5%;
       left: 5%;
       font-size: 5em;
-      width: fit-content; }
+      width: fit-content;
+      padding: 0.25em;
+      border-radius: 0.5em;
+      background-color: #fff; }
     .blowup-view .blowup-soap h3 {
       background-color: #fff;
       padding: 1em;
@@ -52,7 +55,10 @@
       top: 5%;
       right: 5%;
       font-size: 3em;
-      font-weight: 600; }
+      font-weight: 600;
+      background-color: #fff;
+      padding: 1em;
+      border-radius: 0.5em; }
       .blowup-view .blowup-soap ul li {
         opacity: 0;
         transition: 250ms ease-out;
@@ -60,14 +66,15 @@
       .blowup-view .blowup-soap ul li.opacity {
         opacity: 1; }
     .blowup-view .blowup-soap button {
+      position: absolute;
       padding: 1em 2em;
       border-radius: 0.5em;
-      margin-top: 15%;
       font-size: 2.5em;
       border: none;
       outline: none;
       box-shadow: 0 0.25em 0.5em 0 #000;
-      background-color: #ffb6c1; }
+      background-color: #ffb6c1;
+      bottom: 5%; }
     .blowup-view .blowup-soap .blowupsoap-img {
       position: absolute;
       min-width: 100%;
