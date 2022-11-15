@@ -10,7 +10,7 @@ const setHeading = async () => {
   heading.innerHTML = newTitle;
 };
 const placeImages = () => {
-  const images = document.querySelectorAll(".bg-img");
+  const images = document.querySelectorAll(".img-container");
   images.forEach((img, index) => {
     img.style.top = `${100 * index}vh`;
   });

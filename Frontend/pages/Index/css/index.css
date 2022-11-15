@@ -186,7 +186,9 @@ h2 {
       font-size: 2em;
       display: block;
       margin: 10% 0 5% 0;
-      text-align: center; }
+      text-align: center;
+      color: #000;
+      text-decoration: underline; }
     .subs .sub button {
       font-size: 2em;
       padding: 1em 2em;
