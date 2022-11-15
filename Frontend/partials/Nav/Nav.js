@@ -1,5 +1,6 @@
 export const toggleMenu = (e) => {
   e.preventDefault();
+  e.stopPropagation()
   const spans = document.querySelectorAll(".menu-toggle span");
   const nav = document.querySelector("nav");
   nav.classList.toggle("open");
