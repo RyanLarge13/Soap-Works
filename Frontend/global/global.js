@@ -9,7 +9,7 @@ const setStorage = async (e) => {
   const parent = e.target.parentElement;
   const title = parent.querySelector("h2").innerText;
 
-  await fetch(`http://localhost:8080/addtocart/${title}`, {
+  await fetch(`https://soap-works-production.up.railway.app/addtocart/${title}`, {
     method: "GET",
   })
     .then((res) => res.json())
@@ -18,8 +18,8 @@ const setStorage = async (e) => {
       localStorage.setItem(`${title}`, JSON.stringify(formattedData));
       createElement(formattedData);
     });
-    showSoap();
-    showCart();
+  showSoap();
+  showCart();
 };
 
 buyBtns.forEach((btn) => {
