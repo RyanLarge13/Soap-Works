@@ -1,8 +1,8 @@
-import express from "express";
-import dotenv from "dotenv";
-import parser from "body-parser";
-import mongoose from "mongoose";
-import cors from "cors";
+import express from "express.js";
+import dotenv from "dotenv.js";
+import parser from "body-parser.js";
+import mongoose from "mongoose.js";
+import cors from "cors.js";
 import { filteredRouter } from "./routes/filteredRouter.js";
 import { aboutRouter } from "./routes/aboutRouter.js";
 import { contactRouter } from "./routes/contactRouter.js";
