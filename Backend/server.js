@@ -2,6 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import parser from "body-parser";
 import mongoose from "mongoose";
+import cors from 'cors';
 import { filteredRouter } from "./routes/filteredRouter.js";
 import { aboutRouter } from "./routes/aboutRouter.js";
 import { contactRouter } from "./routes/contactRouter.js";
@@ -13,7 +14,22 @@ connectDB();
 
 const app = express();
 const port = process.env.PORT || 8080;
+const allowedOrigins = ['http://localhost:8080', '']
 
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) === -1) {
+        let message =
+          "The CORS policy for this application doesn’t allow access from origin " +
+          origin;
+        return callback(new Error(message), false);
+      }
+      return callback(null, true);
+    },
+  })
+);
 app.use(parser.urlencoded({ extended: false }));
 app.use(express.static("../Frontend"));
 app.use(
