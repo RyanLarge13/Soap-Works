@@ -10,7 +10,7 @@
   border-radius: 0.75em;
   box-shadow: 0 0.1em 0.25em 0 #000;
   padding: 2em;
-  transition: 500ms ease-out;
+  transition: 250ms ease-out;
 }
 .cart .checkout {
   position: absolute;
@@ -91,7 +91,7 @@
   background-color: #ffb6c1;
   font-weight: 700;
 }
-.cart-container .cart-item .quantity-container .quantity {
+.cart-container .cart-item .quantity-container .cart-item-quantity {
   font-size: 2em;
   font-weight: 600;
   margin: 0 1em;
