@@ -1,4 +1,5 @@
 {
+  "type": "module",
   "name": "soap-works",
   "version": "1.0.0",
   "description": "",
