@@ -1,6 +1,6 @@
 export const showSoap = (e) => {
   const blowupView = document.querySelector(".blowup-view");
-  const blownupSoaps = document.querySelectorAll(".blowup-soap");
+  if (e === undefined) return blowupView.classList.remove("show");
   const ingredientsBtns = document.querySelectorAll(".ingredientList");
   ingredientsBtns.forEach((btn) => {
     btn.addEventListener("click", showIngredientList);

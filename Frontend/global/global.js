@@ -1,7 +1,7 @@
 import { toggleMenu } from "../partials/Nav/Nav.js";
 import { showSoap } from "../partials/BlowUpView/BlowUpView.js";
 import { date } from "../partials/Footer/Footer.js";
-import { showCart, getItems } from "../partials/Cart/Cart.js";
+import { showCart, getItems, createElement } from "../partials/Cart/Cart.js";
 
 const buyBtns = document.querySelectorAll(".buy-btn");
 
@@ -16,8 +16,10 @@ const setStorage = async (e) => {
     .then((data) => {
       const formattedData = data.foundProduct[0];
       localStorage.setItem(`${title}`, JSON.stringify(formattedData));
-      getItems()
+      createElement(formattedData);
     });
+    showSoap();
+    showCart();
 };
 
 buyBtns.forEach((btn) => {

@@ -16,26 +16,27 @@
 
 <body>
 	<%- include('../../partials/Header/Header.ejs')%>
-		<h1>Connect With Us</h1>
-		<form>
-			<label class="hidden" for="email">Email</label>
-			<input type="email" name="email" id="email" placeholder="Email">
-			<label class="hidden" for="name">Name</label>
-			<input type="text" name="name" id="name" placeholder="Name">
-			<label class="hidden" for="tel">Number</label>
-			<input type="tel" name="tel" id="tel" placeholder="Number">
-			<button type="submit">Send</button>
-		</form>
-		<div class="chat-bot">
-			<div class="messages">
-				<div class="bot-message">
-					<div class="bot"></div>
+		<%- include("../../partials/Cart/Cart.ejs") %>
+			<h1>Connect With Us</h1>
+			<form>
+				<label class="hidden" for="email">Email</label>
+				<input type="email" name="email" id="email" placeholder="Email">
+				<label class="hidden" for="name">Name</label>
+				<input type="text" name="name" id="name" placeholder="Name">
+				<label class="hidden" for="tel">Number</label>
+				<input type="tel" name="tel" id="tel" placeholder="Number">
+				<button type="submit">Send</button>
+			</form>
+			<div class="chat-bot">
+				<div class="messages">
+					<div class="bot-message">
+						<div class="bot"></div>
+					</div>
+					<div class="user-message"></div>
 				</div>
-				<div class="user-message"></div>
+				<i>Message</i>
 			</div>
-			<i>Message</i>
-		</div>
-		<%- include('../../partials/Footer/Footer.ejs')%>
+			<%- include('../../partials/Footer/Footer.ejs')%>
 </body>
 
 </html>

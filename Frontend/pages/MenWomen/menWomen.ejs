@@ -16,12 +16,14 @@
 
 <body>
     <%- include("../../partials/Header/Header.ejs") %>
-        <%soaps.forEach((item)=> {%>
-            <h1>
-                <%=item.Title%>
-            </h1>
-            <%})%>
+        <%- include("../../partials/Cart/Cart.ejs") %>
+            <%soaps.forEach((item)=> {%>
+                <h1>
+                    <%=item.Title%>
+                </h1>
+                <%})%>
 
-                <%- include("../../partials/Footer/Footer.ejs") %>
+                    <%- include("../../partials/Footer/Footer.ejs") %>
 </body>
+
 </html>
