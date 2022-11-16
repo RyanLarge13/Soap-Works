@@ -44,7 +44,7 @@ app.use(
   addToCartRouter
 );
 app.set("view engine", "ejs");
-app.set("views", "../app/Frontend/pages/");
+app.set("views", "../Frontend/pages/");
 
 app.get("/", async (req, res) => {
   try {
