@@ -16,7 +16,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 const allowedOrigins = [
   "http://localhost:8080",
-  "https://soap-works-production.up.railway.app/",
+  "https://soap-works-production.up.railway.app",
 ];
 
 app.use(
