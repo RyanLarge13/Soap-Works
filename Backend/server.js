@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import parser from "body-parser";
 import mongoose from "mongoose";
-import cors from "cors.js";
+import cors from "cors";
 import { filteredRouter } from "./routes/filteredRouter.js";
 import { aboutRouter } from "./routes/aboutRouter.js";
 import { contactRouter } from "./routes/contactRouter.js";
