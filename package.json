@@ -1,0 +1,21 @@
+{
+  "name": "soap-works",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./Backend/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cd ./Backend/ && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RyanLarge13/Soap-Works.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RyanLarge13/Soap-Works/issues"
+  },
+  "homepage": "https://github.com/RyanLarge13/Soap-Works#readme"
+}
