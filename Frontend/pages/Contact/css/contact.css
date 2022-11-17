@@ -1,5 +1,5 @@
 h1 {
-  margin-left: 2%;
+  text-align: center;
   font-size: 6em;
 }
 
@@ -11,7 +11,7 @@ form {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 90vw;
+  width: 75vw;
   height: 45vh;
 }
 form input {
@@ -61,6 +61,11 @@ form button {
   height: 50vh;
   background-color: #fff;
   border-radius: 1em;
+}
+.chat-bot.open h2 {
+  font-size: 3em;
+  display: block;
+  opacity: 1;
 }
 .chat-bot.open i {
   display: none;

@@ -43,6 +43,9 @@
 
 		img {
 			min-width: 100%;
+			width: 75%;
+			height: 33%;
+			border-radius: 1em;
 		}
 	}
 
@@ -55,17 +58,33 @@
 		margin: 0 2%;
 	}
 	.desc {
-		font-size: 3em;
-		margin: 0 2%;
+		font-size: 3.5em;
+		margin: 5% 2%;
+		max-width: 75%;
+	}
+	.list-title {
+		font-size: 3.5em;
 	}
 	.list {
 		display: flex;
 		flex-direction: column;
 		margin: 0 2%;
+
+		.ingredients {
+			font-size: 3em;
+			font-weight: 600;
+		}
+		.includes {
+			font-size: 3em;
+			font-weight: 600;
+		}
 	}
 	.price {
 		font-size: 4em;
-		margin: 0 2%;
+		position: absolute;
+		top: 2%;
+		right: 5%;
+		font-weight: 600;
 	}
 
 	button {

@@ -1,5 +1,5 @@
 h1 {
-  margin-left: 2%;
+  text-align: center;
   font-size: 6em;
 }
 form {
@@ -10,7 +10,7 @@ form {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 90vw;
+  width: 75vw;
   height: 45vh;
 
   input {
@@ -60,6 +60,11 @@ form {
   height: 50vh;
   background-color: #fff;
   border-radius: 1em;
+  h2 {
+    font-size: 3em;
+    display: block;
+    opacity: 1;
+  }
   i {
     display: none;
   }

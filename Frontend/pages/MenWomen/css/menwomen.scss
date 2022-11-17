@@ -1,0 +1,47 @@
+.men-women-grid {
+    width: 100vw;
+    overflow-x: hidden;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 2%;
+    gap: 2em;
+    justify-items: center;
+    align-items: center;
+    overflow-y: auto;
+    height: 60vh;
+
+    .men-women-item {
+        box-shadow: 0 0.25em 0.75em 0 #aaa;
+        border-radius: 1em;
+        height: 450px;
+        width: 450px;
+        position: relative;
+
+        h2 {
+            position: absolute;
+            bottom: 0;
+            padding: 1em;
+            background-color: #fff;
+            width: 100%;
+            border-radius: 0 0 0.75em 0.75em;
+        }
+
+        .men-women-img {
+            position: absolute;
+            z-index: -1;
+            min-width: 100%;
+            width: 100%;
+            height: 100%;
+            border-radius: 1em;
+        }
+
+        button {
+            font-size: 2em;
+			padding: 0.5em 0.75em;
+			border-radius: 0.5em;
+			box-shadow: 0 0.25em 0.5em #4f4f4f;
+			background-color: #ffb6c1;
+            transform: translateX(-10%) translateY(-20%);
+        }
+    }
+}

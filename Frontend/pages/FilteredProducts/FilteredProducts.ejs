@@ -39,10 +39,20 @@
 									<%=product.Description%>
 								</p>
 								<ul class="list">
-									<%- product.Ingredients ? `<li class="ingredients">${product.Ingredients}</li>`:
-										null %>
-										<%- product.Included ? `<li class="ingredient">${product.Included}</li>`: null
-											%>
+									<%if (product.Ingredients) {%>
+										<h3 class="list-title">Ingredients</h3>
+										<%product.Ingredients.forEach((ing)=> {%>
+											<li class="ingredients">
+												<%=ing%>
+											</li>
+											<%})%>
+												<%} else {%>
+													<%product.Included?.forEach((include)=> {%>
+														<li class="includes">
+															- <%=include%>
+														</li>
+														<%})%>
+															<%}%>
 								</ul>
 								<p class="price">
 									$<%=product.Price%>

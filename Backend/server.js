@@ -3,13 +3,14 @@ import dotenv from "dotenv";
 import parser from "body-parser";
 import mongoose from "mongoose";
 import cors from "cors";
+import { connectDB } from "./config/db.js";
 import { filteredRouter } from "./routes/filteredRouter.js";
 import { aboutRouter } from "./routes/aboutRouter.js";
 import { contactRouter } from "./routes/contactRouter.js";
-import { connectDB } from "./config/db.js";
 import { menWomenRouter } from "./routes/mensWomensRouter.js";
 import { addToCartRouter } from "./routes/addToCartRouter.js";
-dotenv.config();
+import { checkoutRouter } from './routes/checkoutRouter.js';
+dotenv.config(); 
 connectDB();
 
 const app = express();
@@ -41,7 +42,8 @@ app.use(
   aboutRouter,
   contactRouter,
   menWomenRouter,
-  addToCartRouter
+  addToCartRouter,
+  checkoutRouter,
 );
 app.set("view engine", "ejs");
 app.set("views", "../Frontend/pages/");

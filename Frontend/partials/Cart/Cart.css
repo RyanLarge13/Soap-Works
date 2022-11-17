@@ -7,7 +7,7 @@
   height: 50vh;
   z-index: 995;
   background-color: #fff;
-  border-radius: 0.75em;
+  border-radius: 1em;
   box-shadow: 0 0.1em 0.25em 0 #000;
   padding: 2em;
   transition: 250ms ease-out;
@@ -43,6 +43,7 @@
   width: 75%;
   font-size: 6em;
   text-align: center;
+  transition: 250ms ease-in-out;
 }
 .cart-container .cart-item {
   position: relative;

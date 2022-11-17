@@ -47,6 +47,9 @@
 }
 .product .product-img img {
   min-width: 100%;
+  width: 75%;
+  height: 33%;
+  border-radius: 1em;
 }
 .product h2 {
   font-size: 6em;
@@ -57,17 +60,32 @@
   margin: 0 2%;
 }
 .product .desc {
-  font-size: 3em;
-  margin: 0 2%;
+  font-size: 3.5em;
+  margin: 5% 2%;
+  max-width: 75%;
+}
+.product .list-title {
+  font-size: 3.5em;
 }
 .product .list {
   display: flex;
   flex-direction: column;
   margin: 0 2%;
 }
+.product .list .ingredients {
+  font-size: 3em;
+  font-weight: 600;
+}
+.product .list .includes {
+  font-size: 3em;
+  font-weight: 600;
+}
 .product .price {
   font-size: 4em;
-  margin: 0 2%;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  font-weight: 600;
 }
 .product button {
   font-size: 2em;

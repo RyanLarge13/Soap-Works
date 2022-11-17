@@ -7,6 +7,7 @@ const buyBtns = document.querySelectorAll(".buy-btn");
 
 const setStorage = async (e) => {
   const parent = e.target.parentElement;
+  const ifOnMain = document.querySelector('.blowup-view');
   const title = parent.querySelector("h2").innerText;
   const cartShown = document.querySelector('.cart').classList.contains("show");
   const itemExsists = localStorage.getItem(title);
@@ -26,9 +27,13 @@ const setStorage = async (e) => {
       localStorage.setItem(`${formattedData._id}`, `${quantity}`);
       createElement(formattedData);
     });
-  showSoap();
-  if (cartShown) return;
-  showCart();
+    if (!ifOnMain && !cartShown) {
+      return showCart();
+    } else {
+      showSoap();
+      if (cartShown) return;
+      showCart();
+    }
 };
 
 buyBtns.forEach((btn) => {
