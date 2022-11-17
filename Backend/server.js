@@ -34,7 +34,8 @@ app.use(
     },
   })
 );
-app.use(parser.urlencoded({ extended: false }));
+app.use(parser.urlencoded({ extended: true }));
+app.use(parser.json());
 app.use(express.static("../Frontend"));
 app.use(
   "/",

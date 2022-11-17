@@ -6,8 +6,6 @@ export const renderStripe = async (req, res) => {
     const devUrl = 'http://localhost:8080';
     const productionUrl = "https://soap-works-production.up.railway.app";
 
-    return console.log(req.body)
-
   if (req.method === "POST") {
     try {
       const params = {
@@ -36,8 +34,8 @@ export const renderStripe = async (req, res) => {
                 quantity: item.Amount,
             }
         }),
-        success_url: `${productionUrl}/`,
-        cancel_url: `${productionUrl}/cancel`,
+        success_url: `${devUrl}/`,
+        cancel_url: `${devUrl}/cancel`,
       };
       const session = await stripe.checkout.sessions.create(params);
       res.redirect(303, session.url);

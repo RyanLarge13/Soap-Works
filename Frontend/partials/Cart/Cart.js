@@ -112,9 +112,10 @@ const fetchStripe = async (items) => {
   const response = await fetch(`${devUrl}/checkout`, {
     method: "POST",
     headers: {
+      'Accept': 'application/json',
       "Content-Type": "application/json",
     },
-    body: items,
+    body: JSON.stringify(items),
   });
 
   if (response.statusCode === 500) return;
