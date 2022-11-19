@@ -116,6 +116,10 @@ const fetchStripe = async (items) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(items),
+  }).then((res) => res.json()).then((data) => {
+    window.location.href = data.url;
+  }).catch((err) => {
+    console.log(err);
   });
 
   if (response.statusCode === 500) return;
