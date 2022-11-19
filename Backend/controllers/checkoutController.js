@@ -1,6 +1,10 @@
 import Stripe from "stripe";
+import dotenv from 'dotenv';
+dotenv.config();
 
-const stripe = new Stripe(process.env.STRIPE_PUBLISHABLE_KEY);
+const stripe = new Stripe(
+  'sk_test_51M21vmGhuJ5xJe5G33cAvw1dPsGZ03RRUoMCquXgU519OERTrx4N6wkMLZ4GfXx2DFqu0ko4Nk5ASKqIZanL0aKx00HWxtpXZW'
+);
 
 export const renderStripe = async (req, res) => {
     const devUrl = 'http://localhost:8080';
@@ -38,7 +42,7 @@ export const renderStripe = async (req, res) => {
         cancel_url: `${devUrl}/cancel`,
       };
       const session = await stripe.checkout.sessions.create(params);
-      res.redirect(303, session.url);
+      res.json({url: session.url});
     } catch (err) {
       res.status(500).json({ statusCode: 500, message: err.message });
     }
