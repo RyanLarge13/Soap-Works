@@ -109,7 +109,7 @@ const queryLocalStorage = () => {
 const fetchStripe = async (items) => {
   const devUrl = "http://localhost:8080";
   const productionUrl = "https://soap-works-production.up.railway.app";
-  const response = await fetch(`${devUrl}/checkout`, {
+  const response = await fetch(`${productionUrl}/checkout`, {
     method: "POST",
     headers: {
       'Accept': 'application/json',

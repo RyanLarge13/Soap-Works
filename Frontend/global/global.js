@@ -17,7 +17,7 @@ const setStorage = async (e) => {
 
   if (itemExsists) return;
 
-  await fetch(`${devUrl}/addtocart/${title}`, {
+  await fetch(`${productionUrl}/addtocart/${title}`, {
     method: "GET",
   })
     .then((res) => res.json())
