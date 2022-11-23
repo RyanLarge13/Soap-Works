@@ -244,17 +244,33 @@ h2 {
   body {
     padding-top: 10%;
   }
+  .view-more-soaps {
+    font-size: 1.5em;
+  }
+  .heading {
+    display: none;
+  }
   .intro {
     width: 50vw;
   }
   h2 {
     font-size: 2em;
   }
+  .top-right-pink {
+    width: 500px;
+    height: 500px;
+    transform: rotateZ(45deg);
+    background-color: #ffb6c1;
+    position: absolute;
+    top: -35%;
+    right: -15%;
+    filter: blur(2px);
+  }
   .second-heading {
     font-size: 2em;
   }
   .soaps {
-    width: 75vw;
+    width: 100vw;
     margin: auto;
     margin-top: 5%;
   }
@@ -264,8 +280,8 @@ h2 {
   }
   .grid-item {
     margin: 1em 1em;
-    min-width: 28%;
-    max-width: 28%;
+    min-width: 22%;
+    max-width: 22%;
     cursor: pointer;
   }
   .grid-item h2 {
@@ -275,16 +291,16 @@ h2 {
     font-size: 1.75em;
   }
   .height-0 {
-    height: 350px;
+    height: 250px;
   }
   .height-1 {
-    height: 450px;
+    height: 350px;
   }
   .height-2 {
-    height: 575px;
+    height: 475px;
   }
   .height-3 {
-    height: 650px;
+    height: 550px;
   }
   .kits {
     justify-items: center;
@@ -320,44 +336,46 @@ h2 {
     scale: 1.01;
   }
   .subs .sub img {
-    scale: 0.5;
-    margin: 0;
-    position: absolute;
-    display: none;
+    all: unset;
+    width: 200px;
+    height: 200px;
+    border-radius: 1em;
   }
   .subs .sub h2 {
     margin: 0.5em 0;
     font-size: 2em;
   }
   .subs .sub h3 {
-    font-size: 1em;
-    margin: 0.25em 0;
+    display: none;
   }
   .subs .sub p {
-    font-size: 1em;
+    font-size: 1.25em;
     margin: 0.25em;
     max-width: 60%;
   }
   .subs .sub .price {
     font-weight: 600;
     font-size: 1.5em;
+    position: absolute;
+    top: 2%;
+    right: 2%;
   }
   .subs .sub .sub-includes {
     margin-top: 0;
-    font-size: 1.5em;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    margin-bottom: 1em;
+    font-size: 1.25em;
+    display: block;
+    margin-bottom: 0;
     width: 100%;
+    position: absolute;
+    right: -35%;
+    text-align: right;
+    top: 33%;
+  }
+  .subs .sub .sub-includes li {
+    font-size: 1em;
   }
   .subs .sub a {
-    font-size: 0.75em;
-    display: block;
-    margin: 0;
-    text-align: center;
-    color: #000;
-    text-decoration: underline;
+    display: none;
   }
   .subs .sub button {
     font-size: 0.75em;
