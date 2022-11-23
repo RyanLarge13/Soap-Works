@@ -38,4 +38,13 @@ header .logo {
 }
 .menu-toggle span:nth-child(3).x {
   transform: rotateZ(-45deg) translateY(-0.75em);
+}
+
+@media (min-width: 1600px) and (min-height: 800px) {
+  header .logo {
+    font-size: 1em;
+  }
+  header .menu-toggle {
+    display: none;
+  }
 }/*# sourceMappingURL=Header.css.map */

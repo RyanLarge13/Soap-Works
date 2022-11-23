@@ -230,3 +230,148 @@ h2 {
 		}
 	}
 }
+
+@media (min-width: 1600px) and (min-height: 800px) {
+body {
+	padding-top: 10%;
+}
+.intro {
+	width: 50vw;
+}
+h2 {
+	font-size: 2em;
+}
+.second-heading {
+	font-size: 2em;
+}
+.soaps {
+	width: 75vw;
+	margin: auto;
+	margin-top: 5%;
+	img {
+		opacity: 1;
+		transition: $trans-med;
+	}
+}
+.grid-item {
+	margin: 1em 1em;
+	min-width: 28%;
+	max-width: 28%;
+	cursor: pointer;
+	h2 {
+		font-size: 2em;
+	}
+	p {
+		font-size: 1.75em;
+	}
+}
+.height-0 {
+	height: 350px;
+}
+.height-1 {
+	height: 450px;
+}
+.height-2 {
+	height: 575px;
+}
+.height-3 {
+	height: 650px;
+}
+
+.kits {
+	justify-items: center;
+	align-items: center;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 2em;
+	.kit-item {
+		h2 {
+			font-size: 1.5em;
+		}
+		p {
+			strong {
+				font-size: 1.5em;
+			}
+		}
+	}
+}
+
+.subs {
+	width: 100vw;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	justify-items: center;
+	align-items: center;
+	.sub {
+		margin: 0;
+		padding: 1em;
+		width: 75%;
+		max-height: 75%;
+		min-height: 250px;
+		border-radius: 1em;
+		box-shadow: 0 0.25em 0.5em 0 #4f4f4f;
+		position: relative;
+		transition: 250ms ease-in-out;
+		&:hover {
+			scale: 1.01;
+		}
+		img {
+			scale: 0.5;
+			margin: 0;
+			position: absolute;
+			display: none;
+		}
+		h2 {
+			margin: 0.5em 0;
+			font-size: 2em;
+		}
+		h3 {
+			font-size: 1em;
+			margin: 0.25em 0;
+		}
+		p {
+			font-size: 1em;
+			margin: 0.25em;
+			max-width: 60%;
+		}
+		.price {
+			font-weight: 600;
+			font-size: 1.5em;
+		}
+		.sub-includes {
+			margin-top: 0;
+			font-size: 1.5em;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			align-items: center;
+			margin-bottom: 1em;
+			width: 100%;
+		}
+		a {
+			font-size: 0.75em;
+			display: block;
+			margin: 0;
+			text-align: center;
+			color: #000;
+			text-decoration: underline;
+		}
+		button {
+			font-size: 0.75em;
+			padding: 1em 2em;
+			border-radius: 0.5em;
+			box-shadow: 0 0.15em 0.25em #999999;
+			box-shadow: 0 0.15em 0.25em #999999;
+			background-color: #ffb6c1;
+			margin: 0;
+			transform: translateX(0);
+			position: absolute;
+			bottom: 2%;
+			right: 50%;
+			transform: translateX(50%);
+			cursor: pointer;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+}

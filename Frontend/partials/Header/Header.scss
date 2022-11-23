@@ -38,3 +38,13 @@ header {
     }
   }
 }
+@media (min-width: 1600px) and (min-height: 800px) {
+  header {
+  .logo {
+    font-size: 1em;
+  }
+  .menu-toggle {
+    display: none;
+  }
+}
+}
