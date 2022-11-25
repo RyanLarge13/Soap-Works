@@ -114,5 +114,8 @@
 		transform: translateX(-50%);
 		position: absolute;
 		bottom: 5%;
+		strong {
+			pointer-events: none;
+		}
 	}
 }

@@ -2,20 +2,23 @@
   position: absolute;
   height: 100vh;
   max-width: 100vw;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+}
 
 .bg-img {
   z-index: -1;
   min-height: 100%;
   opacity: 0.75;
-  min-width: 100%; }
+  min-width: 100%;
+}
 
 .filtered-title {
   font-size: 6em;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  position: absolute; }
+  position: absolute;
+}
 
 .filter-section {
   padding: 0 2.5%;
@@ -25,7 +28,8 @@
   align-items: center;
   margin-bottom: 25%;
   position: absolute;
-  top: 0; }
+  top: 0;
+}
 
 .product {
   position: relative;
@@ -36,64 +40,81 @@
   background-color: #fff;
   border-radius: 1em;
   box-shadow: 0 0.1em 0.5em 0 #000;
-  overflow-x: hidden; }
-  .product .product-img {
-    max-width: 60vw;
-    margin: auto;
-    margin-top: 33%;
-    max-height: 25vh;
-    overflow: hidden;
-    border-radius: 1em; }
-    .product .product-img img {
-      min-width: 100%;
-      width: 75%; }
-  .product h2 {
-    font-size: 6em;
-    position: absolute;
-    top: 1.5%;
-    left: 2.5%; }
-  .product .quantity {
-    font-size: 4em;
-    text-align: center;
-    background-color: #fff;
-    border-radius: 0.25em;
-    transform: translateY(-50%);
-    max-width: fit-content;
-    margin: auto;
-    padding: 0.1em 0.3em;
-    box-shadow: 0 1px 0.25em 0 #eee;
-    font-weight: 600; }
-  .product .desc {
-    font-size: 3.5em;
-    margin: auto;
-    margin-top: 10%;
-    max-width: 75%;
-    text-align: center; }
-  .product .list-title {
-    font-size: 3.5em; }
-  .product .list {
-    display: flex;
-    flex-direction: column;
-    margin: 0 2%; }
-    .product .list .ingredients {
-      font-size: 3em;
-      font-weight: 600; }
-    .product .list .includes {
-      font-size: 3em;
-      font-weight: 600; }
-  .product .price {
-    font-size: 4em;
-    position: absolute;
-    top: 2%;
-    right: 5%;
-    font-weight: 600; }
-  .product button {
-    font-size: 2em;
-    padding: 1em 2em;
-    border-radius: 0.5em;
-    box-shadow: 0 0.25em 0.5em #4f4f4f;
-    background-color: #ffb6c1;
-    margin-left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    bottom: 5%; }
+  overflow-x: hidden;
+}
+.product .product-img {
+  max-width: 60vw;
+  margin: auto;
+  margin-top: 33%;
+  max-height: 25vh;
+  overflow: hidden;
+  border-radius: 1em;
+}
+.product .product-img img {
+  min-width: 100%;
+  width: 75%;
+}
+.product h2 {
+  font-size: 6em;
+  position: absolute;
+  top: 1.5%;
+  left: 2.5%;
+}
+.product .quantity {
+  font-size: 4em;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.25em;
+  transform: translateY(-50%);
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin: auto;
+  padding: 0.1em 0.3em;
+  box-shadow: 0 1px 0.25em 0 #eee;
+  font-weight: 600;
+}
+.product .desc {
+  font-size: 3.5em;
+  margin: auto;
+  margin-top: 10%;
+  max-width: 75%;
+  text-align: center;
+}
+.product .list-title {
+  font-size: 3.5em;
+}
+.product .list {
+  display: flex;
+  flex-direction: column;
+  margin: 0 2%;
+}
+.product .list .ingredients {
+  font-size: 3em;
+  font-weight: 600;
+}
+.product .list .includes {
+  font-size: 3em;
+  font-weight: 600;
+}
+.product .price {
+  font-size: 4em;
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  font-weight: 600;
+}
+.product button {
+  font-size: 2em;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  box-shadow: 0 0.25em 0.5em #4f4f4f;
+  background-color: #ffb6c1;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  bottom: 5%;
+}
+.product button strong {
+  pointer-events: none;
+}/*# sourceMappingURL=filteredProducts.css.map */

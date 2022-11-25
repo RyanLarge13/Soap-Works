@@ -1,6 +1,7 @@
 h1 {
   text-align: center;
-  font-size: 6em; }
+  font-size: 6em;
+}
 
 form {
   position: relative;
@@ -11,25 +12,28 @@ form {
   justify-content: flex-start;
   align-items: center;
   width: 75vw;
-  height: 45vh; }
-  form input {
-    width: 100%;
-    font-size: 2em;
-    margin: 7% 0;
-    border-radius: 0.25em;
-    padding: 0.5em 1em;
-    outline: none;
-    border: none;
-    box-shadow: 0 0.1em 0.25em 0 #999999; }
-  form button {
-    margin-top: 15%;
-    padding: 0.5em 2em;
-    border-radius: 0.5em;
-    font-size: 2.5em;
-    border: none;
-    outline: none;
-    box-shadow: 0 0.1em 0.25em 0 #999999;
-    background-color: #ffb6c1; }
+  height: 45vh;
+}
+form input {
+  width: 100%;
+  font-size: 2em;
+  margin: 7% 0;
+  border-radius: 0.25em;
+  padding: 0.5em 1em;
+  outline: none;
+  border: none;
+  box-shadow: 0 0.1em 0.25em 0 #999999;
+}
+form button {
+  margin-top: 15%;
+  padding: 0.5em 2em;
+  border-radius: 0.5em;
+  font-size: 2.5em;
+  border: none;
+  outline: none;
+  box-shadow: 0 0.1em 0.25em 0 #999999;
+  background-color: #ffb6c1;
+}
 
 .chat-bot {
   width: 70px;
@@ -45,19 +49,47 @@ form {
   bottom: 2%;
   right: 2%;
   transition: 250ms ease-out;
-  z-index: 998; }
-  .chat-bot i {
-    font-weight: 600; }
+  z-index: 998;
+}
+.chat-bot i {
+  font-weight: 600;
+}
 
 .chat-bot.open {
   width: 50vw;
   height: 50vh;
   background-color: #fff;
-  border-radius: 1em; }
-  .chat-bot.open h2 {
+  border-radius: 1em;
+}
+.chat-bot.open h2 {
+  font-size: 5em;
+  display: block;
+  opacity: 1;
+  text-align: center;
+}
+.chat-bot.open i {
+  display: none;
+}
+
+@media (min-width: 1600px) and (min-height: 800px) {
+  body {
+    padding-top: 10vh;
+  }
+  h1 {
     font-size: 5em;
-    display: block;
-    opacity: 1;
-    text-align: center; }
-  .chat-bot.open i {
-    display: none; }
+  }
+  form {
+    margin-top: 5%;
+    height: 45vh;
+    width: 50vw;
+  }
+  form input {
+    font-size: 1.5em;
+    margin: 1em 0;
+    padding: 0.25em 0.75em;
+  }
+  form button {
+    margin-top: 10%;
+    font-size: 1em;
+  }
+}/*# sourceMappingURL=contact.css.map */

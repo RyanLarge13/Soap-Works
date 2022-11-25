@@ -40,4 +40,20 @@ section {
   margin: 1em 4em;
   text-align: center;
   font-weight: 600;
+}
+
+@media (min-width: 1600px) and (min-height: 800px) {
+  img {
+    min-height: 50vh;
+    max-height: 50vh;
+  }
+  h1 {
+    font-size: 3em;
+  }
+  h2 {
+    font-size: 2.5em;
+  }
+  section {
+    margin-top: 25%;
+  }
 }/*# sourceMappingURL=about.css.map */

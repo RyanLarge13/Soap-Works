@@ -43,4 +43,25 @@
   bottom: 2%;
   z-index: 10;
   text-align: center;
+}
+
+@media (min-width: 1600px) and (min-height: 800px) {
+  .main-footer {
+    margin-top: 2.5%;
+  }
+  .main-footer .footer-links {
+    font-size: 1em;
+  }
+  .main-footer .footer-links ul {
+    margin: 0 3em;
+  }
+  .main-footer .footer-links ul li {
+    margin: 0.5em 0;
+  }
+  .main-footer .footer-links ul li a {
+    padding: 1em;
+  }
+  .main-footer p {
+    font-size: 0.75em;
+  }
 }/*# sourceMappingURL=Footer.css.map */

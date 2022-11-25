@@ -32,3 +32,20 @@
     text-align: center;
     margin-top: 1em;
 }
+
+@media (min-width: 1600px) and (min-height: 800px) {
+    .main-contact {
+    width: 60%;
+    margin: auto;
+    margin-top: 10%;
+    input {
+        font-size: 1.75em;
+        margin-bottom: 0.75em;
+        padding: 0.2em 0.5em;
+    }
+    button {
+        border-radius: 0.25em;
+        cursor: pointer;
+    }
+}
+}

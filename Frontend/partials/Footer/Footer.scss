@@ -44,3 +44,24 @@
 		text-align: center;
 	}
 }
+
+@media (min-width: 1600px) and (min-height: 800px) {
+	.main-footer {
+	margin-top: 2.5%;
+	.footer-links {
+		font-size: 1em;
+		ul {
+			margin: 0 3em;
+			li {
+				margin: 0.5em 0;
+				a {
+					padding: 1em;
+				}
+			}
+		}
+	}
+	p {
+		font-size: 0.75em;
+	}
+}
+}
