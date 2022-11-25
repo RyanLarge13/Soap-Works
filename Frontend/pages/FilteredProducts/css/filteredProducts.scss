@@ -39,28 +39,45 @@
 	overflow-x: hidden;
 
 	.product-img {
-		max-width: 50vw;
+		max-width: 60vw;
+		margin: auto;
+		margin-top: 33%;
+		max-height: 25vh;
+		overflow: hidden;
+		border-radius: 1em;
 
 		img {
 			min-width: 100%;
 			width: 75%;
-			height: 33%;
-			border-radius: 1em;
+			//max-height: 25%;
+			//border-radius: 1em;
 		}
 	}
 
 	h2 {
 		font-size: 6em;
-		margin-left: 2%;
+		position: absolute;
+		top: 1.5%;
+		left: 2.5%;
 	}
 	.quantity {
 		font-size: 4em;
-		margin: 0 2%;
+		text-align: center;
+		background-color: #fff;
+		border-radius: 0.25em;
+		transform: translateY(-50%);
+		max-width: fit-content;
+		margin: auto;
+		padding: 0.1em 0.3em;
+		box-shadow: 0 1px 0.25em 0 #eee;
+		font-weight: 600;
 	}
 	.desc {
 		font-size: 3.5em;
-		margin: 5% 2%;
+		margin: auto;
+		margin-top: 10%;
 		max-width: 75%;
+		text-align: center;
 	}
 	.list-title {
 		font-size: 3.5em;

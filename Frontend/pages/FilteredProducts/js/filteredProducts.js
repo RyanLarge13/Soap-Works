@@ -15,5 +15,5 @@ const placeImages = () => {
     img.style.top = `${100 * index}vh`;
   });
 };
-setHeading();
+//setHeading();
 placeImages();
