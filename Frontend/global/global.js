@@ -4,7 +4,6 @@ import { date } from "../partials/Footer/Footer.js";
 import { showCart, getItems, createElement } from "../partials/Cart/Cart.js";
 
 const buyBtns = document.querySelectorAll(".buy-btn");
-
 const setStorage = async (e) => {
   const parent = e.target.parentElement;
   const ifOnMain = document.querySelector('.blowup-view');

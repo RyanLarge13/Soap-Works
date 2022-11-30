@@ -1,4 +1,4 @@
-const setHeading = async () => {
+const setHeading = () => {
   const heading = document.querySelector(".filtered-title");
   const url = window.location.href;
   const index = url.lastIndexOf("/");
@@ -15,5 +15,6 @@ const placeImages = () => {
     img.style.top = `${100 * index}vh`;
   });
 };
+
 //setHeading();
 placeImages();

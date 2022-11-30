@@ -23,6 +23,38 @@ setTimeout(() => {
   }, 5000);
 }, 500);
 
+const styleText = () => {
+  const heading = document.querySelector(".heading");
+  const intro = document.querySelector(".intro");
+  heading.style.transform = "translateX(0)";
+  intro.style.transform = "translateX(0)";
+  setTimeout(() => {
+    heading.style.opacity = "1";
+    intro.style.opacity = "1";
+  }, 500);
+  addListeners();
+  window.removeEventListener("scroll", styleText)
+};
+
+const addListeners = () => {
+  //window.addHeadingListeners("scroll", styleHeadings);
+  window.addEventListener("scroll", styleParagraphs);
+};
+
+const styleParagraphs = () => {
+  const allParagraphs = document.querySelectorAll(".intro");
+  allParagraphs.forEach((text) => {
+    const pos = text.getBoundingClientRect().top;
+    if (pos < window.innerHeight) {
+      text.classList.add("inview");
+    }
+  });
+  const check = allParagraphs.forEach((item) =>
+    item.classList.contains("inview")
+  );
+  if (check) window.removeEventListener("scroll", styleParagraphs);
+};
+
 const styleSoaps = () => {
   soapItems.forEach((item) => {
     const pos = item.getBoundingClientRect().top;
@@ -55,5 +87,6 @@ const showSubs = () => {
   });
 };
 
+document.addEventListener("DOMContentLoaded", styleText);
 window.addEventListener("scroll", showKits);
 window.addEventListener("scroll", showSubs);

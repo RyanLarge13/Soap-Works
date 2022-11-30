@@ -92,6 +92,11 @@
 			box-shadow: 0 0.15em 0.5em 0 #191919;
 			background-color: #ffb6c1;
 			bottom: 5%;
+			transition: 250ms ease-in-out;
+			&:focus {
+				background-color: #fff;
+				scale: 1.01;
+			}
 			strong {
 				pointer-events: none;
 			}
@@ -115,39 +120,39 @@
 
 @media (min-width: 1600px) and (min-height: 800px) {
 	.blowup-view {
-	.blowup-soap {
-		min-width: 90%;
-		max-width: 30px;
-		min-height: 85%;
+		.blowup-soap {
+			min-width: 90%;
+			max-width: 30px;
+			min-height: 85%;
 
-		h2 {
-			left: 1%;
-			font-size: 2em;
-		}
-		h3 {
-			font-size: 1.75em;
-			text-align: center;
-			max-width: 50%;
-		}
-		h4 {
-			font-size: 2em;
-		}
-		ul {
-			padding: 0 0.1em 0.25em 0.1em;
-			max-height: 1em;
-			font-size: 1.75em;
-			cursor: pointer;
-		}
+			h2 {
+				left: 1%;
+				font-size: 2em;
+			}
+			h3 {
+				font-size: 1.75em;
+				text-align: center;
+				max-width: 50%;
+			}
+			h4 {
+				font-size: 2em;
+			}
+			ul {
+				padding: 0 0.1em 0.25em 0.1em;
+				max-height: 1em;
+				font-size: 1.75em;
+				cursor: pointer;
+			}
 
-		button {
-			font-size: 1.25em;
-			cursor: pointer;
-		}
+			button {
+				font-size: 1.25em;
+				cursor: pointer;
+			}
 
-		.blowupsoap-img {
-			min-height: 200%;
-		}
+			.blowupsoap-img {
+				min-height: 200%;
+			}
 
+		}
 	}
-}
 }
