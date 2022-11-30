@@ -79,8 +79,9 @@ form button {
     font-size: 5em;
   }
   form {
-    margin-top: 5%;
-    height: 45vh;
+    margin-top: 0;
+    margin: 4% auto;
+    height: 35vh;
     width: 50vw;
   }
   form input {
@@ -89,7 +90,7 @@ form button {
     padding: 0.25em 0.75em;
   }
   form button {
-    margin-top: 10%;
+    margin-top: 7.5%;
     font-size: 1em;
   }
 }/*# sourceMappingURL=contact.css.map */

@@ -1,12 +1,17 @@
 export const toggleMenu = (e) => {
   e.preventDefault();
-  e.stopPropagation()
+  e.stopPropagation();
   const spans = document.querySelectorAll(".menu-toggle span");
   const nav = document.querySelector("nav");
   nav.classList.toggle("open");
   spans.forEach((span) => {
-  	span.classList.toggle('x');
+    span.classList.toggle("x");
   });
 };
 
 document.querySelector(".menu-toggle").addEventListener("click", toggleMenu);
+document.querySelectorAll("nav a").forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.stopImmediatePropagation();
+  });
+});

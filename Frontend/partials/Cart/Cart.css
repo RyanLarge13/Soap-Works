@@ -154,6 +154,7 @@
   }
   .cart-container .cart-item .quantity-container button {
     font-size: 1.5em;
+    cursor: pointer;
   }
   .cart-container .cart-item .quantity-container .cart-item-quantity {
     font-size: 1em;
@@ -163,5 +164,6 @@
   .cart-container .cart-item .danger {
     padding: 0.25em 1em;
     font-size: 1em;
+    cursor: pointer;
   }
 }/*# sourceMappingURL=Cart.css.map */

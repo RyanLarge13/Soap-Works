@@ -97,6 +97,9 @@ h2 {
     background-color: rgba(0, 0, 0, 0.7);
   }
 }
+.grid-item.inview {
+  opacity: 1;
+}
 .height-0 {
   height: 450px;
 }
@@ -126,6 +129,7 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
   gap: 1.5em;
   .kit-item {
+    opacity: 0;
     position: relative;
     border-radius: 1em;
     box-shadow: $shadow-sm;
@@ -133,6 +137,7 @@ h2 {
     min-width: 100%;
     overflow-x: hidden;
     cursor: pointer;
+    transform: translateX(-50vw);
     transition: $trans-fast;
     &:hover {
       scale: 1.025;
@@ -167,6 +172,11 @@ h2 {
       }
     }
   }
+  .kit-item.inview {
+    opacity: 1;
+    transition: $trans-slo;
+    transform: translateX(0);
+  }
 }
 
 .subs {
@@ -183,6 +193,8 @@ h2 {
     min-height: 1750px;
     border-radius: 1em;
     box-shadow: 0 0.25em 0.5em 0 #4f4f4f;
+    opacity: 0;
+    transform: translateY(5vh);
     img {
       border-radius: 1em;
     }
@@ -228,6 +240,11 @@ h2 {
     &:last-child {
       margin-bottom: 0;
     }
+  }
+  .sub.inview {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 1s ease-in-out;
   }
 }
 

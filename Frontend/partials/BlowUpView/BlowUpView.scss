@@ -115,7 +115,6 @@
 
 @media (min-width: 1600px) and (min-height: 800px) {
 	.blowup-view {
-
 	.blowup-soap {
 		min-width: 90%;
 		max-width: 30px;
@@ -134,7 +133,7 @@
 			font-size: 2em;
 		}
 		ul {
-			padding: 0;
+			padding: 0 0.1em 0.25em 0.1em;
 			max-height: 1em;
 			font-size: 1.75em;
 			cursor: pointer;

@@ -129,7 +129,7 @@
     font-size: 2em;
   }
   .blowup-view .blowup-soap ul {
-    padding: 0;
+    padding: 0 0.1em 0.25em 0.1em;
     max-height: 1em;
     font-size: 1.75em;
     cursor: pointer;

@@ -5,7 +5,6 @@
   justify-content: center;
   align-items: center;
   height: 25vh;
-  z-index: -1;
 }
 .main-footer .footer-links {
   display: flex;

@@ -56,5 +56,6 @@
   }
   .men-women-grid .men-women-item button {
     font-size: 1em;
+    cursor: pointer;
   }
 }/*# sourceMappingURL=menwomen.css.map */
