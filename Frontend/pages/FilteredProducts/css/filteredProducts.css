@@ -72,8 +72,12 @@
       font-size: 3em;
       font-weight: 600; }
     .product .list .includes {
-      font-size: 3em;
-      font-weight: 600; }
+      font-size: 1.55em;
+      font-weight: 600;
+      text-align: center;
+      margin: 0 auto; }
+      .product .list .includes:first-child {
+        margin-top: 2em; }
   .product .price {
     font-size: 4em;
     position: absolute;
@@ -96,6 +100,9 @@
       scale: 1.01; }
     .product button strong {
       pointer-events: none; }
+
+.footer-holder {
+  display: none; }
 
 @media (min-width: 1600px) and (min-height: 800px) {
   .img-container {

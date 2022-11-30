@@ -83,8 +83,13 @@
 			font-weight: 600;
 		}
 		.includes {
-			font-size: 3em;
+			font-size: 1.55em;
 			font-weight: 600;
+			text-align: center;
+			margin: 0 auto;
+			&:first-child {
+				margin-top: 2em;
+			}
 		}
 	}
 	.price {
@@ -114,6 +119,9 @@
 			pointer-events: none;
 		}
 	}
+}
+.footer-holder {
+	display: none;
 }
 
 @media (min-width: 1600px) and (min-height: 800px) {
