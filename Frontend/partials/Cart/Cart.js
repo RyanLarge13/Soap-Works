@@ -116,13 +116,14 @@ const fetchStripe = async (items) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(items),
-  }).then((res) => res.json()).then((data) => {
-    window.location.href = data.url;
+  }).then((res) => res.json()).then(async (data) => {
+    const stripeUrl = await data.url;
+    window.location.href = stripeUrl;
   }).catch((err) => {
     console.log(err);
   });
 
-  if (response.statusCode === 500) return;
+  // if (response.statusCode === 500) return;
 
   // const data = await response.json();
 
