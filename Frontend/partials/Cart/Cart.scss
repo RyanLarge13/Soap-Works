@@ -24,15 +24,18 @@
 		font-size: 2em;
 		font-weight: 600;
 		transition: 250ms ease-in-out;
-		&:focus {
+
+		&:hover {
 			background-color: #fff;
 			scale: 1.01;
 		}
 	}
 }
+
 .cart.show {
 	transform: translateX(-50%) translateY(0);
 }
+
 .cart-container {
 	padding-top: 15%;
 	width: 100%;
@@ -76,6 +79,7 @@
 			height: 100%;
 			overflow: hidden;
 			border-radius: 1em;
+
 			img {
 				min-width: 100%;
 			}
@@ -89,6 +93,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
 			button {
 				padding: 0.1em 1em;
 				border: none;
@@ -98,11 +103,13 @@
 				background-color: #ffb6c1;
 				font-weight: 700;
 				transition: 250ms ease-in-out;
-				&:focus {
+
+				&:hover {
 					background-color: #fff;
 					scale: 1.01;
 				}
 			}
+
 			.cart-item-quantity {
 				font-size: 2em;
 				font-weight: 600;
@@ -147,9 +154,11 @@
 			cursor: pointer;
 		}
 	}
+
 	.cart.show {
 		transform: translateX(0);
 	}
+
 	.cart-container {
 
 		.no-items-in-cart {
@@ -177,6 +186,7 @@
 					font-size: 1.5em;
 					cursor: pointer;
 				}
+
 				.cart-item-quantity {
 					font-size: 1em;
 					width: 30px;
@@ -188,6 +198,12 @@
 				padding: 0.25em 1em;
 				font-size: 1em;
 				cursor: pointer;
+				transition: 250ms ease-in-out;
+
+				&:hover {
+					background-color: #fff;
+					scale: 1.01;
+				}
 			}
 		}
 	}

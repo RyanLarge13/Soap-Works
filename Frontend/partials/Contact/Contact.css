@@ -48,5 +48,10 @@
   .main-contact button {
     border-radius: 0.25em;
     cursor: pointer;
+    transition: 250ms ease-in-out;
+  }
+  .main-contact button:hover {
+    background-color: #fff;
+    scale: 1.01;
   }
 }/*# sourceMappingURL=Contact.css.map */

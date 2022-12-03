@@ -44,17 +44,20 @@
 			background-color: #ffb6c1;
 			transition: 250ms ease-in-out;
 			transform: translateX(-10%) translateY(-20%);
-			&:focus {
+
+			&:hover {
 				background-color: #fff;
 				scale: 1.01;
 			}
 		}
 	}
+
 	.men-women-item.inview {
 		opacity: 1;
 		transform: translateY(0);
 	}
 }
+
 @media (min-width: 1600px) and (min-height: 800px) {
 	.men-women-grid {
 		grid-template-columns: repeat(4, 1fr);
@@ -65,9 +68,11 @@
 		.men-women-item {
 			height: 350px;
 			width: 90%;
+
 			h2 {
 				padding: 0.5em;
 			}
+
 			button {
 				font-size: 1em;
 				cursor: pointer;

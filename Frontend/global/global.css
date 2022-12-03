@@ -2,9 +2,9 @@
 @import "../partials/Nav/Nav.css";
 @import "../partials/BlowUpView/BlowUpView.css";
 @import "../partials/Footer/Footer.css";
-@import '../partials/Contact/Contact.css';
+@import "../partials/Contact/Contact.css";
 @import "../partials/Cart/Cart.css";
-@import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Shalimar&display=swap");
 
 *,
 ::after,
@@ -12,20 +12,21 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Shalimar", cursive; 
+  font-family: "Shalimar", cursive;
 }
 
 li {
-  list-style-type: none; }
+  list-style-type: none;
+}
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 body {
   overflow-x: hidden;
-  padding-top: 25%; }
-
-
+  padding-top: 25%;
+}
 .flex {
   display: flex;
 }

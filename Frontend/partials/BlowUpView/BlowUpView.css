@@ -13,113 +13,137 @@
   overflow-x: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: 250ms ease-out; }
-  .blowup-view .blowup-soap {
-    position: relative;
-    min-width: 90%;
-    max-width: 30px;
-    min-height: 75%;
-    border-radius: 1em;
-    margin: 0 5%;
-    box-shadow: 0 0.1em 0.5em 0 #000;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: 500ms ease-out; }
-    .blowup-view .blowup-soap h2 {
-      position: absolute;
-      top: 5%;
-      left: 5%;
-      font-size: 5em;
-      width: fit-content;
-      padding: 0.1em 0.5em;
-      border-radius: 0.25em;
-      box-shadow: 0 0.1em 0.25em 0 #393939;
-      background-color: #fff; }
-    .blowup-view .blowup-soap h3 {
-      background-color: #fff;
-      padding: 1em;
-      max-width: 75%;
-      border-radius: 0.5em;
-      font-size: 3em;
-      box-shadow: 0 0.15em 0.5em 0 #191919; }
-    .blowup-view .blowup-soap p {
-      position: absolute;
-      bottom: 0;
-      left: 0; }
-    .blowup-view .blowup-soap h4 {
-      font-size: 3em; }
-    .blowup-view .blowup-soap ul {
-      position: absolute;
-      top: 5%;
-      right: 5%;
-      font-size: 3em;
-      font-weight: 600;
-      background-color: #fff;
-      max-height: 75px;
-      padding: 0.15em;
-      border-radius: 0.25em;
-      box-shadow: 0 0.1em 0.25em 0 #393939; }
-      .blowup-view .blowup-soap ul li {
-        margin: 1em 0;
-        background-color: #fff;
-        border-radius: 0.25em;
-        padding: 0.2em 0.5em;
-        opacity: 0;
-        transition: 250ms ease-out;
-        font-size: 0.75em; }
-      .blowup-view .blowup-soap ul li.opacity {
-        opacity: 1; }
-    .blowup-view .blowup-soap button {
-      position: absolute;
-      padding: 1em 2em;
-      border-radius: 0.5em;
-      font-size: 2.5em;
-      border: none;
-      outline: none;
-      box-shadow: 0 0.15em 0.5em 0 #191919;
-      background-color: #ffb6c1;
-      bottom: 5%;
-      transition: 250ms ease-in-out; }
-      .blowup-view .blowup-soap button:focus {
-        background-color: #fff;
-        scale: 1.01; }
-      .blowup-view .blowup-soap button strong {
-        pointer-events: none; }
-    .blowup-view .blowup-soap .blowupsoap-img {
-      position: absolute;
-      min-width: 100%;
-      height: 100%;
-      z-index: -1;
-      pointer-events: none; }
+  transition: 250ms ease-out;
+}
+.blowup-view .blowup-soap {
+  position: relative;
+  min-width: 90%;
+  max-width: 30px;
+  min-height: 75%;
+  border-radius: 1em;
+  margin: 0 5%;
+  box-shadow: 0 0.1em 0.5em 0 #000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 500ms ease-out;
+}
+.blowup-view .blowup-soap h2 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  font-size: 5em;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.1em 0.5em;
+  border-radius: 0.25em;
+  box-shadow: 0 0.1em 0.25em 0 #393939;
+  background-color: #fff;
+}
+.blowup-view .blowup-soap h3 {
+  background-color: #fff;
+  padding: 1em;
+  max-width: 75%;
+  border-radius: 0.5em;
+  font-size: 3em;
+  box-shadow: 0 0.15em 0.5em 0 #191919;
+}
+.blowup-view .blowup-soap p {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.blowup-view .blowup-soap h4 {
+  font-size: 3em;
+}
+.blowup-view .blowup-soap ul {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  font-size: 3em;
+  font-weight: 600;
+  background-color: #fff;
+  max-height: 75px;
+  padding: 0.15em;
+  border-radius: 0.25em;
+  box-shadow: 0 0.1em 0.25em 0 #393939;
+}
+.blowup-view .blowup-soap ul li {
+  margin: 1em 0;
+  background-color: #fff;
+  border-radius: 0.25em;
+  padding: 0.2em 0.5em;
+  opacity: 0;
+  transition: 250ms ease-out;
+  font-size: 0.75em;
+}
+.blowup-view .blowup-soap ul li.opacity {
+  opacity: 1;
+}
+.blowup-view .blowup-soap button {
+  position: absolute;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  font-size: 2.5em;
+  border: none;
+  outline: none;
+  box-shadow: 0 0.15em 0.5em 0 #191919;
+  background-color: #ffb6c1;
+  bottom: 5%;
+  transition: 250ms ease-in-out;
+}
+.blowup-view .blowup-soap button:hover {
+  background-color: #fff;
+  scale: 1.01;
+}
+.blowup-view .blowup-soap button strong {
+  pointer-events: none;
+}
+.blowup-view .blowup-soap .blowupsoap-img {
+  position: absolute;
+  min-width: 100%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+}
 
 .blowup-view.show {
   pointer-events: all;
-  opacity: 1; }
+  opacity: 1;
+}
 
 @media (min-width: 1600px) and (min-height: 800px) {
   .blowup-view .blowup-soap {
     min-width: 90%;
     max-width: 30px;
-    min-height: 85%; }
-    .blowup-view .blowup-soap h2 {
-      left: 1%;
-      font-size: 2em; }
-    .blowup-view .blowup-soap h3 {
-      font-size: 1.75em;
-      text-align: center;
-      max-width: 50%; }
-    .blowup-view .blowup-soap h4 {
-      font-size: 2em; }
-    .blowup-view .blowup-soap ul {
-      padding: 0 0.1em 0.25em 0.1em;
-      max-height: 1em;
-      font-size: 1.75em;
-      cursor: pointer; }
-    .blowup-view .blowup-soap button {
-      font-size: 1.25em;
-      cursor: pointer; }
-    .blowup-view .blowup-soap .blowupsoap-img {
-      min-height: 200%; } }
+    min-height: 85%;
+  }
+  .blowup-view .blowup-soap h2 {
+    left: 1%;
+    font-size: 2em;
+  }
+  .blowup-view .blowup-soap h3 {
+    font-size: 1.75em;
+    text-align: center;
+    max-width: 50%;
+  }
+  .blowup-view .blowup-soap h4 {
+    font-size: 2em;
+  }
+  .blowup-view .blowup-soap ul {
+    padding: 0 0.1em 0.25em 0.1em;
+    max-height: 1em;
+    font-size: 1.75em;
+    cursor: pointer;
+  }
+  .blowup-view .blowup-soap button {
+    font-size: 1.25em;
+    cursor: pointer;
+  }
+  .blowup-view .blowup-soap .blowupsoap-img {
+    min-height: 200%;
+  }
+}/*# sourceMappingURL=BlowUpView.css.map */

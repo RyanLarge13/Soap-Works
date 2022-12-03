@@ -14,26 +14,33 @@ nav {
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh; }
-  nav ul {
-    text-align: right;
-    transform: translateX(90%); }
-    nav ul li {
-      margin: 8em 0; }
-      nav ul li a {
-        padding: 1em;
-        color: #000;
-        font-size: 3em; }
-        nav ul li a:focus {
-          color: #ffb6c1;
-          -webkit-tap-highlight-color: transparent;
-          transition: 250ms ease-in-out; }
-  nav p {
-    margin-top: 4em; }
+  height: 100vh;
+}
+nav ul {
+  text-align: right;
+  transform: translateX(90%);
+}
+nav ul li {
+  margin: 8em 0;
+}
+nav ul li a {
+  padding: 1em;
+  color: #000;
+  font-size: 3em;
+}
+nav ul li a:focus {
+  color: #ffb6c1;
+  -webkit-tap-highlight-color: transparent;
+  transition: 250ms ease-in-out;
+}
+nav p {
+  margin-top: 4em;
+}
 
 nav.open {
   opacity: 1;
-  pointer-events: all; }
+  pointer-events: all;
+}
 
 @media (min-width: 1600px) and (min-height: 800px) {
   nav {
@@ -46,18 +53,31 @@ nav.open {
     z-index: 999;
     position: unset;
     justify-content: center;
-    align-items: flex-end; }
-    nav ul {
-      text-align: left;
-      transform: translateX(0);
-      display: flex;
-      flex-direction: row; }
-      nav ul li {
-        margin: 1em 1em;
-        margin-top: 2em; }
-        nav ul li a {
-          padding: 1em 1em;
-          color: #000;
-          font-size: 1em; }
-    nav p {
-      display: none; } }
+    align-items: flex-end;
+  }
+  nav ul {
+    text-align: left;
+    transform: translateX(0);
+    display: flex;
+    flex-direction: row;
+  }
+  nav ul li {
+    margin: 1em 1em;
+    margin-top: 2em;
+  }
+  nav ul li a {
+    padding: 0.25em 1em;
+    color: #000;
+    font-size: 1em;
+    transition: 250ms ease-in-out;
+    border-radius: 1em;
+  }
+  nav ul li a:hover {
+    color: #ffb6c1;
+    background-color: #000;
+    font-weight: 600;
+  }
+  nav p {
+    display: none;
+  }
+}/*# sourceMappingURL=Nav.css.map */

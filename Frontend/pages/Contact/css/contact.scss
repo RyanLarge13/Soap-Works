@@ -34,6 +34,11 @@ form {
     outline: none;
     box-shadow: 0 0.1em 0.25em 0 #999999;
     background-color: #ffb6c1;
+    transition: 250ms ease-in-out;
+    &:hover {
+        background-color: #fff;
+        scale: 1.01;
+      }
   }
 }
 
