@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="/pages/FilteredProducts/css/filteredProducts.css" />
 <script type="module" src="/global/global.js"></script>
 <script defer src="pages/FilteredProducts/js/filteredProducts.js"></script>
+<script src="https://kit.fontawesome.com/a673862905.js" crossorigin="anonymous"></script>
 <title>Soap Works </title>
 </head>
 
@@ -29,6 +30,20 @@
 <div class="product-img">
 <img src="<%=product.ImageUrl%>" alt="product image">
 </div>
+<div class="option-btns">
+<div>
+<button><i class="fa-solid fa-up-right-and-down-left-from-center"></i></button>
+</div>
+<div>
+<button><i class="fa-solid fa-images"></i></button>
+</div>
+<div>
+<button><i class="fa-solid fa-list"></i></button>
+</div>
+<div>
+<button><i class="fa-solid fa-circle-info"></i></button>
+</div>
+</div>
 <h2>
 <%=product.Title%>
 </h2>
@@ -38,30 +53,13 @@
 <p class="desc">
 <%=product.Description%>
 </p>
-<ul class="list">
-<%if (product.Ingredients) {
-%>
-<h3 class="list-title">Ingredients</h3>
-<%product.Ingredients.forEach((ing)=> {
-%>
-<li class="ingredients">
-<%=ing%>
-</li>
-<%})%>
-<%} else {%>
-<%product.Included?.forEach((include)=> { %>
-<li class="includes">
-- <%=include%>
-</li>
-<%})%>
-<%}%>
-</ul>
 <p class="price">
 $<%=product.Price%>
 </p>
 <button class="buy-btn">Add <strong>
 <%=product.Title%>
 </strong> To Cart</button>
+<i class="fa-solid fa-share-nodes share"></i>
 </div>
 <%})%>
 </section>

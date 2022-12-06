@@ -30,17 +30,17 @@
 	border-radius: 1em;
 	box-shadow: 0 0.1em 0.5em 0 #000;
 	overflow-x: hidden;
-
 	.product-img {
-		max-width: 60vw;
+		width: 600px;
+		height: 500px;
 		margin: auto;
 		margin-top: 33%;
-		max-height: 25vh;
 		overflow: hidden;
 		border-radius: 1em;
 
 		img {
 			min-width: 100%;
+			min-height: 100%;
 			width: 75%;
 		}
 	}
@@ -66,31 +66,9 @@
 	.desc {
 		font-size: 3.5em;
 		margin: auto;
-		margin-top: 10%;
+		margin-top: 15%;
 		max-width: 75%;
 		text-align: center;
-	}
-	.list-title {
-		font-size: 3.5em;
-	}
-	.list {
-		display: flex;
-		flex-direction: column;
-		margin: 0 2%;
-
-		.ingredients {
-			font-size: 3em;
-			font-weight: 600;
-		}
-		.includes {
-			font-size: 1.55em;
-			font-weight: 600;
-			text-align: center;
-			margin: 0 auto;
-			&:first-child {
-				margin-top: 2em;
-			}
-		}
 	}
 	.price {
 		font-size: 4em;
@@ -99,7 +77,6 @@
 		right: 5%;
 		font-weight: 600;
 	}
-
 	button {
 		font-size: 2em;
 		padding: 1em 2em;
@@ -117,6 +94,50 @@
 		}
 		strong {
 			pointer-events: none;
+		}
+	}
+	.share {
+		font-size: 4em;
+		position: absolute;
+		bottom: 2%;
+		right: 4%;
+	}
+}
+.option-btns {
+	position: absolute;
+	top: 42%;
+	z-index: 2;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 50%;
+	height: 100px;
+	box-shadow: 0 0.1em 1em 0 #aaa;
+	border-radius: 0.25em 0.25em 1em 1em;
+	background-color: #fff;
+	display: grid;
+	grid-template-columns: repeat(4,1fr);
+	overflow: hidden;
+	div {
+		box-shadow: 0 0.1em 0.25em 0 #aaa;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		button {
+			all: unset;
+			transition: 250ms ease-in-out;
+			&:hover {
+				background-color: #aaa;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+			}
+			i {
+				font-size: 1.5em;
+				background-color: transparent;
+			}
 		}
 	}
 }
