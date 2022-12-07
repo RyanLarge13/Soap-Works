@@ -16,5 +16,25 @@ const placeImages = () => {
   });
 };
 
+const sharePage = () => {
+  navigator
+    .share({
+      title: "Soap Works!",
+      url: window.location.href,
+    })
+    .then(() => console.log("Success"))
+    .catch((err) => console.log(err));
+};
+
+const initiateView = (e) => {
+	
+};
+
 //setHeading();
 placeImages();
+document
+  .querySelectorAll(".share")
+  .forEach((btn) => btn.addEventListener("click", sharePage));
+document
+  .querySelectorAll(".option-btns")
+  .addEventListener("click", initiateView);
