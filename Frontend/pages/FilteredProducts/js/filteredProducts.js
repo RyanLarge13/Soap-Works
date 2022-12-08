@@ -27,8 +27,10 @@ const sharePage = () => {
 };
 
 const initiateView = (e) => {
-	
+  if (e.target.firstElementChild.id === "expand") expand();
 };
+
+const expand = () => {};
 
 //setHeading();
 placeImages();
