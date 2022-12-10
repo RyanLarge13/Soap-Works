@@ -37,12 +37,16 @@
 		margin-top: 33%;
 		overflow: hidden;
 		border-radius: 1em;
+		transition: 500ms ease-in-out;
 
 		img {
 			min-width: 100%;
 			min-height: 100%;
 			width: 75%;
 		}
+	}
+	.product-img.expand {
+		scale: 1.5;
 	}
 
 	h2 {
@@ -137,6 +141,7 @@
 			i {
 				font-size: 1.5em;
 				background-color: transparent;
+				pointer-events: none;
 			}
 		}
 	}
