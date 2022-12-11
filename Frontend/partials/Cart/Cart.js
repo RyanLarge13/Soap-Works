@@ -163,14 +163,30 @@ const initialTotalCost = (price, quantity) => {
 };
 
 const showCartTotal = () => {
-  const itemTotal = (document.querySelector(".item-total strong").innerHTML =
-    amount);
+  document.querySelector(".item-total strong").innerHTML = amount;
 };
 
 const showTotalPrice = () => {
-  document.querySelector(".total-price strong").innerHTML = totalCost;
+  let totalPrice = document.querySelector(".total-price strong");
+
+  const setPrice = () => {
+    let price = Number(totalPrice.innerHTML);
+    if (price <= totalCost) {
+      if (price === totalCost) return clearInterval(interval);
+      totalPrice.innerHTML = price + 1;
+    } else {
+      if (price === totalCost) return clearInterval(interval);
+      totalPrice.innerHTML = price - 1;
+    }
+  };
+
+  let interval = setInterval(() => {
+    setPrice();
+  }, 10);
 };
 
+showCartTotal();
+showTotalPrice();
 document.querySelector("header").addEventListener("click", showCart);
 document.addEventListener("DOMContentLoaded", getItems);
 document.querySelector(".checkout").addEventListener("click", initCheckout);
