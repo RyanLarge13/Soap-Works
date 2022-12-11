@@ -51,8 +51,14 @@ header {
 }
 @media (min-width: 1600px) and (min-height: 800px) {
 	header {
-		.logo {
+		.shopping-cart {
 			font-size: 1em;
+			left: 2.5%;
+			z-index: 1000;
+			cursor: pointer;
+		}
+		.logo {
+			display: none;
 		}
 		.menu-toggle {
 			display: none;

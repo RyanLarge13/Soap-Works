@@ -113,7 +113,7 @@
 
 .option-btns {
   position: absolute;
-  top: 42%;
+  top: 40%;
   z-index: 2;
   left: 50%;
   transform: translateX(-50%);
@@ -159,10 +159,16 @@
   .img-container {
     min-height: 100vh;
     min-width: 100vw;
+    overflow-y: hidden;
   }
   .product {
+    padding-top: 5%;
+    position: relative;
     max-height: 85vh;
     border-radius: 1em;
+  }
+  .product .share {
+    font-size: 1em;
   }
   .product .product-img {
     margin-top: 7.5%;
@@ -176,11 +182,15 @@
     font-size: 3em;
   }
   .product .quantity {
-    font-size: 2em;
+    display: none;
   }
   .product .desc {
-    font-size: 2em;
-    margin-top: 5%;
+    font-size: 1.5em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
   }
   .product .list-title {
     font-size: 2.5em;
@@ -196,8 +206,35 @@
     font-size: 2.5em;
   }
   .product button {
-    font-size: 1.5em;
+    font-size: 1em;
     padding: 0.75em 1.5em;
     cursor: pointer;
+  }
+  .option-btns {
+    scale: 0.5;
+    transform: translateX(-100%);
+    top: 45%;
+    width: 75%;
+  }
+  .option-btns div {
+    transition: 250ms ease-in-out;
+    cursor: pointer;
+  }
+  .option-btns div:hover {
+    background-color: #aaa;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .option-btns div button {
+    all: unset;
+  }
+  .option-btns div button i {
+    font-size: 1.5em;
+    background-color: transparent;
+    pointer-events: none;
   }
 }/*# sourceMappingURL=filteredProducts.css.map */
