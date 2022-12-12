@@ -343,10 +343,18 @@ h2 {
     grid-template-columns: repeat(4, 1fr);
     gap: 2em;
   }
+  .kits .kit-item img {
+    pointer-events: none;
+  }
   .kits .kit-item h2 {
+    pointer-events: none;
     font-size: 1.5em;
   }
+  .kits .kit-item p {
+    pointer-events: none;
+  }
   .kits .kit-item p strong {
+    pointer-events: none;
     font-size: 1.5em;
   }
   .subs {

@@ -33,7 +33,7 @@ const styleText = () => {
     intro.style.opacity = "1";
   }, 500);
   addListeners();
-  window.removeEventListener("scroll", styleText)
+  window.removeEventListener("scroll", styleText);
 };
 
 const addListeners = () => {

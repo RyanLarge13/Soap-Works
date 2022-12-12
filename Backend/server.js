@@ -9,8 +9,9 @@ import { aboutRouter } from "./routes/aboutRouter.js";
 import { contactRouter } from "./routes/contactRouter.js";
 import { menWomenRouter } from "./routes/mensWomensRouter.js";
 import { addToCartRouter } from "./routes/addToCartRouter.js";
-import { checkoutRouter } from './routes/checkoutRouter.js';
-dotenv.config(); 
+import { checkoutRouter } from "./routes/checkoutRouter.js";
+import { productRouter } from "./routes/productPage.js";
+dotenv.config();
 connectDB();
 
 const app = express();
@@ -45,6 +46,7 @@ app.use(
   menWomenRouter,
   addToCartRouter,
   checkoutRouter,
+  productRouter
 );
 app.set("view engine", "ejs");
 app.set("views", "../Frontend/pages/");
