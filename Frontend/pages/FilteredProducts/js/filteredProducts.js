@@ -27,8 +27,8 @@ const sharePage = () => {
 };
 
 const initiateView = (e) => {
-  const id = e.target.firstElementChild.id;
-  const parent = e.target.parentElement.parentElement.parentElement;
+  const id = e.target.id;
+  const parent = e.target.parentElement;
   if (id === "expand") expand(parent);
   if (id === "image") images(parent);
   if (id === "spec") showSpecs(parent);
@@ -36,8 +36,8 @@ const initiateView = (e) => {
 };
 
 const expand = (product) => {
-  const image = product.querySelector(".product-img");
-  image.classList.toggle("expand");
+  //const image = product.querySelector(".product-img");
+  //image.style.display = "none";
 };
 
 //setHeading();
@@ -46,5 +46,5 @@ document
   .querySelectorAll(".share")
   .forEach((btn) => btn.addEventListener("click", sharePage));
 document
-  .querySelectorAll(".option-btns button")
+  .querySelectorAll(".option-btns div")
   .forEach((btn) => btn.addEventListener("click", initiateView));
