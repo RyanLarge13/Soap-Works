@@ -14,8 +14,13 @@ const setStorage = async (e) => {
   const devUrl = "http://localhost:8080";
   const productionUrl = "https://soap-works-production.up.railway.app";
   let quantity = 1;
-
+  
   if (itemExsists) return;
+  
+  e.target.innerText = `${title} Added`;
+  setTimeout(() => {
+    e.target.innerText = `Add ${title} to cart`;
+  }, 3000);
 
   await fetch(`${productionUrl}/addtocart/${title}`, {
     method: "GET",
