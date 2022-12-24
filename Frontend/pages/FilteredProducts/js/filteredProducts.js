@@ -17,6 +17,7 @@ const placeImages = () => {
 };
 
 const sharePage = () => {
+  if (!navigator.share) return console.log("no share on this device");
   navigator
     .share({
       title: "Soap Works!",
@@ -28,7 +29,7 @@ const sharePage = () => {
 
 const initiateView = (e) => {
   const id = e.target.id;
-  const parent = e.target.parentElement;
+  const parent = e.target.parentElement.parentElement;
   if (id === "expand") expand(parent);
   if (id === "image") images(parent);
   if (id === "spec") showSpecs(parent);
@@ -36,8 +37,36 @@ const initiateView = (e) => {
 };
 
 const expand = (product) => {
-  //const image = product.querySelector(".product-img");
-  //image.style.display = "none";
+  const infoContainer = product.previousElementSibling;
+  const title = product.querySelector("h2");
+  const img = product.querySelector(".product-img");
+  const clonedTitle = title.cloneNode(true);
+  const clonedImg = img.cloneNode(true);
+  clonedTitle.id = "cloned-title";
+  clonedImg.id = "img-clone";
+  infoContainer.classList.add("show");
+  setTimeout(() => {
+    infoContainer.style.opacity = "1";
+  }, 1);
+  infoContainer.appendChild(clonedTitle);
+  infoContainer.appendChild(clonedImg);
+  infoContainer.querySelector(".fa-xmark").addEventListener("click", () => {
+    clonedImg.remove();
+    clonedTitle.remove();
+    infoContainer.classList.remove("show");
+  });
+};
+
+const images = (product) => {
+  console.log("show images");
+};
+
+const showSpecs = (product) => {
+  console.log("show specs");
+};
+
+const showList = (product) => {
+  console.log("show list");
 };
 
 //setHeading();
