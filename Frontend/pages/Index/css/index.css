@@ -343,10 +343,18 @@ h2 {
     grid-template-columns: repeat(4, 1fr);
     gap: 2em;
   }
+  .kits .kit-item img {
+    pointer-events: none;
+  }
   .kits .kit-item h2 {
+    pointer-events: none;
     font-size: 1.5em;
   }
+  .kits .kit-item p {
+    pointer-events: none;
+  }
   .kits .kit-item p strong {
+    pointer-events: none;
     font-size: 1.5em;
   }
   .subs {
@@ -417,7 +425,7 @@ h2 {
     padding: 1em 2em;
     bottom: 2%;
     right: 50%;
-    transform: translateX(50%);
+    transform: translateX(-50%);
     cursor: pointer;
   }
   .subs .sub:last-child {

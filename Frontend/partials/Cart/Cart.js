@@ -1,9 +1,14 @@
+import { toggleCartIcon } from "../Header/Header.js";
+let totalCost = 0;
+let amount = 0;
+
 export const showCart = () => {
   const cart = document.querySelector(".cart");
   const backdrop = document.querySelector(".backdrop");
   cart.classList.toggle("show");
   backdrop.classList.toggle("show");
   backdrop.addEventListener("click", showCart);
+  toggleCartIcon();
 };
 
 export const getItems = () => {
@@ -31,7 +36,11 @@ export const createElement = (obj) => {
   </div>
   <button class="danger">Delete</button>`;
   cartContainer.appendChild(itemDiv);
-
+  //totalCost += Number(obj.Price);
+  initialTotalCost(obj.Price, quantity);
+  amount += Number(quantity);
+  showCartTotal();
+  showTotalPrice();
   //adding event listeners in the same function to avoid passing an unreasonable amnout of parameters.
   const deleteBtns = document.querySelectorAll(".danger");
   const incBtns = document.querySelectorAll(".inc");
@@ -40,9 +49,17 @@ export const createElement = (obj) => {
     btn.addEventListener("click", (e) => {
       e.stopImmediatePropagation();
       const htmlObj = e.target.parentElement;
+      const deletedQuantity = Number(
+        htmlObj.querySelector(".cart-item-quantity").innerHTML
+      );
       cartContainer.removeChild(htmlObj);
       localStorage.removeItem(obj.Title);
       localStorage.removeItem(obj._id);
+      totalCost -= Number(obj.Price * deletedQuantity);
+      if (amount < 0) amount = 0;
+      else amount -= deletedQuantity;
+      showCartTotal();
+      showTotalPrice();
     });
   });
   incBtns.forEach((btn) => {
@@ -55,6 +72,10 @@ export const createElement = (obj) => {
       localStorage.removeItem(obj._id);
       localStorage.setItem(obj._id, `${num}`);
       quantity.innerHTML = localStorage.getItem(obj._id);
+      amount += 1;
+      totalCost += Number(obj.Price);
+      showCartTotal();
+      showTotalPrice();
     });
   });
   decBtns.forEach((btn) => {
@@ -68,6 +89,10 @@ export const createElement = (obj) => {
       localStorage.removeItem(obj._id);
       localStorage.setItem(obj._id, `${num}`);
       quantity.innerHTML = localStorage.getItem(obj._id);
+      amount -= 1;
+      totalCost -= Number(obj.Price);
+      showCartTotal();
+      showTotalPrice();
     });
   });
 };
@@ -109,29 +134,59 @@ const queryLocalStorage = () => {
 const fetchStripe = async (items) => {
   const devUrl = "http://localhost:8080";
   const productionUrl = "https://soap-works-production.up.railway.app";
-  const response = await fetch(`${productionUrl}/checkout`, {
+  await fetch(`${devUrl}/checkout`, {
     method: "POST",
     headers: {
-      'Accept': 'application/json',
+      Accept: "application/json",
       "Content-Type": "application/json",
     },
     body: JSON.stringify(items),
-  }).then((res) => res.json()).then(async (data) => {
-    const stripeUrl = await data.url;
-    window.location.href = stripeUrl;
-  }).catch((err) => {
-    console.log(err);
-  });
-
-  // if (response.statusCode === 500) return;
-
-  // const data = await response.json();
-
-  //Impliment a loading animation here;
-
-
+  })
+    .then((res) => res.json())
+    .then(async (data) => {
+      data.statusCode === 500 || data.statusCode === 400
+        ? console.log(data.message)
+        : loadPurchase(data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 };
 
+const loadPurchase = async (data) => {
+  const stripeUrl = await data.url;
+  window.location.href = stripeUrl;
+};
+
+const initialTotalCost = (price, quantity) => {
+  totalCost += Number(price) * Number(quantity);
+};
+
+const showCartTotal = () => {
+  document.querySelector(".item-total strong").innerHTML = amount;
+};
+
+const showTotalPrice = () => {
+  let totalPrice = document.querySelector(".total-price strong");
+
+  const setPrice = () => {
+    let price = Number(totalPrice.innerHTML);
+    if (price <= totalCost) {
+      if (price === totalCost) return clearInterval(interval);
+      totalPrice.innerHTML = price + 1;
+    } else {
+      if (price === totalCost) return clearInterval(interval);
+      totalPrice.innerHTML = price - 1;
+    }
+  };
+
+  let interval = setInterval(() => {
+    setPrice();
+  }, 15);
+};
+
+showCartTotal();
+showTotalPrice();
 document.querySelector("header").addEventListener("click", showCart);
 document.addEventListener("DOMContentLoaded", getItems);
 document.querySelector(".checkout").addEventListener("click", initCheckout);

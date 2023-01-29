@@ -28,7 +28,7 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		transition: 500ms ease-out;
+		transition: 500ms cubic-bezier(.99,.09,.58,.8);
 
 		h2 {
 			position: absolute;

@@ -1,6 +1,9 @@
 import express from "express";
-import { renderContact } from '../controllers/contactController.js';
+import {
+  renderContact,
+  sendMessage,
+} from "../controllers/contactController.js";
 
 export const contactRouter = express.Router();
 
-contactRouter.route('/contact').get(renderContact);
+contactRouter.route("/contact").get(renderContact).post(sendMessage);

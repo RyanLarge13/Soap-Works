@@ -39,6 +39,7 @@ const translate = (index) => {
   count = index;
   const allDescriptiveSoaps = document.querySelectorAll(".blowup-soap");
   allDescriptiveSoaps.forEach((soap) => {
+    soap.style.transition = "none";
     soap.style.transform = `translateX(-${90 * index}vw)`;
     soap.addEventListener("touchstart", (e) => {
       e.stopPropagation();
@@ -60,12 +61,14 @@ const move = () => {
   if (start > end + 250 && count !== allDescriptiveSoaps.length - 1) {
     count++;
     return allDescriptiveSoaps.forEach((soap) => {
+      soap.style.transition = "300ms cubic-bezier(.99,.09,.58,.8)";
       soap.style.transform = `translateX(${-90 * count}vw)`;
     });
   }
   if (start < end - 250 && count !== 0) {
     count--;
     allDescriptiveSoaps.forEach((soap) => {
+      soap.style.transition = "300ms cubic-bezier(.99,.09,.58,.8)";
       return (soap.style.transform = `translateX(-${90 * count}vw)`);
     });
   }

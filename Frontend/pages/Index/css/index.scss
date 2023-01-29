@@ -333,11 +333,17 @@ h2 {
 		grid-template-columns: repeat(4, 1fr);
 		gap: 2em;
 		.kit-item {
+			img {
+				pointer-events: none;
+			}
 			h2 {
+				pointer-events: none;
 				font-size: 1.5em;
 			}
 			p {
+				pointer-events: none;
 				strong {
+					pointer-events: none;
 					font-size: 1.5em;
 				}
 			}
@@ -410,7 +416,7 @@ h2 {
 				padding: 1em 2em;
 				bottom: 2%;
 				right: 50%;
-				transform: translateX(50%);
+				transform: translateX(-50%);
 				cursor: pointer;
 			}
 			&:last-child {

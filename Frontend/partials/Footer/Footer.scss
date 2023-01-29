@@ -40,6 +40,7 @@
 		i {
 			color: #000;
 			font-size: 2em;
+			margin: 1em;
 		}
 	}
 	p {
@@ -55,6 +56,7 @@
 		margin-top: 2.5%;
 		.footer-links {
 			font-size: 1em;
+			margin-bottom: 10vh;
 			ul {
 				margin: 0 3em;
 				li {
@@ -63,6 +65,13 @@
 						padding: 1em;
 					}
 				}
+			}
+		}
+		.footer-social {
+			bottom: 10%;
+			i {
+				font-size: 1em;
+				cursor: pointer;
 			}
 		}
 		p {
