@@ -18,7 +18,7 @@ export const tamperedClient = async (req, res, next) => {
         if (!item) return;
         if (item.Price * product.Amount === product.Amount * product.Price) {
           return (isItTrue = true);
-        } 
+        }
       });
     }
     if (aKit) {
@@ -34,15 +34,18 @@ export const tamperedClient = async (req, res, next) => {
         if (!item) return;
         if (item.Price * product.Amount === product.Amount * product.Price) {
           return (isItTrue = true);
-        } 
+        }
       });
     }
+    checkIfTampered(res, next);
   });
+};
+
+const checkIfTampered = (res, next) => {
   if (isItTrue === false) {
     return killPurchase(res);
   } else {
-    console.log(isItTrue);
-    res.locals.tampered = isItTrue;
+    return (res.locals.tampered = isItTrue);
     next();
   }
 };
