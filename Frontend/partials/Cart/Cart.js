@@ -134,7 +134,7 @@ const queryLocalStorage = () => {
 const fetchStripe = async (items) => {
   const devUrl = "http://localhost:8080";
   const productionUrl = "https://soap-works-production.up.railway.app";
-  const response = await fetch(`${devUrl}/checkout`, {
+  await fetch(`${devUrl}/checkout`, {
     method: "POST",
     headers: {
       Accept: "application/json",
@@ -144,18 +144,18 @@ const fetchStripe = async (items) => {
   })
     .then((res) => res.json())
     .then(async (data) => {
-      const stripeUrl = await data.url;
-      window.location.href = stripeUrl;
+      data.statusCode === 500 || data.statusCode === 400
+        ? console.log(data.message)
+        : loadPurchase(data);
     })
     .catch((err) => {
       console.log(err);
     });
+};
 
-  // if (response.statusCode === 500) return;
-
-  // const data = await response.json();
-
-  //Impliment a loading animation here;
+const loadPurchase = async (data) => {
+  const stripeUrl = await data.url;
+  window.location.href = stripeUrl;
 };
 
 const initialTotalCost = (price, quantity) => {
@@ -182,7 +182,7 @@ const showTotalPrice = () => {
 
   let interval = setInterval(() => {
     setPrice();
-  }, 10);
+  }, 15);
 };
 
 showCartTotal();

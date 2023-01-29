@@ -11,7 +11,6 @@ export const renderStripe = async (req, res) => {
   const productionUrl = "https://soap-works-production.up.railway.app";
 
   const notTampered = res.locals.tampered;
-  return console.log(notTampered)
 
   if (req.method === "POST" && notTampered) {
     try {
@@ -45,11 +44,11 @@ export const renderStripe = async (req, res) => {
         cancel_url: `${productionUrl}/`,
       };
       const session = await stripe.checkout.sessions.create(params);
-      res.json({ url: session.url });
+      res.json({ statusCode: 200, url: session.url });
     } catch (err) {
       res.status(500).json({ statusCode: 500, message: err.message });
     }
   } else {
-    return console.log("I am sorry something is wrong with your code again fuck head")
+    return console.log("I am sorry something is wrong");
   }
 };
