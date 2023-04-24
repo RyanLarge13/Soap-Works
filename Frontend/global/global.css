@@ -4,7 +4,7 @@
 @import "../partials/Footer/Footer.css";
 @import "../partials/Contact/Contact.css";
 @import "../partials/Cart/Cart.css";
-@import url("https://fonts.googleapis.com/css2?family=Shalimar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 *,
 ::after,
@@ -14,8 +14,14 @@
   box-sizing: border-box;
 }
 
-* {
-	font-family: "Shalimar", cursive; 
+body {
+  font-family: "Indie Flower", cursive;
+}
+
+button {
+  font-family: "Indie Flower", cursive;
+  background-image: linear-gradient(45deg, #ffb6c1, #fff);
+  box-shadow: 0.25em 0.5em 1em 0 #777777;
 }
 
 li {

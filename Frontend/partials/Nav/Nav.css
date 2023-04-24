@@ -3,8 +3,8 @@ nav {
   background-position: 100% 0;
   background-size: cover;
   background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  inset: 0;
   pointer-events: none;
   opacity: 0;
   transition: 250ms ease-in-out;
@@ -12,16 +12,11 @@ nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-}
-nav ul {
-  text-align: right;
-  transform: translateX(90%);
+  align-items: flex-end;
 }
 nav ul li {
   margin: 8em 0;
+  text-align: right;
 }
 nav ul li a {
   padding: 1em;
@@ -32,6 +27,9 @@ nav ul li a:focus {
   color: #ffb6c1;
   -webkit-tap-highlight-color: transparent;
   transition: 250ms ease-in-out;
+}
+nav .logo {
+  align-self: center;
 }
 nav p {
   margin-top: 4em;

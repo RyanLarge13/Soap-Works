@@ -16,29 +16,26 @@
 	transition: 250ms ease-out;
 
 	.blowup-soap {
-		position: relative;
 		min-width: 90%;
 		max-width: 30px;
 		min-height: 75%;
 		border-radius: 1em;
 		margin: 0 5%;
-		box-shadow: 0 0.1em 0.5em 0 #000;
+		box-shadow: 0 0.1em 0.75em 0 #222;
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
 		align-items: center;
-		transition: 500ms cubic-bezier(.99,.09,.58,.8);
+		transition: 500ms cubic-bezier(.99, .09, .58, .8);
 
 		h2 {
-			position: absolute;
-			top: 5%;
-			left: 5%;
-			font-size: 5em;
+			margin-top: 1em;
+			font-size: 2em;
 			width: fit-content;
 			padding: 0.1em 0.5em;
 			border-radius: 0.25em;
-			box-shadow: 0 0.1em 0.25em 0 #393939;
+			box-shadow: 0 0.1em 0.25em 0 #373737;
 			background-color: #fff;
 		}
 
@@ -47,57 +44,19 @@
 			padding: 1em;
 			max-width: 75%;
 			border-radius: 0.5em;
-			font-size: 3em;
 			box-shadow: 0 0.15em 0.5em 0 #191919;
-		}
-
-		p {
-			position: absolute;
-			bottom: 0;
-			left: 0;
-		}
-
-		h4 {
-			font-size: 3em;
-		}
-
-		ul {
-			position: absolute;
-			top: 5%;
-			right: 5%;
-			font-size: 3em;
-			font-weight: 600;
-			background-color: #fff;
-			max-height: 75px;
-			padding: 0.15em;
-			border-radius: 0.25em;
-			box-shadow: 0 0.1em 0.25em 0 #393939;
-
-			li {
-				margin: 1em 0;
-				background-color: #fff;
-				border-radius: 0.25em;
-				padding: 0.2em 0.5em;
-				opacity: 0;
-				transition: 250ms ease-out;
-				font-size: 0.75em;
-			}
-
-			li.opacity {
-				opacity: 1;
-			}
+			font-size: 1.75em;
 		}
 
 		button {
-			position: absolute;
+			margin-bottom: 1em;
 			padding: 1em 2em;
+			font-size: 1.75em;
 			border-radius: 0.5em;
-			font-size: 2.5em;
 			border: none;
 			outline: none;
 			box-shadow: 0 0.15em 0.5em 0 #191919;
 			background-color: #ffb6c1;
-			bottom: 5%;
 			transition: 250ms ease-in-out;
 
 			&:hover {
@@ -131,10 +90,9 @@
 		.blowup-soap {
 			min-width: 90%;
 			max-width: 30px;
-			min-height: 85%;
+			min-height: 90vh;
 
 			h2 {
-				left: 1%;
 				font-size: 2em;
 			}
 

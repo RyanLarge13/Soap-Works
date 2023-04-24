@@ -1,12 +1,13 @@
 header {
   position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   justify-content: space-between;
-  width: 100vw;
-  box-shadow: 0.1em 0.1em 0.5em 0 #000;
+  box-shadow: 0.1em 0.1em 0.5em 0 #eee;
   border-radius: 0 0 0.5em 0.5em;
   z-index: 998;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgb(255, 255, 255);
 }
 header .shopping-cart {
   position: absolute;
@@ -23,7 +24,10 @@ header .logo {
   text-decoration: none;
   color: #000;
   padding: 1em;
-  font-size: 2em;
+}
+header .logo img {
+  height: 50px;
+  width: 50px;
 }
 
 .menu-toggle {

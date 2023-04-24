@@ -2,42 +2,43 @@
 <html>
 
 <head>
-	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
-<meta http-equiv="refresh" content="text/html;charset=UTF-8" />
-<link rel="stylesheet" href="/global/global.css" />
-<link rel="stylesheet" href="/pages/Contact/css/contact.css" />
-<script src="https://kit.fontawesome.com/a673862905.js" crossorigin="anonymous"></script>
-<script defer type="module" src="/global/global.js"></script>
-<script defer type="module" src="/pages/Contact/js/contact.js"></script>
-<title>Soap Works</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
+  <meta http-equiv="refresh" content="text/html;charset=UTF-8" />
+  <link rel="shortcut icon" href="../../assets/images/logo.svg" type="image/x-icon">
+  <link rel="stylesheet" href="/global/global.css" />
+  <link rel="stylesheet" href="/pages/Contact/css/contact.css" />
+  <script src="https://kit.fontawesome.com/a673862905.js" crossorigin="anonymous"></script>
+  <script defer type="module" src="/global/global.js"></script>
+  <script defer type="module" src="/pages/Contact/js/contact.js"></script>
+  <title>Soap Works</title>
 </head>
 
 <body>
-<%- include('../../partials/Header/Header.ejs')%>
-<%- include("../../partials/Cart/Cart.ejs") %>
-<div class="backdrop"></div>
-<h1>Connect With Us</h1>
-<form class="contact-page-form">
-<label class="hidden" for="email">Email</label>
-<input type="email" name="email" id="email" placeholder="Email">
-<label class="hidden" for="name">Name</label>
-<input type="text" name="name" id="name" placeholder="Name">
-<label class="hidden" for="tel">Number</label>
-<input type="tel" name="tel" id="tel" placeholder="Number">
-<button type="submit">Send</button>
-</form>
-<div class="chat-bot">
-<h2 class="hidden">Features<br> comming soon!</h2>
-<div class="messages">
-<div class="bot-message">
-<div class="bot"></div>
-</div>
-<div class="user-message"></div>
-</div>
-<i>Message</i>
-</div>
-<%- include('../../partials/Footer/Footer.ejs')%>
+  <%- include('../../partials/Header/Header.ejs')%>
+  <%- include("../../partials/Cart/Cart.ejs") %>
+  <div class="backdrop"></div>
+  <h1>Connect With Us</h1>
+  <form class="contact-page-form">
+    <label class="hidden" for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="Email">
+    <label class="hidden" for="name">Name</label>
+    <input type="text" name="name" id="name" placeholder="Name">
+    <label class="hidden" for="tel">Number</label>
+    <input type="tel" name="tel" id="tel" placeholder="Number">
+    <button type="submit">Send</button>
+  </form>
+  <div class="chat-bot">
+    <h2 class="hidden">Features<br> comming soon!</h2>
+    <div class="messages">
+      <div class="bot-message">
+        <div class="bot"></div>
+      </div>
+      <div class="user-message"></div>
+    </div>
+    <i>Message</i>
+  </div>
+  <%- include('../../partials/Footer/Footer.ejs')%>
 </body>
 
 </html>

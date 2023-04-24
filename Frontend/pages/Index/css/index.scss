@@ -1,27 +1,23 @@
-*,
-::after,
-::before {
-	padding: 0;
-	margin: 0;
-	box-sizing: border-box;
-	// font-family: "Shalimar", cursive;
-}
 li {
 	list-style-type: none;
 }
+
 a {
 	text-decoration: none;
 }
+
 //variables
 $trans-slo: 1s ease-in-out;
 $trans-med: 500ms ease-in-out;
 $trans-fast: 250ms ease-in-out;
-$shadow-sm: 0 0.5em 1em 0 #777;
+$shadow-sm: 0.25em 0.5em 0.5em 0 #eee;
 $radius-btm: 0 0 0.5em 0.5em;
+
 body {
 	overflow-x: hidden;
 	padding-top: 25%;
 }
+
 .heading {
 	margin-left: 2%;
 	font-weight: 600;
@@ -30,40 +26,46 @@ body {
 	transition: 2s ease-in-out;
 	transform: translateX(-100%);
 }
+
 .intro {
 	display: block;
 	width: 100vw;
 	padding: 1em 4em 1em 2%;
 	margin: 1em 0 2em 0;
-	font-size: 2em;
 	opacity: 0;
 	transition: 1s ease-in-out;
 	transition-delay: 1s;
 	transform: translateX(-100%);
 }
+
 .intro.inview {
 	opacity: 1;
 	transform: translateX(0);
 	transition: 1.5s ease-in-out;
 	transition-delay: none;
 }
+
 h2 {
 	margin-left: 2%;
 }
+
 .second-heading {
 	margin-left: 2%;
 	margin-top: 2em;
 	font-size: 5em;
 }
+
 .soaps {
 	width: 100vw;
 	padding: 0 2em;
 	margin-top: 5%;
+
 	img {
 		opacity: 1;
 		transition: $trans-med;
 	}
 }
+
 .grid-item {
 	opacity: 0;
 	position: relative;
@@ -75,9 +77,11 @@ h2 {
 	box-shadow: $shadow-sm;
 	overflow-x: hidden;
 	transition: $trans-fast;
+
 	&:hover {
 		scale: 1.025;
 	}
+
 	img {
 		position: absolute;
 		min-width: 100%;
@@ -85,18 +89,20 @@ h2 {
 		border-radius: 1em;
 		transition: $trans-med;
 	}
+
 	h2 {
 		position: absolute;
 		padding: 0.1em 0.3em;
-		bottom: 2%;
-		left: 2%;
+		bottom: 5px;
+		left: 5px;
 		z-index: 1;
-		font-size: 3em;
+		font-size: 2em;
 		font-weight: 600;
 		background-color: #fff;
 		border-radius: 0 1em 0 0.25em;
-		box-shadow: -0.1em 0.1em 0.25em 0 #000;
+		box-shadow: -0.1em 0.1em 0.25em 0 #eee;
 	}
+
 	p {
 		position: absolute;
 		bottom: 0%;
@@ -110,22 +116,28 @@ h2 {
 		background-color: rgba(0, 0, 0, 0.7);
 	}
 }
+
 .grid-item.inview {
 	opacity: 1;
 	transition: $trans-slo;
 }
+
 .height-0 {
 	height: 450px;
 }
+
 .height-1 {
 	height: 550px;
 }
+
 .height-2 {
 	height: 675px;
 }
+
 .height-3 {
 	height: 750px;
 }
+
 .view-more-soaps {
 	display: block;
 	text-align: right;
@@ -142,6 +154,7 @@ h2 {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	gap: 1.5em;
+
 	.kit-item {
 		opacity: 0;
 		position: relative;
@@ -153,9 +166,11 @@ h2 {
 		cursor: pointer;
 		transform: translateX(-50vw);
 		transition: $trans-fast;
+
 		&:hover {
 			scale: 1.025;
 		}
+
 		img {
 			border-radius: 1em;
 			min-width: 100%;
@@ -163,12 +178,14 @@ h2 {
 			min-height: 450px;
 			pointer-events: none;
 		}
+
 		h2 {
 			border-radius: 1em 1em 0 0;
 			width: 100%;
 			padding: 0 0 0.5em 0.25em;
 			font-size: 2em;
 		}
+
 		p {
 			position: absolute;
 			width: max-content;
@@ -181,11 +198,13 @@ h2 {
 			padding: 0 0.5em;
 			border-radius: 0 1em 0 1em;
 			box-shadow: 0 0.1em 0.25em 0 #eee;
+
 			strong {
 				font-size: 3em;
 			}
 		}
 	}
+
 	.kit-item.inview {
 		opacity: 1;
 		transition: $trans-slo;
@@ -199,40 +218,50 @@ h2 {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
+
 	.sub {
 		margin: 5% 0 10% 0;
 		padding: 2.5em;
 		width: 90%;
-		height: 75vh;
-		min-height: 1750px;
 		border-radius: 1em;
-		box-shadow: 0 0.25em 0.5em 0 #4f4f4f;
+		box-shadow: 0 0.25em 0.5em 0 #eee;
 		opacity: 0;
 		transform: translateY(5vh);
+
 		img {
 			border-radius: 1em;
 		}
+
 		h2 {
 			font-size: 4em;
 			margin-left: 0;
 			margin-top: 1em;
 		}
+
 		h3 {
 			font-size: 2.5em;
-			margin-top: 0.5em;
+			margin-top: 1em;
 		}
+
 		p {
-			font-size: 3em;
+			font-size: 2em;
 		}
+
 		.price {
 			font-weight: 600;
 		}
+
 		.sub-includes {
 			margin-top: 1em;
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
 			align-items: center;
+
+			.sub-item {
+				font-size: 1em;
+			}
 		}
+
 		a {
 			font-size: 2em;
 			display: block;
@@ -241,25 +270,26 @@ h2 {
 			color: #000;
 			text-decoration: underline;
 		}
+
 		button {
 			font-size: 2em;
 			padding: 1em 2em;
 			border-radius: 0.5em;
-			box-shadow: 0 0.15em 0.25em #999999;
-			box-shadow: 0 0.15em 0.25em #999999;
-			background-color: #ffb6c1;
 			margin-left: 50%;
 			transition: 250ms ease-in-out;
 			transform: translateX(-50%);
+
 			&:hover {
 				background-color: #fff;
 				scale: 1.01;
 			}
 		}
+
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
+
 	.sub.inview {
 		opacity: 1;
 		transform: translateY(0);
@@ -271,15 +301,19 @@ h2 {
 	body {
 		padding-top: 10%;
 	}
+
 	.view-more-soaps {
 		font-size: 1.5em;
 	}
+
 	.intro {
 		width: 50vw;
 	}
+
 	h2 {
 		font-size: 2em;
 	}
+
 	.top-right-pink {
 		width: 500px;
 		height: 500px;
@@ -290,39 +324,49 @@ h2 {
 		right: -15%;
 		filter: blur(2px);
 	}
+
 	.second-heading {
 		font-size: 2em;
 	}
+
 	.soaps {
 		width: 100vw;
 		margin: auto;
 		margin-top: 5%;
+
 		img {
 			opacity: 1;
 			transition: $trans-med;
 		}
 	}
+
 	.grid-item {
 		margin: 1em 1em;
 		min-width: 22%;
 		max-width: 22%;
 		cursor: pointer;
+
 		h2 {
 			font-size: 2em;
 		}
+
 		p {
 			font-size: 1.75em;
 		}
 	}
+
 	.height-0 {
 		height: 250px;
 	}
+
 	.height-1 {
 		height: 350px;
 	}
+
 	.height-2 {
 		height: 475px;
 	}
+
 	.height-3 {
 		height: 550px;
 	}
@@ -332,16 +376,20 @@ h2 {
 		align-items: center;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 2em;
+
 		.kit-item {
 			img {
 				pointer-events: none;
 			}
+
 			h2 {
 				pointer-events: none;
 				font-size: 1.5em;
 			}
+
 			p {
 				pointer-events: none;
+
 				strong {
 					pointer-events: none;
 					font-size: 1.5em;
@@ -356,6 +404,7 @@ h2 {
 		grid-template-columns: repeat(2, 1fr);
 		justify-items: center;
 		align-items: center;
+
 		.sub {
 			margin: 0;
 			padding: 1em;
@@ -366,27 +415,33 @@ h2 {
 			box-shadow: 0 0.25em 0.5em 0 #4f4f4f;
 			position: relative;
 			transition: 250ms ease-in-out;
+
 			&:hover {
 				scale: 1.01;
 			}
+
 			img {
 				all: unset;
 				width: 200px;
 				height: 200px;
 				border-radius: 1em;
 			}
+
 			h2 {
 				margin: 0.5em 0;
 				font-size: 2em;
 			}
+
 			h3 {
 				display: none;
 			}
+
 			p {
 				font-size: 1.25em;
 				margin: 0.25em;
 				max-width: 60%;
 			}
+
 			.price {
 				font-weight: 600;
 				font-size: 1.5em;
@@ -394,6 +449,7 @@ h2 {
 				top: 2%;
 				right: 2%;
 			}
+
 			.sub-includes {
 				margin-top: 0;
 				font-size: 1.25em;
@@ -404,13 +460,16 @@ h2 {
 				right: -35%;
 				text-align: right;
 				top: 33%;
+
 				li {
 					font-size: 1em;
 				}
 			}
+
 			a {
 				display: none;
 			}
+
 			button {
 				font-size: 0.75em;
 				padding: 1em 2em;
@@ -419,6 +478,7 @@ h2 {
 				transform: translateX(-50%);
 				cursor: pointer;
 			}
+
 			&:last-child {
 				margin-bottom: 0;
 			}
