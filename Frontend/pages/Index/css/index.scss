@@ -159,6 +159,7 @@ h2 {
 		opacity: 0;
 		position: relative;
 		border-radius: 1em;
+		background-color: #fff;
 		box-shadow: $shadow-sm;
 		max-width: 100%;
 		min-width: 100%;
@@ -224,7 +225,7 @@ h2 {
 		padding: 2.5em;
 		width: 90%;
 		border-radius: 1em;
-		box-shadow: 0 0.25em 0.5em 0 #eee;
+		box-shadow: 0 0.25em 0.75em 0 #aaa;
 		opacity: 0;
 		transform: translateY(5vh);
 
@@ -244,7 +245,7 @@ h2 {
 		}
 
 		p {
-			font-size: 2em;
+			font-size: 1em;
 		}
 
 		.price {
@@ -275,9 +276,8 @@ h2 {
 			font-size: 2em;
 			padding: 1em 2em;
 			border-radius: 0.5em;
-			margin-left: 50%;
+			margin: auto;
 			transition: 250ms ease-in-out;
-			transform: translateX(-50%);
 
 			&:hover {
 				background-color: #fff;

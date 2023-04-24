@@ -1,5 +1,6 @@
 header {
   position: fixed;
+  padding: 0.5em;
   top: 0;
   left: 0;
   right: 0;
@@ -7,65 +8,51 @@ header {
   box-shadow: 0.1em 0.1em 0.5em 0 #eee;
   border-radius: 0 0 0.5em 0.5em;
   z-index: 998;
-  background-color: rgb(255, 255, 255);
-}
-header .shopping-cart {
-  position: absolute;
-  font-size: 2.5em;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 1;
-  transition: 250ms ease-in-out;
-}
-header .shopping-cart.show {
-  opacity: 0;
-}
-header .logo {
-  text-decoration: none;
-  color: #000;
-  padding: 1em;
-}
-header .logo img {
-  height: 50px;
-  width: 50px;
-}
+  background-color: white; }
+  header .shopping-cart {
+    position: absolute;
+    font-size: 2.5em;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 1;
+    transition: 250ms ease-in-out; }
+  header .shopping-cart.show {
+    opacity: 0; }
+  header .logo {
+    text-decoration: none;
+    color: #000;
+    padding: 1em; }
+    header .logo img {
+      height: 50px;
+      width: 50px; }
 
 .menu-toggle {
   width: 40px;
   height: 40px;
   margin-right: 2em;
   cursor: pointer;
-  z-index: 999;
-}
-.menu-toggle span {
-  width: 100%;
-  height: 3px;
-  border-radius: 1em;
-  background-color: #000;
-  margin: 3px 0;
-  transition: 250ms ease-in-out;
-}
-.menu-toggle span:nth-child(1).x {
-  transform: rotateZ(45deg) translateY(0.75em);
-}
-.menu-toggle span:nth-child(2).x {
-  opacity: 0;
-}
-.menu-toggle span:nth-child(3).x {
-  transform: rotateZ(-45deg) translateY(-0.75em);
-}
+  z-index: 999; }
+  .menu-toggle span {
+    width: 100%;
+    height: 3px;
+    border-radius: 1em;
+    background-color: #000;
+    margin: 3px 0;
+    transition: 250ms ease-in-out; }
+    .menu-toggle span:nth-child(1).x {
+      transform: rotateZ(45deg) translateY(0.75em); }
+    .menu-toggle span:nth-child(2).x {
+      opacity: 0; }
+    .menu-toggle span:nth-child(3).x {
+      transform: rotateZ(-45deg) translateY(-0.75em); }
 
 @media (min-width: 1600px) and (min-height: 800px) {
   header .shopping-cart {
     font-size: 1em;
     left: 2.5%;
     z-index: 1000;
-    cursor: pointer;
-  }
+    cursor: pointer; }
   header .logo {
-    display: none;
-  }
+    display: none; }
   header .menu-toggle {
-    display: none;
-  }
-}/*# sourceMappingURL=Header.css.map */
+    display: none; } }

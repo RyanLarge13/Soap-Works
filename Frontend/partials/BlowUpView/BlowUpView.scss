@@ -1,15 +1,11 @@
 .blowup-view {
 	display: flex;
 	justify-content: flex-start;
-	padding: 5% 5%;
 	align-items: center;
-	min-width: 100vw;
-	min-height: 100vh;
-	height: 100vh;
 	z-index: 999;
 	background-color: rgba(0, 0, 0, 0.5);
 	position: fixed;
-	top: 0;
+	inset: 0;
 	overflow-x: hidden;
 	opacity: 0;
 	pointer-events: none;
@@ -17,7 +13,7 @@
 
 	.blowup-soap {
 		min-width: 90%;
-		max-width: 30px;
+		max-width: 90%;
 		min-height: 75%;
 		border-radius: 1em;
 		margin: 0 5%;
