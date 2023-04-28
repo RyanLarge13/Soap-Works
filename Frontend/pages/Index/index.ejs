@@ -2,115 +2,116 @@
 <html>
 
 <head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
-  <meta http-equiv="refresh" content="text/html;charset=UTF-8" />
-  <link rel="shortcut icon" href="../../assets/images/logo.svg" type="image/x-icon">
-  <link rel="stylesheet" href="/global/global.css" />
-  <link rel="stylesheet" href="/pages/Index/css/index.css" />
-  <script type="module" src="/global/global.js"></script>
-  <script defer src="/pages/Index/js/showKits.js"></script>
-  <script defer src="https://kit.fontawesome.com/a673862905.js" crossorigin="anonymous"></script>
-  <script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
-  <script defer src="/pages/Index/js/index.js"></script>
-  <title>Soap Works</title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
+<meta http-equiv="refresh" content="text/html;charset=UTF-8" />
+<link rel="shortcut icon" href="../../assets/images/logo.svg" type="image/x-icon">
+<link rel="stylesheet" href="/global/global.css" />
+<link rel="stylesheet" href="/pages/Index/css/index.css" />
+<script type="module" src="/global/global.js"></script>
+<script defer src="/pages/Index/js/showKits.js"></script>
+<script defer src="https://kit.fontawesome.com/a673862905.js" crossorigin="anonymous"></script>
+<script defer src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+<script defer src="/pages/Index/js/index.js"></script>
+<title>Soap Works</title>
 </head>
 
 <body>
-  <%- include("../../partials/Header/Header.ejs") %>
-  <%- include("../../partials/Cart/Cart.ejs") %>
-  <%- include("../../partials/BlowUpView/BlowUpView.ejs") %>
-  <div class="backdrop"></div>
-  <h1 class="heading">Soap Works</h1>
-  <p class="intro">
-    Welcome!! Please enjoy viewing these amazing products... Remember that all soap products that you see are made with 100% all natural ingredients! If you
-    are a nature person, you will love what we have to offer.
-  </p>
-  <h2>Soaps</h2>
-  <div class="top-right-pink"></div>
-  <section class="soaps">
-    <%soaps.forEach((soap)=> {
-						%>
-    <div class="grid-item">
-      <img class="img" src="<%=soap.ImageUrl%>" alt="<%=soap.Title%>" />
-      <h2 class="title">
-        <%=soap.Title%>
-      </h2>
-      <p class="price">
-        $<%=soap.Price%>
-      </p>
-    </div>
-    <%})%>
-  </section>
-  <a href="/soaps" class="view-more-soaps">View More ...</a>
-  <h3 class="second-heading">Kits</h3>
-  <p class="intro">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
-    doloribus
-    iure nesciunt architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non
-    et
-    asperiores!
-  </p>
-  <h2>Kit Selections</h2>
-  <section class="kits">
-    <%kits.forEach((kit)=> {
-						%>
-    <div class="kit-item">
-      <img src="<%=kit.ImageUrl%>" alt="<%=kit.Title%>" />
-      <h2>
-        <%=kit.Title%>
-      </h2>
-      <p>
-        <strong>
-          <%=kit.Quantity%>
-        </strong> kits available
-      </p>
-    </div>
-    <%})%>
-  </section>
-  <a href="/kits" class="view-more-soaps">View More ...</a>
-  <h3 class="second-heading">Subscription Boxes</h3>
-  <p class="intro">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
-    doloribus
-    iure nesciunt
-    architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non et
-    asperiores!
-  </p>
-  <h2>Boxes</h2>
-  <section class="subs">
-    <%subs.forEach((sub)=> {
-						%>
-    <div class="sub">
-      <img src="<%=sub.ImageUrl%>" alt="">
-      <h2>
-        <%=sub.Title%>
-      </h2>
-      <p class="price">
-        $<%=sub.Price%>
-      </p>
-      <p>
-        <%=sub.Description%>
-      </p>
-      <h3>
-        <%=sub.Title%> Includes ..
-      </h3>
-      <div class="sub-includes">
-        <%sub.Included.forEach((item)=> {
-									%>
-        <p class="sub-item">
-          - <%=item%>
-        </p>
-        <%})%>
-      </div>
-      <a class="view-sub-deets" href="/subscriptions">View All</a>
-      <button class="buy-btn">Add To Cart</button>
-    </div>
-    <%})%>
-  </section>
-  <a href="/subscriptions" class="view-more-soaps">View More ...</a>
-  <%- include('../../partials/Contact/Contact.ejs')%>
-  <%- include('../../partials/Footer/Footer.ejs') %>
+<%- include("../../partials/Header/Header.ejs") %>
+<%- include("../../partials/Cart/Cart.ejs") %>
+<%- include("../../partials/BlowUpView/BlowUpView.ejs") %>
+<div class="backdrop"></div>
+<h1 class="heading">Soap Works</h1>
+<p class="intro">
+Welcome!! Please enjoy viewing these amazing products... Remember that all soap products that you see are made with 100% all natural ingredients! If you
+are a nature person, you will love what we have to offer.
+</p>
+<h2>Soaps</h2>
+<div class="top-right-pink"></div>
+<section class="soaps">
+<%soaps.forEach((soap)=> {
+%>
+<div class="grid-item">
+<img class="img" src="<%=soap.ImageUrl%>" alt="<%=soap.Title%>" />
+<h2 class="title">
+<%=soap.Title%>
+</h2>
+<p class="price">
+$<%=soap.Price%>
+</p>
+</div>
+<%})%>
+</section>
+<a href="/soaps" class="view-more-soaps">View More ...</a>
+<h3 class="second-heading">Kits</h3>
+<p class="intro">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
+doloribus
+iure nesciunt architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non
+et
+asperiores!
+</p>
+<h2>Kit Selections</h2>
+<section class="kits">
+<%kits.forEach((kit)=> {
+%>
+<div class="kit-item">
+<img src="<%=kit.ImageUrl%>" alt="<%=kit.Title%>" />
+<h2>
+<%=kit.Title%>
+</h2>
+<p>
+<strong>
+<%=kit.Quantity%>
+</strong> kits available
+</p>
+</div>
+<%})%>
+</section>
+<a href="/kits" class="view-more-soaps">View More ...</a>
+<h3 class="second-heading">Subscription Boxes</h3>
+<p class="intro">
+Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
+doloribus
+iure nesciunt
+architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non et
+asperiores!
+</p>
+<h2>Boxes</h2>
+<section class="subs">
+<%subs.forEach((sub)=> {
+%>
+<div class="sub">
+<img src="<%=sub.ImageUrl%>" alt="">
+<div class="title-and-price">
+<h2>
+<%=sub.Title%>
+</h2>
+<p class="price">
+$<%=sub.Price%>
+</p>
+</div>
+<p>
+<%=sub.Description%>
+</p>
+<h3>
+<%=sub.Title%> Includes ..
+</h3>
+<div class="sub-includes">
+<%sub.Included.forEach((item)=> {
+%>
+<p class="sub-item">
+- <%=item%>
+</p>
+<%})%>
+</div>
+<button class="buy-btn">Add To Cart</button>
+</div>
+<%})%>
+</section>
+<a href="/subscriptions" class="view-more-soaps">View More ...</a>
+<%- include('../../partials/Contact/Contact.ejs')%>
+<%- include('../../partials/Footer/Footer.ejs') %>
 </body>
 
 </html>

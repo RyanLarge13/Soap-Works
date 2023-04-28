@@ -1,57 +1,55 @@
 .main-contact {
-  margin: 10% 15% 0 15%;
+  margin: 0 auto;
+  margin-bottom: 10%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 70%;
-}
-.main-contact input {
-  width: 100%;
-  font-size: 2em;
-  border-radius: 0.25em;
-  margin-bottom: 1em;
-  padding: 0.25em 0.5em;
-}
-.main-contact textarea {
-  width: 100%;
-  font-size: 1.5em;
-  border-radius: 0.25em;
-  padding: 0.25em 0.5em;
-}
-.main-contact button {
-  padding: 0.25em 1em;
-  border-radius: 0.5em;
-  background-color: #ffb6c1;
-  font-size: 1.5em;
-  margin-top: 1em;
-  align-self: flex-start;
-  box-shadow: 0 0.1em 0.25em 0 #4f4f4f;
-}
+  width: 90%; }
+  .main-contact input {
+    width: 100%;
+    font-size: 2em;
+    border-radius: 0.25em;
+    margin-bottom: 1em;
+    padding: 1em;
+    outline: none;
+    border: none;
+    box-shadow: 0 0.1em 0.25em 0 #eee; }
+  .main-contact textarea {
+    width: 100%;
+    font-size: 2.5em;
+    border-radius: 0.25em;
+    padding: 0.5em;
+    outline: none;
+    border: none;
+    box-shadow: 0 0.1em 0.25em 0 #eee; }
+  .main-contact button {
+    padding: 0.5em 1.25em;
+    border-radius: 0.5em;
+    background-color: #ffb6c1;
+    font-size: 2em;
+    margin-top: 1em;
+    align-self: flex-start;
+    box-shadow: 0 0.1em 0.25em 0 #4f4f4f; }
 
 .contact-heading {
-  text-align: center;
-  margin-top: 1em;
-}
+  margin: 20% 0 10% 2%;
+  font-weight: 600;
+  font-size: 4em; }
 
 @media (min-width: 1600px) and (min-height: 800px) {
   .main-contact {
     width: 60%;
     margin: auto;
-    margin-top: 10%;
-  }
-  .main-contact input {
-    font-size: 1.75em;
-    margin-bottom: 0.75em;
-    padding: 0.2em 0.5em;
-  }
-  .main-contact button {
-    border-radius: 0.25em;
-    cursor: pointer;
-    transition: 250ms ease-in-out;
-  }
-  .main-contact button:hover {
-    background-color: #fff;
-    scale: 1.01;
-  }
-}/*# sourceMappingURL=Contact.css.map */
+    margin-top: 10%; }
+    .main-contact input {
+      font-size: 1.75em;
+      margin-bottom: 0.75em;
+      padding: 0.2em 0.5em; }
+    .main-contact button {
+      border-radius: 0.25em;
+      cursor: pointer;
+      transition: 250ms ease-in-out; }
+      .main-contact button:hover {
+        background-color: #fff;
+        scale: 1.01; } }

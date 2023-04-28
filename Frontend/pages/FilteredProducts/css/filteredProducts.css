@@ -1,142 +1,78 @@
-.img-container {
-  position: absolute;
-  height: 100vh;
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-.bg-img {
-  z-index: -1;
-  min-height: 100%;
-  opacity: 0.75;
-  min-width: 100%;
-}
-
 .filter-section {
-  padding: 0 2.5%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 25%;
-  position: absolute;
-  top: 0;
-}
+  align-items: center; }
+  .filter-section .info-container {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+.filtered-title {
+  font-size: 6em;
+  margin-left: 2.5%;
+  margin-bottom: 1em; }
 
 .product-information-container {
   opacity: 0;
   display: none;
   position: fixed;
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
   background-color: #fff;
   transition: 250ms ease-in-out;
-  z-index: 999;
-}
-.product-information-container .fa-xmark {
-  position: absolute;
-  top: 2.5%;
-  left: 5%;
-  font-size: 1.5em;
-}
-.product-information-container h2 {
-  font-size: 4em;
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translateX(-50%);
-}
-.product-information-container img {
-  border-radius: 1em;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  z-index: 999; }
+  .product-information-container .fa-xmark {
+    font-size: 4em;
+    margin: 10px 0 0 10px; }
+  .product-information-container h2 {
+    font-size: 4em;
+    margin-top: 4em; }
 
 .product-information-container.show {
-  display: flex;
-}
+  display: block; }
 
 .product {
-  position: relative;
-  max-width: 90%;
-  min-width: 90%;
-  margin: 7.5vh 0;
-  min-height: 85vh;
   background-color: #fff;
-  border-radius: 1em;
-  box-shadow: 0 0.1em 0.5em 0 #000;
   overflow-x: hidden;
-}
-.product .product-img {
-  width: 600px;
-  height: 500px;
-  margin: auto;
-  margin-top: 33%;
-  overflow: hidden;
-  border-radius: 1em;
-  transition: 500ms ease-in-out;
-}
-.product .product-img img {
-  min-width: 100%;
-  min-height: 100%;
-  width: 75%;
-}
-.product h2 {
-  font-size: 6em;
-  position: absolute;
-  top: 1.5%;
-  left: 2.5%;
-}
-.product .ingredients {
-  display: none;
-}
-.product .desc {
-  font-size: 3.5em;
-  margin: auto;
-  margin-top: 15%;
-  max-width: 75%;
-  text-align: center;
-}
-.product .price {
-  font-size: 4em;
-  position: absolute;
-  top: 2%;
-  right: 5%;
-  font-weight: 600;
-}
-.product button {
-  font-size: 2em;
-  padding: 1em 2em;
-  border-radius: 0.5em;
-  box-shadow: 0 0.25em 0.5em #4f4f4f;
-  background-color: #ffb6c1;
-  margin-left: 50%;
-  transition: 250ms ease-in-out;
-  transform: translateX(-50%);
-  position: absolute;
-  bottom: 5%;
-}
-.product button:hover {
-  background-color: #fff;
-  scale: 1.01;
-}
-.product button strong {
-  pointer-events: none;
-}
-.product .share {
-  font-size: 4em;
-  position: absolute;
-  bottom: 2%;
-  right: 4%;
-}
+  padding-bottom: 2em; }
+  .product .product-img {
+    margin: auto;
+    overflow: hidden;
+    transition: 500ms ease-in-out; }
+    .product .product-img img {
+      min-width: 100%;
+      min-height: 100%;
+      width: 75%; }
+  .product .title-and-price {
+    text-align: center; }
+  .product h2 {
+    font-size: 6em; }
+  .product .price {
+    font-size: 4em;
+    font-weight: 600; }
+  .product .desc {
+    font-size: 2em;
+    margin: 4em 10px;
+    text-align: center; }
+  .product button {
+    font-size: 2em;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    transition: 250ms ease-in-out;
+    width: 100%; }
+    .product button:hover {
+      background-color: #fff;
+      scale: 1.01; }
+    .product button strong {
+      pointer-events: none; }
+  .product .share {
+    font-size: 4em; }
 
 .option-btns {
-  position: absolute;
-  top: 40%;
+  margin: 0 auto 3em auto;
   z-index: 2;
-  left: 50%;
-  transform: translateX(-50%);
   width: 50%;
   height: 100px;
   box-shadow: 0 0.1em 1em 0 #aaa;
@@ -144,106 +80,15 @@
   background-color: #fff;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  overflow: hidden;
-}
-.option-btns div {
-  box-shadow: 0 0.1em 0.25em 0 #aaa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.option-btns div i {
-  font-size: 1.75em;
-  pointer-events: none;
-}
-
-.footer-holder {
-  display: none;
-}
-
-@media (min-width: 1600px) and (min-height: 800px) {
-  .img-container {
-    min-height: 100vh;
-    min-width: 100vw;
-    overflow-y: hidden;
-  }
-  .product {
-    padding-top: 5%;
-    position: relative;
-    max-height: 85vh;
-    border-radius: 1em;
-  }
-  .product .share {
-    font-size: 1em;
-  }
-  .product .product-img {
-    margin-top: 7.5%;
-  }
-  .product .product-img img {
-    transform: translateY(-50%);
-    min-width: 100%;
-    width: 75%;
-  }
-  .product h2 {
-    font-size: 3em;
-  }
-  .product .quantity {
-    display: none;
-  }
-  .product .desc {
-    font-size: 1.5em;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100%;
-  }
-  .product .list-title {
-    font-size: 2.5em;
-  }
-  .product .list .ingredients {
-    font-size: 1.5em;
-    font-weight: 500;
-  }
-  .product .list .includes {
-    font-size: 1.5em;
-  }
-  .product .price {
-    font-size: 2.5em;
-  }
-  .product button {
-    font-size: 1em;
-    padding: 0.75em 1.5em;
-    cursor: pointer;
-  }
-  .product .share {
-    display: none;
-  }
-  .option-btns {
-    scale: 0.5;
-    transform: translateX(-100%);
-    top: 45%;
-    width: 75%;
-  }
+  overflow: hidden; }
   .option-btns div {
-    transition: 250ms ease-in-out;
-    cursor: pointer;
-  }
-  .option-btns div:hover {
-    background-color: #aaa;
-    width: 100%;
-    height: 100%;
+    box-shadow: 0 0.1em 0.25em 0 #aaa;
     display: flex;
     justify-content: center;
-    align-items: center;
-    color: #fff;
-  }
-  .option-btns div button {
-    all: unset;
-  }
-  .option-btns div button i {
-    font-size: 1.5em;
-    background-color: transparent;
-    pointer-events: none;
-  }
-}/*# sourceMappingURL=filteredProducts.css.map */
+    align-items: center; }
+    .option-btns div i {
+      font-size: 1.75em;
+      pointer-events: none; }
+
+.footer-holder {
+  display: none; }
