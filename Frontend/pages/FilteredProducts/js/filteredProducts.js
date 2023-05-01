@@ -9,23 +9,6 @@ const setHeading = () => {
   const newTitle = title[0].toUpperCase() + title.substring(1);
   heading.innerHTML = newTitle;
 };
-const placeImages = () => {
-  const images = document.querySelectorAll(".img-container");
-  images.forEach((img, index) => {
-    img.style.top = `${100 * index}vh`;
-  });
-};
-
-const sharePage = () => {
-  if (!navigator.share) return console.log("no share on this device");
-  navigator
-    .share({
-      title: "Soap Works!",
-      url: window.location.href,
-    })
-    .then(() => console.log("Success"))
-    .catch((err) => console.log(err));
-};
 
 const initiateView = (e) => {
   const id = e.target.id;
@@ -69,11 +52,7 @@ const showList = (product) => {
   console.log("show list");
 };
 
-//setHeading();
-placeImages();
-document
-  .querySelectorAll(".share")
-  .forEach((btn) => btn.addEventListener("click", sharePage));
+setHeading();
 document
   .querySelectorAll(".option-btns div")
   .forEach((btn) => btn.addEventListener("click", initiateView));
