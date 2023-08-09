@@ -4,6 +4,9 @@ const renderKit = () => {
 };
 
 const grabInfo = (e) => {
+  if (!e.target.classList.contains("kit-item")) {
+    return; // If not, ignore the click event
+  }
   const productionUrl = "https://soap-works-production.up.railway.app";
   const devUrl = "http://localhost:8080";
   const type = "kits";
