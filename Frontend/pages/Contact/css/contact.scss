@@ -35,6 +35,7 @@ form {
     box-shadow: 0 0.1em 0.25em 0 #999999;
     background-color: #ffb6c1;
     transition: 250ms ease-in-out;
+
     &:hover {
       background-color: #fff;
       scale: 1.01;
@@ -78,33 +79,5 @@ form {
 
   i {
     display: none;
-  }
-}
-
-@media (min-width: 1600px) and (min-height: 800px) {
-  body {
-    padding-top: 10vh;
-  }
-
-  h1 {
-    font-size: 5em;
-  }
-
-  form {
-    margin-top: 0;
-    margin: 4% auto;
-    height: 35vh;
-    width: 50vw;
-
-    input {
-      font-size: 1.5em;
-      margin: 1em 0;
-      padding: 0.25em 0.75em;
-    }
-
-    button {
-      margin-top: 7.5%;
-      font-size: 1em;
-    }
   }
 }

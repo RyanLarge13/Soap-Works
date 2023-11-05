@@ -5,58 +5,49 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 25vh; }
-  .main-footer .footer-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 2em; }
-    .main-footer .footer-links ul {
-      margin: 0 1.5em;
-      padding-bottom: 0.25em;
-      position: relative; }
-      .main-footer .footer-links ul::after {
-        position: absolute;
-        content: "";
-        bottom: 0;
-        height: 2px;
-        width: 100%;
-        background-color: #ffb6c1; }
-      .main-footer .footer-links ul li {
-        color: #000; }
-        .main-footer .footer-links ul li a {
-          color: #000; }
-  .main-footer .footer-social {
-    margin: 25px 0;
-    height: 25%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .main-footer .footer-social i {
-      color: #000;
-      font-size: 3em;
-      margin: 1em; }
-  .main-footer p {
-    z-index: 10;
-    text-align: center; }
-
-@media (min-width: 1600px) and (min-height: 800px) {
-  .main-footer {
-    margin-top: 2.5%; }
-    .main-footer .footer-links {
-      font-size: 1em;
-      margin-bottom: 10vh; }
-      .main-footer .footer-links ul {
-        margin: 0 3em; }
-        .main-footer .footer-links ul li {
-          margin: 0.5em 0; }
-          .main-footer .footer-links ul li a {
-            padding: 1em; }
-    .main-footer .footer-social {
-      bottom: 10%; }
-      .main-footer .footer-social i {
-        font-size: 1em;
-        cursor: pointer; }
-    .main-footer p {
-      font-size: 0.75em; } }
+}
+.main-footer .footer-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+.main-footer .footer-links ul {
+  margin: 0 1.5em;
+  padding-bottom: 0.25em;
+  position: relative;
+}
+.main-footer .footer-links ul::after {
+  position: absolute;
+  content: "";
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #ffb6c1;
+}
+.main-footer .footer-links ul li {
+  color: #000;
+}
+.main-footer .footer-links ul li a {
+  color: #000;
+}
+.main-footer .footer-social {
+  margin: 50px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-footer .footer-social i {
+  color: #000;
+  font-size: 3em;
+  margin: 1em;
+  transition-duration: 200ms;
+}
+.main-footer .footer-social i:hover {
+  color: #ffb6c1;
+}
+.main-footer p {
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 100px;
+}/*# sourceMappingURL=Footer.css.map */
