@@ -58,17 +58,17 @@ const translate = (index) => {
 //Function to handle UI for moving through the soap list.
 const move = () => {
   const allDescriptiveSoaps = document.querySelectorAll(".blowup-soap");
-  if (start > end + 250 && count !== allDescriptiveSoaps.length - 1) {
+  if (start > end + 100 && count !== allDescriptiveSoaps.length - 1) {
     count++;
     return allDescriptiveSoaps.forEach((soap) => {
-      soap.style.transition = "300ms cubic-bezier(.99,.09,.58,.8)";
+      soap.style.transition = "200ms cubic-bezier(.99,.09,.58,.8)";
       soap.style.transform = `translateX(${-111 * count}%)`;
     });
   }
-  if (start < end - 250 && count !== 0) {
+  if (start < end - 100 && count !== 0) {
     count--;
     allDescriptiveSoaps.forEach((soap) => {
-      soap.style.transition = "300ms cubic-bezier(.99,.09,.58,.8)";
+      soap.style.transition = "200ms cubic-bezier(.99,.09,.58,.8)";
       return (soap.style.transform = `translateX(-${111 * count}%)`);
     });
   }

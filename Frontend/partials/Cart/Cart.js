@@ -32,9 +32,8 @@ export const createElement = (obj) => {
   <p class="cart-item-quantity">${quantity}</p>
   <button class="inc">+</button>
   </div>
-  <button class="danger">Delete</button>`;
+  <button class="danger">remove</button>`;
   cartContainer.appendChild(itemDiv);
-  //totalCost += Number(obj.Price);
   initialTotalCost(obj.Price, quantity);
   amount += Number(quantity);
   showCartTotal();
