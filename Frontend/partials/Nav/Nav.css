@@ -3,26 +3,22 @@ nav {
   top: 0;
   right: 0;
   background-color: #fff;
-  padding: 50px;
+  padding: 40px;
   pointer-events: none;
   opacity: 0;
   transition: 250ms ease-in-out;
   z-index: 997;
-  box-shadow: 0 5px 100px 0 #eee;
-}
-nav ul li {
-  margin: 8px 0;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #000;
-  transition-duration: 200ms;
-}
-nav ul li a:hover {
-  color: rgb(221, 96, 179);
-}
+  box-shadow: 0 5px 100px 0 #eee; }
+  nav ul li {
+    margin: 25px 0;
+    list-style-type: none; }
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      transition-duration: 200ms; }
+      nav ul li a:hover {
+        color: #dd60b3; }
 
 nav.open {
   opacity: 1;
-  pointer-events: all;
-}/*# sourceMappingURL=Nav.css.map */
+  pointer-events: all; }

@@ -22,28 +22,25 @@
   <%- include("../../partials/Cart/Cart.ejs") %>
   <%- include("../../partials/BlowUpView/BlowUpView.ejs") %>
   <div class="backdrop"></div>
-  <h1 class="heading">Soap Works</h1>
+  <section>
+  <h1 class="heading">Livin' Large Soap Works</h1>
   <p class="intro">
     Welcome!! Please enjoy viewing these amazing products... Remember that all soap products that you see are made with 100% all natural ingredients! If you
     are a nature person, you will love what we have to offer.
   </p>
-  <h2>Soaps</h2>
   <div class="top-right-pink"></div>
-  <section class="soaps">
+  <h2>Soaps</h2>
+  <div class="soaps">
     <%soaps.forEach((soap)=> {
 %>
     <div class="grid-item">
-      <img class="img" src="<%=soap.ImageUrl%>" alt="<%=soap.Title%>" />
-      <h2 class="title">
-        <%=soap.Title%>
-      </h2>
-      <p class="price">
-        $<%=soap.Price%>
-      </p>
+      <img src="<%=soap.ImageUrl%>" alt="<%=soap.Title%>" />
     </div>
     <%})%>
+    </div> 
+  <a href="/soaps" class="view-more">View More ...</a>
   </section>
-  <a href="/soaps" class="view-more-soaps">View More ...</a>
+  <section class="kits">
   <h3 class="second-heading">Kits</h3>
   <p class="intro">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
@@ -53,23 +50,20 @@
     asperiores!
   </p>
   <h2>Kit Selections</h2>
-  <section class="kits">
     <%kits.forEach((kit)=> {
 %>
     <div class="kit-item">
       <img src="<%=kit.ImageUrl%>" alt="<%=kit.Title%>" />
+      <div class="kit-text">
       <h2>
         <%=kit.Title%>
       </h2>
-      <p>
-        <strong>
-          <%=kit.Quantity%>
-        </strong> kits available
-      </p>
+      </div>
     </div>
     <%})%>
+  <a href="/kits" class="view-more">View More ...</a>
   </section>
-  <a href="/kits" class="view-more-soaps">View More ...</a>
+  <section class="subs">
   <h3 class="second-heading">Subscription Boxes</h3>
   <p class="intro">
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
@@ -79,11 +73,11 @@
     asperiores!
   </p>
   <h2>Boxes</h2>
-  <section class="subs">
     <%subs.forEach((sub)=> {
 %>
     <div class="sub">
       <img src="<%=sub.ImageUrl%>" alt="">
+      <div class="sub-text">
       <div class="title-and-price">
         <h2>
           <%=sub.Title%>
@@ -95,22 +89,25 @@
       <p>
         <%=sub.Description%>
       </p>
+      <div class="sub-includes">
       <h3>
         <%=sub.Title%> Includes ..
       </h3>
-      <div class="sub-includes">
+      	<ul>
         <%sub.Included.forEach((item)=> {
 %>
-        <p class="sub-item">
-          - <%=item%>
-        </p>
+        <li class="sub-item">
+          <%=item%>
+        </li>
         <%})%>
+        </ul>
       </div>
       <button class="buy-btn">Add To Cart</button>
+      </div>
     </div>
     <%})%>
+  <a href="/subscriptions" class="view-more">View More ...</a>
   </section>
-  <a href="/subscriptions" class="view-more-soaps">View More ...</a>
   <%- include('../../partials/Contact/Contact.ejs')%>
   <%- include('../../partials/Footer/Footer.ejs') %>
 </body>

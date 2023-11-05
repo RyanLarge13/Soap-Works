@@ -25,10 +25,8 @@ export const createElement = (obj) => {
   const quantity = localStorage.getItem(obj._id);
   if (obj.Title === undefined) return;
   itemDiv.className = "cart-item";
-  itemDiv.innerHTML = `<h1>${obj.Title}</h1>
-  <div class="cart-img-container">
+  itemDiv.innerHTML = `<h2>${obj.Title}</h2>
   <img src="${obj.ImageUrl}" alt="background product image" />
-  </div>
   <div class="quantity-container">
   <button class="dec">-</button>
   <p class="cart-item-quantity">${quantity}</p>

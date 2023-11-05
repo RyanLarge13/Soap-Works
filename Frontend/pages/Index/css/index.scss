@@ -1,11 +1,3 @@
-li {
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 //variables
 $trans-slo: 1s ease-in-out;
 $trans-med: 500ms ease-in-out;
@@ -13,12 +5,8 @@ $trans-fast: 250ms ease-in-out;
 $shadow-sm: 0.25em 0.5em 0.5em 0 #eee;
 $radius-btm: 0 0 0.5em 0.5em;
 
-body {
-  padding-top: 25%;
-}
-
 .heading {
-  margin-left: 2%;
+  margin-top: 100px;
   font-weight: 600;
   font-size: 4em;
   opacity: 0;
@@ -27,9 +15,7 @@ body {
 }
 
 .intro {
-  padding: 1em 4em 1em 2%;
-  margin: 1em 0 2em 0;
-  font-size: 1em;
+  margin-bottom: 75px;
   opacity: 0;
   transition: 1s ease-in-out;
   transition-delay: 1s;
@@ -43,37 +29,14 @@ body {
   transition-delay: none;
 }
 
-h2 {
-  margin-left: 2%;
-}
-
-.second-heading {
-  margin-left: 2%;
-  margin-top: 2em;
-  font-size: 5em;
-}
-
-.soaps {
-  width: 100vw;
-  padding: 0 2em;
-  margin-top: 5%;
-
-  img {
-    opacity: 1;
-    transition: $trans-med;
-  }
-}
-
 .grid-item {
+  max-width: 47%;
   opacity: 0;
-  position: relative;
-  margin: 1em 1em;
-  min-width: 42.5%;
-  max-width: 42.5%;
+  margin: 5px;
   border-radius: 1em;
   background-color: #eee;
   box-shadow: $shadow-sm;
-  overflow-x: hidden;
+  overflow: hidden;
   transition: $trans-fast;
 
   &:hover {
@@ -81,37 +44,10 @@ h2 {
   }
 
   img {
-    position: absolute;
-    min-width: 100%;
-    height: 100%;
     border-radius: 1em;
     transition: $trans-med;
-  }
-
-  h2 {
-    position: absolute;
-    padding: 0.1em 0.3em;
-    bottom: 5px;
-    left: 5px;
-    z-index: 1;
-    font-size: 2em;
-    font-weight: 600;
-    background-color: #fff;
-    border-radius: 0 1em 0 0.25em;
-    box-shadow: -0.1em 0.1em 0.25em 0 #eee;
-  }
-
-  p {
-    position: absolute;
-    bottom: 0%;
-    right: 0%;
-    font-size: 3em;
-    font-weight: 600;
-    z-index: 1;
-    color: #fff;
-    padding: 0.25em;
-    border-radius: 0.25em 0 0.25em 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    min-height: 100%;
+    max-height: 100%;
   }
 }
 
@@ -121,47 +57,34 @@ h2 {
 }
 
 .height-0 {
-  height: 450px;
+  height: 150px;
 }
 
 .height-1 {
-  height: 550px;
+  height: 250px;
 }
 
 .height-2 {
-  height: 675px;
+  height: 350px;
 }
 
 .height-3 {
-  height: 750px;
+  height: 400px;
 }
 
-.view-more-soaps {
-  display: block;
-  text-align: right;
-  margin-right: 5%;
-  margin-top: 5vh;
+.view-more {
   color: #000;
+  margin-top: 25px;
+  display: block;
 }
 
 .kits {
-  width: 100vw;
-  padding: 0 2em;
-  margin-top: 5%;
-  margin-bottom: 2em;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5em;
-
   .kit-item {
+    margin-top: 50px;
     opacity: 0;
-    position: relative;
     border-radius: 1em;
     background-color: #fff;
     box-shadow: $shadow-sm;
-    max-width: 100%;
-    min-width: 100%;
-    overflow-x: hidden;
     cursor: pointer;
     transform: translateX(-50vw);
     transition: $trans-fast;
@@ -172,35 +95,12 @@ h2 {
 
     img {
       border-radius: 1em;
-      min-width: 100%;
-      max-height: 450px;
-      min-height: 450px;
       pointer-events: none;
-    }
-
-    h2 {
-      border-radius: 1em 1em 0 0;
       width: 100%;
-      padding: 0 0 0.5em 0.25em;
-      font-size: 2em;
     }
 
-    p {
-      position: absolute;
-      width: max-content;
-      font-size: 1.5em;
-      font-weight: 600;
-      top: 2%;
-      right: 2%;
-      color: #000;
-      background-color: #fff;
-      padding: 0 0.5em;
-      border-radius: 0 1em 0 1em;
-      box-shadow: 0 0.1em 0.25em 0 #eee;
-
-      strong {
-        font-size: 3em;
-      }
+    .kit-text {
+      padding: 8px;
     }
   }
 
@@ -212,69 +112,50 @@ h2 {
 }
 
 .subs {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
   .sub {
-    margin: 5% 0 10% 0;
-    padding: 2.5em;
-    width: 90%;
     border-radius: 1em;
-    box-shadow: 0 0.25em 0.75em 0 #aaa;
+    box-shadow: 0 15px 100px 0 #eee;
     opacity: 0;
     transform: translateY(5vh);
+    margin: 50px 0;
+
+    .sub-text {
+      padding: 1em;
+    }
 
     img {
-      border-radius: 1em;
       width: 100%;
+      border-radius: 1em;
     }
 
     .title-and-price {
-      margin-top: 2em;
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
 
     h2 {
-      font-size: 4em;
-      margin-left: 0;
     }
 
     h3 {
-      font-size: 2.5em;
-      margin-top: 1em;
     }
 
     p {
-      font-size: 1em;
     }
 
     .price {
-      font-weight: 600;
-      font-size: 4em;
     }
 
     .sub-includes {
       margin-top: 1em;
-      display: grid;
-      gap: 0 1em;
-      grid-template-columns: repeat(2, 1fr);
-      align-items: center;
-
+      ul {
+        margin-left: 1em;
+      }
       .sub-item {
-        font-size: 0.75em;
       }
     }
 
     .buy-btn {
-      width: 100%;
-      margin-top: 20%;
-      padding: 1em 2em;
-      font-size: 2em;
       border-radius: 0.5em;
       transition: 250ms ease-in-out;
 

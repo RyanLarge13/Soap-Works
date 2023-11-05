@@ -9,67 +9,54 @@
   overflow-x: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: 250ms ease-out;
-}
-.blowup-view .blowup-soap {
-  min-width: 90%;
-  max-width: 90%;
-  min-height: 75%;
-  border-radius: 1em;
-  margin: 0 5%;
-  box-shadow: 0 0.1em 0.75em 0 #222;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  transition: 500ms cubic-bezier(0.99, 0.09, 0.58, 0.8);
-}
-.blowup-view .blowup-soap h2 {
-  margin-top: 1em;
-  font-size: 2em;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 0.1em 0.5em;
-  border-radius: 0.25em;
-  box-shadow: 0 0.1em 0.25em 0 #373737;
-  background-color: #fff;
-}
-.blowup-view .blowup-soap h3 {
-  background-color: #fff;
-  padding: 1em;
-  max-width: 75%;
-  border-radius: 0.5em;
-  box-shadow: 0 0.15em 0.5em 0 #191919;
-  font-size: 1.75em;
-}
-.blowup-view .blowup-soap button {
-  margin-bottom: 1em;
-  padding: 1em 2em;
-  font-size: 1.75em;
-  border-radius: 0.5em;
-  border: none;
-  outline: none;
-  box-shadow: 0 0.15em 0.5em 0 #191919;
-  background-color: #ffb6c1;
-  transition: 250ms ease-in-out;
-}
-.blowup-view .blowup-soap button:hover {
-  background-color: #fff;
-  scale: 1.01;
-}
-.blowup-view .blowup-soap button strong {
-  pointer-events: none;
-}
-.blowup-view .blowup-soap .blowupsoap-img {
-  position: absolute;
-  min-width: 100%;
-  height: 100%;
-  z-index: -1;
-  pointer-events: none;
-}
+  transition: 250ms ease-out; }
+  .blowup-view .blowup-soap {
+    min-width: 90%;
+    max-width: 90%;
+    min-height: 75%;
+    border-radius: 1em;
+    margin: 0 5%;
+    box-shadow: 0 0.1em 0.75em 0 #222;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transition: 500ms cubic-bezier(0.99, 0.09, 0.58, 0.8); }
+    .blowup-view .blowup-soap h2 {
+      margin-top: 1em;
+      width: fit-content;
+      padding: 0.1em 0.5em;
+      border-radius: 0.25em;
+      box-shadow: 0 0.1em 0.25em 0 #373737;
+      background-color: #fff; }
+    .blowup-view .blowup-soap h3 {
+      background-color: #fff;
+      padding: 1em;
+      max-width: 75%;
+      border-radius: 0.5em;
+      box-shadow: 0 0.15em 0.5em 0 #191919; }
+    .blowup-view .blowup-soap button {
+      margin-bottom: 1em;
+      padding: 1em 2em;
+      border-radius: 0.5em;
+      border: none;
+      outline: none;
+      box-shadow: 0 0.15em 0.5em 0 #191919;
+      background-color: #ffb6c1;
+      transition: 250ms ease-in-out; }
+      .blowup-view .blowup-soap button:hover {
+        background-color: #fff;
+        scale: 1.01; }
+      .blowup-view .blowup-soap button strong {
+        pointer-events: none; }
+    .blowup-view .blowup-soap .blowupsoap-img {
+      position: absolute;
+      min-width: 100%;
+      height: 100%;
+      z-index: -1;
+      pointer-events: none; }
 
 .blowup-view.show {
   pointer-events: all;
-  opacity: 1;
-}/*# sourceMappingURL=BlowUpView.css.map */
+  opacity: 1; }

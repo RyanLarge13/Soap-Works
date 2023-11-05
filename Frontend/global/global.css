@@ -4,7 +4,7 @@
 @import "../partials/Footer/Footer.css";
 @import "../partials/Contact/Contact.css";
 @import "../partials/Cart/Cart.css";
-@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 *,
 ::after,
@@ -15,25 +15,28 @@
 }
 
 body {
-  font-family: "Merriweather", serif;
+  font-family: 'Indie Flower', cursive;
   overflow-x: hidden;
+  padding: 0 20px;
 }
-
+section {
+  margin-bottom: 250px;
+}
 button {
-  font-family: "Merriweather", serif;
-  box-shadow: 0.25em 0.5em 1em 0 #777777;
-  border: none;
+  border-radius: 5px;
   outline: none;
+  border: none;
+  padding: 1em;
+  background-color: #efd0d9;
+  width: 100%;
+  margin-top: 1em;
 }
-
-li {
-  list-style-type: none;
+p {
+  font-size: 14px;
 }
-
 a {
   text-decoration: none;
 }
-
 .flex {
   display: flex;
 }
@@ -45,16 +48,11 @@ a {
 .flex-row {
   align-items: center;
 }
-.sec {
-  width: 100vw;
-  height: 100vh;
-}
 .hidden {
   display: none;
   opacity: 0;
   pointer-events: none;
 }
-
 .backdrop {
   inset: 0;
   opacity: 0;

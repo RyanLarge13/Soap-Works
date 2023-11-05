@@ -1,24 +1,24 @@
 .men-women-grid {
-  margin-bottom: 100px;
+  margin-top: 100px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  gap: 25px; }
   .men-women-grid .men-women-item {
     position: relative;
     width: 100%;
-    height: 100%;
     box-shadow: 0 0.25em 0.75em 0 #aaa;
     opacity: 0;
     transition: 500ms ease-in-out;
-    transform: translateY(50%); }
+    transform: translateY(50%);
+    border-radius: 10px;
+    overflow: hidden; }
     .men-women-grid .men-women-item h2 {
-      font-size: 2em;
       position: absolute;
       bottom: 0;
-      padding: 1em;
+      padding: 8px;
       background-color: #fff;
-      width: 100%;
       border-radius: 0.75em 0.75em 0 0; }
     .men-women-grid .men-women-item .men-women-img {
       z-index: -1;
