@@ -37,7 +37,6 @@ const styleText = () => {
 };
 
 const addListeners = () => {
-  //window.addHeadingListeners("scroll", styleHeadings);
   window.addEventListener("scroll", styleParagraphs);
 };
 

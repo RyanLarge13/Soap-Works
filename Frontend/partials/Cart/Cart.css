@@ -25,11 +25,6 @@
     border-radius: 1em; }
     .cart .cart-info p {
       margin: 0 1em; }
-  .cart .checkout {
-    transition: 250ms ease-in-out; }
-    .cart .checkout:hover {
-      background-color: #fff;
-      scale: 1.01; }
 
 .cart.show {
   transform: translateX(-50%) translateY(0);
@@ -41,7 +36,7 @@
   padding: 50px 0;
   overflow-y: auto; }
   .cart-container .no-items-in-cart {
-    width: 75%;
+    margin-top: 1em;
     text-align: center;
     transition: 250ms ease-in-out; }
   .cart-container .cart-item {
@@ -73,9 +68,7 @@
         font-weight: 600;
         margin: 0 1em;
         background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center; }
+        text-align: center; }
     .cart-container .cart-item .danger {
       width: min-content;
       background-color: #fff;

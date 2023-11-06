@@ -31,15 +31,6 @@
       margin: 0 1em;
     }
   }
-
-  .checkout {
-    transition: 250ms ease-in-out;
-
-    &:hover {
-      background-color: #fff;
-      scale: 1.01;
-    }
-  }
 }
 
 .cart.show {
@@ -54,7 +45,7 @@
   overflow-y: auto;
 
   .no-items-in-cart {
-    width: 75%;
+    margin-top: 1em;
     text-align: center;
     transition: 250ms ease-in-out;
   }
@@ -95,9 +86,7 @@
         font-weight: 600;
         margin: 0 1em;
         background-color: #fff;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        text-align: center;
       }
     }
 

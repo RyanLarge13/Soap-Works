@@ -4,16 +4,15 @@ header {
   top: 0;
   right: 0;
   left: 0;
+  display: flex;
   justify-content: space-between;
+  align-items: center;
   box-shadow: 0 15px 100px 0 #eee;
   border-radius: 0 0 0.5em 0.5em;
   z-index: 998;
   background-color: rgba(255, 255, 255, 1);
 
   .shopping-cart {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     opacity: 1;
     transition: 250ms ease-in-out;
   }

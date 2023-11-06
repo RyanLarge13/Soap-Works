@@ -1,10 +1,9 @@
 @import "../partials/Header/Header.css";
 @import "../partials/Nav/Nav.css";
-@import "../partials/BlowUpView/BlowUpView.css";
 @import "../partials/Footer/Footer.css";
 @import "../partials/Contact/Contact.css";
 @import "../partials/Cart/Cart.css";
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
 
 *,
 ::after,
@@ -15,7 +14,7 @@
 }
 
 body {
-  font-family: 'Indie Flower', cursive;
+  font-family: "Indie Flower", cursive;
   overflow-x: hidden;
   padding: 0 20px;
 }
@@ -30,6 +29,13 @@ button {
   background-color: #efd0d9;
   width: 100%;
   margin-top: 1em;
+  font-family: "Indie Flower", cursive;
+}
+input {
+font-family: "Indie Flower", cursive;
+}
+textarea {
+font-family: "Indie Flower", cursive;
 }
 p {
   font-size: 14px;

@@ -95,7 +95,7 @@ export const createElement = (obj) => {
 };
 
 const initCheckout = (e) => {
-  const container = e.target.parentElement.firstElementChild;
+  const container = document.querySelector(".cart-container");
   const hasChildren = container.querySelector(".cart-item");
   if (!hasChildren) {
     const noItems = document.createElement("h2");

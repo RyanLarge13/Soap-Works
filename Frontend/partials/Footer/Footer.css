@@ -5,7 +5,8 @@
   justify-content: center;
   align-items: center; }
   .main-footer .footer-links li {
-    list-style-type: none; }
+    list-style-type: none;
+    text-align: center; }
     .main-footer .footer-links li a {
       color: #000; }
   .main-footer .footer-social {
