@@ -3,9 +3,9 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  padding: 100px 10px 0 10px;
 
   .info-container {
-    padding: 2em;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -37,9 +37,6 @@
     font-size: 4em;
     margin-top: 4em;
   }
-
-  img {
-  }
 }
 
 .product-information-container.show {
@@ -50,16 +47,17 @@
   background-color: #fff;
   overflow-x: hidden;
   padding-bottom: 2em;
+  margin: 50px 0;
 
   .product-img {
     margin: auto;
     overflow: hidden;
     transition: 500ms ease-in-out;
+    border-radius: 10px;
 
     img {
+      max-width: 100%;
       min-width: 100%;
-      min-height: 100%;
-      width: 75%;
     }
   }
 
@@ -68,23 +66,16 @@
   }
 
   h2 {
-    font-size: 6em;
   }
 
   .price {
-    font-size: 4em;
     font-weight: 600;
   }
 
   .desc {
-    font-size: 2em;
-    margin: 4em 10px;
-    text-align: center;
   }
 
   button {
-    font-size: 2em;
-    padding: 1em 2em;
     border-radius: 0.5em;
     transition: 250ms ease-in-out;
     width: 100%;
@@ -100,32 +91,19 @@
   }
 
   .share {
-    font-size: 4em;
   }
 }
 
 .option-btns {
   margin: 0 auto 3em auto;
-  z-index: 2;
-  width: 50%;
-  height: 100px;
-  box-shadow: 0 0.1em 1em 0 #aaa;
   border-radius: 0.25em 0.25em 1em 1em;
   background-color: #fff;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   div {
-    box-shadow: 0 0.1em 0.25em 0 #aaa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    i {
-      font-size: 1.75em;
-      pointer-events: none;
-    }
+    padding: 10px 15px;
   }
 }
 

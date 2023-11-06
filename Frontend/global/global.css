@@ -1,6 +1,5 @@
 @import "../partials/Header/Header.css";
 @import "../partials/Nav/Nav.css";
-@import "../partials/BlowUpView/BlowUpView.css";
 @import "../partials/Footer/Footer.css";
 @import "../partials/Contact/Contact.css";
 @import "../partials/Cart/Cart.css";
@@ -16,27 +15,33 @@
 
 body {
   font-family: "Indie Flower", cursive;
+  overflow-x: hidden;
+  padding: 0 20px;
 }
-
+section {
+  margin-bottom: 250px;
+}
 button {
-  font-family: "Indie Flower", cursive;
-  background-image: linear-gradient(45deg, #ffb6c1, #fff);
-  box-shadow: 0.25em 0.5em 1em 0 #777777;
-  border: none;
+  border-radius: 5px;
   outline: none;
+  border: none;
+  padding: 1em;
+  background-color: #efd0d9;
+  width: 100%;
+  margin-top: 1em;
+  font-family: "Indie Flower", cursive;
 }
-
-li {
-  list-style-type: none;
+input {
+font-family: "Indie Flower", cursive;
 }
-
+textarea {
+font-family: "Indie Flower", cursive;
+}
+p {
+  font-size: 14px;
+}
 a {
   text-decoration: none;
-}
-
-body {
-  overflow-x: hidden;
-  padding-top: 15%;
 }
 .flex {
   display: flex;
@@ -49,16 +54,11 @@ body {
 .flex-row {
   align-items: center;
 }
-.sec {
-  width: 100vw;
-  height: 100vh;
-}
 .hidden {
   display: none;
   opacity: 0;
   pointer-events: none;
 }
-
 .backdrop {
   inset: 0;
   opacity: 0;

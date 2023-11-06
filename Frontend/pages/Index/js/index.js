@@ -10,7 +10,7 @@ soapItems.forEach((item) => {
 setTimeout(() => {
   const masonry = new Masonry(soapGrid, {
     itemSelector: ".grid-item",
-    columnWidth: 0,
+    columnWidth: 2,
     percentPosition: true,
   });
   for (let i = 0; i < soapItems.length; i++) {
@@ -21,7 +21,7 @@ setTimeout(() => {
   setTimeout(() => {
     window.addEventListener("scroll", styleSoaps);
   }, 5000);
-}, 500);
+}, 100);
 
 const styleText = () => {
   const heading = document.querySelector(".heading");
@@ -37,7 +37,6 @@ const styleText = () => {
 };
 
 const addListeners = () => {
-  //window.addHeadingListeners("scroll", styleHeadings);
   window.addEventListener("scroll", styleParagraphs);
 };
 

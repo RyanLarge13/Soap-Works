@@ -1,57 +1,43 @@
 header {
   position: fixed;
-  padding: 0.5em;
+  padding: 0.5em 1em;
   top: 0;
-  width: 100%;
+  right: 0;
+  left: 0;
+  display: flex;
   justify-content: space-between;
-  box-shadow: 0.1em 0.1em 0.5em 0 #eee;
+  align-items: center;
+  box-shadow: 0 15px 100px 0 #eee;
   border-radius: 0 0 0.5em 0.5em;
   z-index: 998;
   background-color: white; }
   header .shopping-cart {
-    position: absolute;
-    font-size: 2.5em;
-    left: 50%;
-    transform: translateX(-50%);
     opacity: 1;
     transition: 250ms ease-in-out; }
   header .shopping-cart.show {
     opacity: 0; }
   header .logo {
     text-decoration: none;
-    color: #000;
-    padding: 1em; }
+    color: #000; }
     header .logo img {
-      height: 50px;
-      width: 50px; }
+      height: 30px;
+      width: 30px; }
 
 .menu-toggle {
-  width: 40px;
-  height: 40px;
-  margin-right: 2em;
+  width: 20px;
+  height: 20px;
   cursor: pointer;
   z-index: 999; }
   .menu-toggle span {
     width: 100%;
-    height: 3px;
+    height: 2px;
     border-radius: 1em;
     background-color: #000;
-    margin: 3px 0;
-    transition: 250ms ease-in-out; }
+    margin: 1px 0;
+    transition: 100ms ease-in-out; }
     .menu-toggle span:nth-child(1).x {
-      transform: rotateZ(45deg) translateY(0.75em); }
+      transform: rotateZ(45deg) translateY(6px); }
     .menu-toggle span:nth-child(2).x {
       opacity: 0; }
     .menu-toggle span:nth-child(3).x {
-      transform: rotateZ(-45deg) translateY(-0.75em); }
-
-@media (min-width: 1600px) and (min-height: 800px) {
-  header .shopping-cart {
-    font-size: 1em;
-    left: 2.5%;
-    z-index: 1000;
-    cursor: pointer; }
-  header .logo {
-    display: none; }
-  header .menu-toggle {
-    display: none; } }
+      transform: rotateZ(-45deg) translateY(-6px); }

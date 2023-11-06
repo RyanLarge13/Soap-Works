@@ -1,59 +1,12 @@
 img {
-  width: 100%;
-  height: 25%;
-  z-index: -1;
-}
-
-.about-heading-img {
-  position: absolute;
-  top: 0;
-}
-
-h1 {
-  font-size: 4em;
-}
+  width: 100%; }
 
 h2 {
-  font-size: 3em;
-  margin-left: 2%;
-  margin-top: 1em;
-}
-
-p {
-  font-size: 2em;
-  margin-left: 4%;
-  margin-right: 4%;
-}
+  margin-top: 1em; }
 
 section {
-  padding: 0 2%;
-  width: 100vw;
-  margin-top: 35%;
-  margin-bottom: 10%;
-}
-
-.no-mt {
-  margin-top: 5%;
-}
+  margin-top: 50px; }
 
 .end {
-  margin: 1em 4em;
   text-align: center;
-  font-weight: 600;
-}
-
-@media (min-width: 1600px) and (min-height: 800px) {
-  img {
-    min-height: 50vh;
-    max-height: 50vh;
-  }
-  h1 {
-    font-size: 3em;
-  }
-  h2 {
-    font-size: 2.5em;
-  }
-  section {
-    margin-top: 25%;
-  }
-}/*# sourceMappingURL=about.css.map */
+  margin-bottom: 100px; }

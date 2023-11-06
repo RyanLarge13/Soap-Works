@@ -2,18 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Soap Works</title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
+    <meta name="description" content="Clean up with the best. <%=product.Title%> will leave you feeling fresh, healthy & clean" />
+  <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
+  <meta http-equiv="refresh" content="text/html;charset=UTF-8" />
+  <link rel="shortcut icon" href="<%=product.ImageUrl%>" type="image/x-icon">
+  <link rel="stylesheet" href="/global/global.css" />
+  <link rel="stylesheet" href="/pages/Product/css/product.css" />
+  <script type="module" src="/global/global.js"></script>
+  <script defer src="https://kit.fontawesome.com/a673862905.js" crossorigin="anonymous"></script>
+  <title>Soap Works - <%=product.Title%></title>
 </head>
 
 <body>
-    <h1>
+	  <%- include("../../partials/Header/Header.ejs") %>
+  <%- include("../../partials/Cart/Cart.ejs") %>
+    <div class="backdrop"></div>
+	<div class="image-container">
+    <img src="<%=product.ImageUrl%>" alt="product">
+	</div>
+    <h2>
         <%=product.Title%>
-    </h1>
-    <h2><%=product.Description%></h2>
-    <img src="<%=product.ImgUrl%>" alt="">
+    </h2>
+    <p><%=product.Description%></p>
+        <button class="buy-btn">Add To Cart</button>
 </body>
 
 </html>

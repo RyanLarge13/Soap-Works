@@ -25,18 +25,15 @@ export const createElement = (obj) => {
   const quantity = localStorage.getItem(obj._id);
   if (obj.Title === undefined) return;
   itemDiv.className = "cart-item";
-  itemDiv.innerHTML = `<h1>${obj.Title}</h1>
-  <div class="cart-img-container">
+  itemDiv.innerHTML = `<h2>${obj.Title}</h2>
   <img src="${obj.ImageUrl}" alt="background product image" />
-  </div>
   <div class="quantity-container">
   <button class="dec">-</button>
   <p class="cart-item-quantity">${quantity}</p>
   <button class="inc">+</button>
   </div>
-  <button class="danger">Delete</button>`;
+  <button class="danger">remove</button>`;
   cartContainer.appendChild(itemDiv);
-  //totalCost += Number(obj.Price);
   initialTotalCost(obj.Price, quantity);
   amount += Number(quantity);
   showCartTotal();
@@ -98,7 +95,7 @@ export const createElement = (obj) => {
 };
 
 const initCheckout = (e) => {
-  const container = e.target.parentElement.firstElementChild;
+  const container = document.querySelector(".cart-container");
   const hasChildren = container.querySelector(".cart-item");
   if (!hasChildren) {
     const noItems = document.createElement("h2");
