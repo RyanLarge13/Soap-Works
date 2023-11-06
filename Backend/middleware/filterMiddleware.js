@@ -13,7 +13,9 @@ const callCollection = async (res, collection) => {
   try {
     const allProducts = mongoose.connection.collection(`${collection}`);
     const productData = await allProducts.find({}).toArray();
-    return (res.locals.products = productData);
+    res.locals.type = collection;
+    res.locals.products = productData;
+    return 
   } catch (err) {
     console.log(err);
   }
