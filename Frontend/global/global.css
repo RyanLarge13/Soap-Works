@@ -18,6 +18,18 @@ body {
   overflow-x: hidden;
   padding: 0 20px;
 }
+h1 {
+  font-size: 1em;
+  font-weight: 500;
+}
+h2 {
+  font-size: 1em;
+font-weight: 500;
+}
+h3 {
+  font-size: 1em;
+font-weight: 500;
+}
 section {
   margin-bottom: 250px;
 }
@@ -32,10 +44,10 @@ button {
   font-family: "Indie Flower", cursive;
 }
 input {
-font-family: "Indie Flower", cursive;
+  font-family: "Indie Flower", cursive;
 }
 textarea {
-font-family: "Indie Flower", cursive;
+  font-family: "Indie Flower", cursive;
 }
 p {
   font-size: 14px;
