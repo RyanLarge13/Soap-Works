@@ -67,7 +67,7 @@
     	  <div>
     	  	<p><%=ingredient.title%></p>
     	  	<p><%=ingredient.oz%> oz</p>
-    	  	<p><%=ingredient.percentage%>%</p>
+    	  	<p><%=(ingredient.percentage * 19).toFixed(0,1)%>%</p>
     	  </div>
     	<% }) %>
     	<h3>Additives</h3>
