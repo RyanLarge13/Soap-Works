@@ -22,98 +22,102 @@
   <%- include("../../partials/Cart/Cart.ejs") %>
   <div class="backdrop"></div>
   <section>
-  <h1 class="heading">Soap Works</h1>
-  <p class="intro">
-    Welcome!! Please enjoy viewing these amazing products... Remember that all soap products that you see are made with 100% all natural ingredients! If you
-    are a nature person, you will love what we have to offer.
-  </p>
-  <div class="top-right-pink"></div>
-  <h2>Soaps</h2>
-  <div class="soaps">
-    <%soaps.forEach((soap)=> {
+    <h1 class="heading">Soap Works</h1>
+    <p class="intro">
+      Welcome!! Please enjoy viewing these amazing products... Remember that all soap products that you see are made with 100% all natural ingredients! If you
+      are a nature person, you will love what we have to offer.
+    </p>
+    <div class="top-right-pink"></div>
+    <h2>Soaps</h2>
+    <div class="soaps">
+      <%soaps.forEach((soap)=> {
 %>
-<a href="/soaps/<%=soap.Title%>">
-    <div class="grid-item">
-      <img src="<%=soap.ImageUrl%>" alt="<%=soap.Title%>" />
+      <a href="/soaps/<%=soap.Title%>">
+        <div class="grid-item">
+          <img src="<%=soap.ImageUrl%>" alt="<%=soap.Title%>" />
+        </div>
+      </a>
+      <%})%>
     </div>
-    </a>
-    <%})%>
-    </div> 
-  <a href="/soaps" class="view-more">View More ...</a>
+    <a href="/soaps" class="view-more">View More ...</a>
   </section>
   <section class="kits">
-  <h3 class="second-heading">Kits</h3>
-  <p class="intro">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
-    doloribus
-    iure nesciunt architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non
-    et
-    asperiores!
-  </p>
-  <h2>Kit Selections</h2>
-    <%kits.forEach((kit)=> {
+    <h3 class="second-heading">Kits</h3>
+    <p class="intro">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
+      doloribus
+      iure nesciunt architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non
+      et
+      asperiores!
+    </p>
+    <h2>Kit Selections</h2>
+    <div class="kit-item-container">
+      <%kits.forEach((kit)=> {
 %>
-    <div class="kit-item">
-      <img src="<%=kit.ImageUrl%>" alt="<%=kit.Title%>" />
-      <div class="kit-text">
-      	<a href="/kits/<%=kit.Title%>">
-      <h2>
-        <%=kit.Title%>
-      </h2>
-      </a>
-      <p><%=kit.Description%></p>
+      <div class="kit-item">
+        <img src="<%=kit.ImageUrl%>" alt="<%=kit.Title%>" />
+        <div class="kit-text">
+          <a href="/kits/<%=kit.Title%>">
+            <h2>
+              <%=kit.Title%>
+            </h2>
+          </a>
+          <p><%=kit.Description%></p>
+        </div>
+        <button class="buy-btn">Add To Cart</button>
       </div>
-            <button class="buy-btn">Add To Cart</button>
+      <%})%>
     </div>
-    <%})%>
-  <a href="/kits" class="view-more">View More ...</a>
+    <a href="/kits" class="view-more">View More ...</a>
   </section>
   <section class="subs">
-  <h3 class="second-heading">Subscription Boxes</h3>
-  <p class="intro">
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
-    doloribus
-    iure nesciunt
-    architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non et
-    asperiores!
-  </p>
-  <h2>Boxes</h2>
-    <%subs.forEach((sub)=> {
+    <h3 class="second-heading">Subscription Boxes</h3>
+    <p class="intro">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
+      doloribus
+      iure nesciunt
+      architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non et
+      asperiores!
+    </p>
+    <h2>Boxes</h2>
+    <div class="sub-container">
+      <%subs.forEach((sub)=> {
 %>
-    <div class="sub">
-      <img src="<%=sub.ImageUrl%>" alt="">
-      <div class="sub-text">
-      <div class="title-and-price">
-      	<a href="/subscriptions/<%=sub.Title%>">
-        <h2>
-          <%=sub.Title%>
-        </h2>
-        </a>
-        <p class="price">
-          $<%=sub.Price%>
-        </p>
-      </div>
-      <p>
-        <%=sub.Description%>
-      </p>
-      <div class="sub-includes">
-      <h3>
-        <%=sub.Title%> Includes ..
-      </h3>
-      	<ul>
-        <%sub.Included.forEach((item)=> {
+      <div class="sub">
+        <img src="<%=sub.ImageUrl%>" alt="">
+        <div class="sub-text">
+          <div class="title-and-price">
+            <a href="/subscriptions/<%=sub.Title%>">
+              <h2>
+                <%=sub.Title%>
+              </h2>
+            </a>
+            <p class="price">
+              $<%=sub.Price%>
+            </p>
+          </div>
+          <p>
+            <%=sub.Description%>
+          </p>
+          <div class="sub-includes">
+            <h3>
+              <%=sub.Title%> Includes ..
+            </h3>
+            <ul>
+              <%sub.Included.forEach((item)=> {
 %>
-        <li class="sub-item">
-          <%=item%>
-        </li>
-        <%})%>
-        </ul>
+              <li class="sub-item">
+                <%=item%>
+              </li>
+              <%})%>
+            </ul>
+          </div>
+          <button class="buy-btn">Add To Cart</button>
+        </div>
       </div>
-      <button class="buy-btn">Add To Cart</button>
-      </div>
+      <%})%>
     </div>
-    <%})%>
-  <a href="/subscriptions" class="view-more">View More ...</a>
+    <a href="/subscriptions" class="view-more">View More ...</a>
   </section>
   <%- include('../../partials/Contact/Contact.ejs')%>
   <%- include('../../partials/Footer/Footer.ejs') %>

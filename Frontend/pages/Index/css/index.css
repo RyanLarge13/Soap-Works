@@ -4,23 +4,27 @@
   font-size: 4em;
   opacity: 0;
   transition: 2s ease-in-out;
-  transform: translateX(-100%); }
+  transform: translateX(-100%);
+}
 
 a {
-  color: #000; }
+  color: #000;
+}
 
 .intro {
   margin-bottom: 75px;
   opacity: 0;
   transition: 1s ease-in-out;
   transition-delay: 1s;
-  transform: translateX(-100%); }
+  transform: translateX(-100%);
+}
 
 .intro.inview {
   opacity: 1;
   transform: translateX(0);
   transition: 1.5s ease-in-out;
-  transition-delay: none; }
+  transition-delay: none;
+}
 
 .grid-item {
   width: 47%;
@@ -30,36 +34,46 @@ a {
   background-color: #eee;
   box-shadow: 0.25em 0.5em 0.5em 0 #eee;
   overflow: hidden;
-  transition: 250ms ease-in-out; }
-  .grid-item:hover {
-    scale: 1.025; }
-  .grid-item img {
-    border-radius: 1em;
-    transition: 500ms ease-in-out;
-    height: 100%;
-    width: 100%;
-    object-fit: cover; }
+  transition: 200ms ease-in-out;
+}
+.grid-item:hover {
+  scale: 1.025;
+}
+.grid-item img {
+  border-radius: 1em;
+  transition: 500ms ease-in-out;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .grid-item.inview {
   opacity: 1;
-  transition: 1s ease-in-out; }
+  transition: 200ms ease-in-out;
+}
 
 .height-0 {
-  height: 150px; }
+  height: 150px;
+}
 
 .height-1 {
-  height: 250px; }
+  height: 250px;
+}
 
 .height-2 {
-  height: 350px; }
+  height: 350px;
+}
 
 .height-3 {
-  height: 400px; }
+  height: 400px;
+}
 
 .view-more {
   color: #000;
   margin-top: 25px;
-  display: block; }
+  display: block;
+}
 
 .kits .kit-item {
   margin: 50px 0;
@@ -68,51 +82,87 @@ a {
   background-color: #fff;
   box-shadow: 0 15px 100px 0 #eee;
   cursor: pointer;
-  transform: translateX(-50vw);
-  transition: 250ms ease-in-out; }
-  .kits .kit-item:hover {
-    scale: 1.025; }
-  .kits .kit-item img {
-    border-radius: 8px;
-    pointer-events: none;
-    width: 100%; }
-  .kits .kit-item .kit-text {
-    padding: 8px; }
-
+  transform: translateX(-25px);
+  transition: 250ms ease-in-out;
+}
+.kits .kit-item:hover {
+  scale: 1.025;
+}
+.kits .kit-item img {
+  border-radius: 8px;
+  pointer-events: none;
+  width: 100%;
+}
+.kits .kit-item .kit-text {
+  padding: 8px;
+}
 .kits .kit-item.inview {
   opacity: 1;
-  transition: 1s ease-in-out;
-  transform: translateX(0); }
+  transition: 200ms ease-in-out;
+  transform: translateX(0);
+}
 
 .subs .sub {
   border-radius: 8px;
   box-shadow: 0 15px 100px 0 #eee;
   opacity: 0;
   transform: translateY(5vh);
-  margin: 50px 0; }
-  .subs .sub .sub-text {
-    padding: 1em; }
-  .subs .sub img {
-    width: 100%;
-    border-radius: 8px; }
-  .subs .sub .title-and-price {
-    display: flex;
-    justify-content: space-between;
-    align-items: center; }
-  .subs .sub .sub-includes {
-    margin-top: 1em; }
-    .subs .sub .sub-includes ul {
-      margin-left: 1em; }
-  .subs .sub .buy-btn {
-    border-radius: 0.5em;
-    transition: 250ms ease-in-out; }
-    .subs .sub .buy-btn:hover {
-      background-color: #fff;
-      scale: 1.01; }
-  .subs .sub:last-child {
-    margin-bottom: 0; }
-
+  margin: 50px 0;
+}
+.subs .sub .sub-text {
+  padding: 1em;
+}
+.subs .sub img {
+  width: 100%;
+  border-radius: 8px;
+}
+.subs .sub .title-and-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.subs .sub .sub-includes {
+  margin-top: 1em;
+}
+.subs .sub .sub-includes ul {
+  margin-left: 1em;
+}
+.subs .sub .buy-btn {
+  border-radius: 0.5em;
+  transition: 250ms ease-in-out;
+}
+.subs .sub .buy-btn:hover {
+  background-color: #fff;
+  scale: 1.01;
+}
+.subs .sub:last-child {
+  margin-bottom: 0;
+}
 .subs .sub.inview {
   opacity: 1;
   transform: translateY(0);
-  transition: 1s ease-in-out; }
+  transition: 1s ease-in-out;
+}
+
+@media (min-width: 1280px) {
+  .kit-item-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    place-items: center;
+    place-content: center;
+  }
+  .kit-item-container .kit-item {
+    margin-top: 0;
+  }
+  .sub-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    place-items: center;
+    place-content: center;
+  }
+  .sub-container .sub {
+    margin: 0;
+  }
+}/*# sourceMappingURL=index.css.map */

@@ -1,21 +1,24 @@
 .main-contact {
-  margin-bottom: 10%; }
-  .main-contact input {
-    width: 100%;
-    border-radius: 0.25em;
-    margin-bottom: 1em;
-    padding: 1em;
-    outline: none;
-    border: none;
-    box-shadow: 0 0.1em 0.25em 0 #eee; }
-  .main-contact textarea {
-    border-radius: 0.25em;
-    padding: 0.5em;
-    outline: none;
-    border: none;
-    box-shadow: 0 0.1em 0.25em 0 #eee;
-    width: 100%; }
-
+  margin-bottom: 10%;
+}
+.main-contact input {
+  width: 100%;
+  border-radius: 0.25em;
+  margin-bottom: 1em;
+  padding: 1em;
+  outline: none;
+  border: none;
+  box-shadow: 0 0.1em 0.25em 0 #eee;
+}
+.main-contact textarea {
+  border-radius: 0.25em;
+  padding: 0.5em;
+  outline: none;
+  border: none;
+  box-shadow: 0 0.1em 0.25em 0 #eee;
+  width: 100%;
+}
 .contact-heading {
   font-weight: 600;
-  font-size: 4em; }
+  font-size: 4em;
+}/*# sourceMappingURL=Contact.css.map */
