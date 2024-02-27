@@ -1,12 +1,15 @@
 <header class="flex flex-row">
-  <i class="fa-solid fa-bag-shopping shopping-cart"></i>
+  <div class="nav-backdrop"></div>
   <a href="/" class="logo">
     <img src="../../assets/images/logo.svg" alt="logo" />
   </a>
-  <div class="menu-toggle flex flex-col">
-    <span></span>
-    <span></span>
-    <span></span>
+  <div class="flex flex-row gap-x">
+    <i class="fa-solid fa-bag-shopping shopping-cart"></i>
+    <div class="menu-toggle flex flex-col">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
   <%- include('../Nav/Nav.ejs') %>
 </header>

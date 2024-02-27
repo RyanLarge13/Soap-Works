@@ -15,6 +15,7 @@ header {
   .shopping-cart {
     opacity: 1;
     transition: 250ms ease-in-out;
+    cursor: pointer;
   }
 
   .shopping-cart.show {

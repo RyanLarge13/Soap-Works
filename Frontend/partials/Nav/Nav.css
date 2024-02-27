@@ -3,22 +3,46 @@ nav {
   top: 0;
   right: 0;
   background-color: #fff;
-  padding: 40px;
   pointer-events: none;
   opacity: 0;
   transition: 100ms ease-in-out;
   z-index: 997;
-  box-shadow: 0 5px 100px 0 #eee; }
-  nav ul li {
-    margin: 25px 0;
-    list-style-type: none; }
-    nav ul li a {
-      text-decoration: none;
-      color: #000;
-      transition-duration: 200ms; }
-      nav ul li a:hover {
-        color: #dd60b3; }
+  box-shadow: 0 5px 100px 0 #eee;
+}
+nav ul {
+  margin-top: 50px;
+}
+nav ul li {
+  list-style-type: none;
+}
+nav ul li a {
+  padding: 15px 20px;
+  display: block;
+  width: 100%;
+  text-decoration: none;
+  color: #000;
+  transition-duration: 200ms;
+}
+nav ul li a:hover {
+  background-color: #eee;
+  color: rgb(221, 96, 179);
+}
 
 nav.open {
   opacity: 1;
-  pointer-events: all; }
+  pointer-events: all;
+}
+
+.nav-backdrop {
+  display: none;
+  position: fixed;
+  inset: 0;
+  transition-duration: 200ms ease-in-out;
+  background-color: #000;
+  opacity: 0;
+}
+
+.show {
+  display: block;
+  opacity: 0.25;
+}/*# sourceMappingURL=Nav.css.map */

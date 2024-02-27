@@ -1,6 +1,7 @@
 h1 {
   text-align: center;
-  margin-top: 100px; }
+  margin-top: 100px;
+}
 
 form {
   position: relative;
@@ -9,12 +10,14 @@ form {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 75vw; }
-  form input {
-    width: 100%;
-    margin: 5px 0;
-    border-radius: 0.25em;
-    padding: 1em;
-    outline: none;
-    border: none;
-    box-shadow: 0 15px 100px 0 #eee; }
+  width: 75vw;
+}
+form input {
+  width: 100%;
+  margin: 5px 0;
+  border-radius: 0.25em;
+  padding: 1em;
+  outline: none;
+  border: none;
+  box-shadow: 0 15px 100px 0 #eee;
+}/*# sourceMappingURL=contact.css.map */

@@ -15,7 +15,7 @@ $radius-btm: 0 0 0.5em 0.5em;
 }
 
 a {
-	color: #000;
+  color: #000;
 }
 
 .intro {
@@ -41,7 +41,7 @@ a {
   background-color: #eee;
   box-shadow: $shadow-sm;
   overflow: hidden;
-  transition: $trans-fast;
+  transition: 200ms ease-in-out;
 
   &:hover {
     scale: 1.025;
@@ -58,7 +58,7 @@ a {
 
 .grid-item.inview {
   opacity: 1;
-  transition: $trans-slo;
+  transition: 200ms ease-in-out;
 }
 
 .height-0 {
@@ -91,7 +91,7 @@ a {
     background-color: #fff;
     box-shadow: 0 15px 100px 0 #eee;
     cursor: pointer;
-    transform: translateX(-50vw);
+    transform: translateX(-25px);
     transition: $trans-fast;
 
     &:hover {
@@ -111,7 +111,7 @@ a {
 
   .kit-item.inview {
     opacity: 1;
-    transition: $trans-slo;
+    transition: 200ms ease-in-out;
     transform: translateX(0);
   }
 }
@@ -123,6 +123,7 @@ a {
     opacity: 0;
     transform: translateY(5vh);
     margin: 50px 0;
+
     .sub-text {
       padding: 1em;
     }
@@ -131,13 +132,16 @@ a {
       width: 100%;
       border-radius: 8px;
     }
+
     .title-and-price {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
+
     .sub-includes {
       margin-top: 1em;
+
       ul {
         margin-left: 1em;
       }
@@ -162,5 +166,37 @@ a {
     opacity: 1;
     transform: translateY(0);
     transition: 1s ease-in-out;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {}
+
+@media (min-width: 768px) and (max-width: 1023px) {}
+
+@media (min-width: 1024px) and (max-width: 1279px) {}
+
+@media (min-width: 1280px) {
+  .kit-item-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    place-items: center;
+    place-content: center;
+
+    .kit-item {
+      margin-top: 0;
+    }
+  }
+
+  .sub-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+    place-items: center;
+    place-content: center;
+
+    .sub {
+      margin: 0;
+    }
   }
 }
