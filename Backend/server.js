@@ -11,6 +11,7 @@ import { menWomenRouter } from "./routes/mensWomensRouter.js";
 import { addToCartRouter } from "./routes/addToCartRouter.js";
 import { checkoutRouter } from "./routes/checkoutRouter.js";
 import { productRouter } from "./routes/productPage.js";
+import { shoppingCartRouter } from "./routes/shoppingCartRouter.js";
 dotenv.config();
 connectDB();
 
@@ -46,7 +47,8 @@ app.use(
   menWomenRouter,
   addToCartRouter,
   checkoutRouter,
-  productRouter
+  productRouter, 
+  shoppingCartRouter
 );
 app.set("view engine", "ejs");
 app.set("views", "../Frontend/pages/");
