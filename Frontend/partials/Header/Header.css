@@ -10,23 +10,27 @@ header {
   box-shadow: 0 15px 100px 0 #eee;
   border-radius: 0 0 0.5em 0.5em;
   z-index: 998;
-  background-color: rgb(255, 255, 255);
+  background-color: white;
 }
+
 header .shopping-cart {
   opacity: 1;
   transition: 250ms ease-in-out;
   cursor: pointer;
 }
+
 header .shopping-cart.show {
   opacity: 0;
 }
+
 header .logo {
   text-decoration: none;
   color: #000;
 }
+
 header .logo img {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
 }
 
 .menu-toggle {
@@ -35,6 +39,7 @@ header .logo img {
   cursor: pointer;
   z-index: 999;
 }
+
 .menu-toggle span {
   width: 100%;
   height: 2px;
@@ -43,12 +48,15 @@ header .logo img {
   margin: 1px 0;
   transition: 100ms ease-in-out;
 }
+
 .menu-toggle span:nth-child(1).x {
   transform: rotateZ(45deg) translateY(6px);
 }
+
 .menu-toggle span:nth-child(2).x {
   opacity: 0;
 }
+
 .menu-toggle span:nth-child(3).x {
   transform: rotateZ(-45deg) translateY(-6px);
-}/*# sourceMappingURL=Header.css.map */
+}

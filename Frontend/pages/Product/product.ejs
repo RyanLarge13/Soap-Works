@@ -35,19 +35,19 @@
     	<p>Packaged Weight: <%=product.PackagedWeight%> oz</p>
     </div>
     <div class="gender-container">
-    	<% product.Gender.map((gender) => { %>
+    	<% product.Gender?.map((gender) => { %>
         <p class="gender"><%=gender%></p>
       <% }) %>
     </div>
     <button class="buy-btn">Add To Cart</button>
     <div class="uses">
     	<h3>What this product is best known for</h3>
-    	<% product.Uses.map((use) => { %>
+    	<% product.Uses?.map((use) => { %>
         <p class="gender"><%=use%></p>
       <% }) %>
     </div>
     <div class="top-properties">
-    <% product.Properties.map((prop) => { %>
+    <% product.Properties?.map((prop) => { %>
       <% const highLowRange = prop.range.split("-"); %>
       <% const difference = (Number(highLowRange[1]) - Number(highLowRange[0])); %>
       <% const placement = prop.value - Number(highLowRange[0]); %>
@@ -56,14 +56,17 @@
     	  	<p class="prop-title"><%=prop.type%></p>
     	  	<p class="prop-percent"><%=Math.floor(percentage)%>%</p>
     	  	<div class="graph-container">
-    	    	<div class="graph-bar" style="<%=`width: ${percentage}%; background-color: #da${String(Math.floor(percentage)).padStart(2,"0")}aa; height: 10px;`%>"></div>
+    	    	<div class="graph-bar" style="<%=`width: ${percentage}%;
+    	    	background-color:
+    	    	#${String(Math.floor(percentage)).padStart(2,"0")}ddad; height:
+    	    	10px;`%>"></div>
     	  	</div>
     	  </div>
      <% }) %>
     </div>
     <div class="ingredients">
     	<h3>Ingredients before saponificacion</h3>
-    	<% product.Ingredients.map((ingredient) => { %>
+    	<% product.Ingredients?.map((ingredient) => { %>
     	  <div>
     	  	<p><%=ingredient.title%></p>
     	  	<p><%=ingredient.oz%> oz</p>
@@ -71,7 +74,7 @@
     	  </div>
     	<% }) %>
     	<h3>Additives</h3>
-    	<% product.Additives.map((additive) => { %>
+    	<% product.Additives?.map((additive) => { %>
     		 <div>
     	  	<p><%=additive.title%></p>
     	  	<p><%=additive.oz%> oz</p>
