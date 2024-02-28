@@ -38,7 +38,8 @@ button {
   outline: none;
   border: none;
   padding: 1em;
-  background-color: #efd0d9;
+  cursor: pointer;
+  background-color: #e9cba7;
   width: 100%;
   margin-top: 1em;
   font-family: "Indie Flower", cursive;
@@ -82,7 +83,7 @@ a {
   opacity: 0;
   pointer-events: none;
   position: fixed;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.2);
   z-index: 994;
   transition: 250ms ease-out;
 }

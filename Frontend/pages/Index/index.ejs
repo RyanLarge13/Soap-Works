@@ -56,15 +56,17 @@
 %>
       <div class="kit-item">
         <img src="<%=kit.ImageUrl%>" alt="<%=kit.Title%>" />
-        <div class="kit-text">
-          <a href="/kits/<%=kit.Title%>">
-            <h2>
-              <%=kit.Title%>
-            </h2>
-          </a>
-          <p><%=kit.Description%></p>
+        <div class="text-container">
+          <div class="kit-text">
+            <a href="/kits/<%=kit.Title%>">
+              <h2>
+                <%=kit.Title%>
+              </h2>
+            </a>
+            <p><%=kit.Description%></p>
+          </div>
+          <button class="buy-btn">Add To Cart</button>
         </div>
-        <button class="buy-btn">Add To Cart</button>
       </div>
       <%})%>
     </div>
