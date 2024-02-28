@@ -8,88 +8,88 @@
 *,
 ::after,
 ::before {
- padding: 0;
- margin: 0;
- box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 body {
- font-family: "Indie Flower", cursive;
- overflow-x: hidden;
- padding: 0 20px;
+  font-family: "Indie Flower", cursive;
+  overflow-x: hidden;
+  padding: 0 20px;
 }
 h1 {
- font-size: 1em;
- font-weight: 500;
+  font-size: 1em;
+  font-weight: 500;
 }
 h2 {
- font-size: 1em;
- font-weight: 500;
+  font-size: 1em;
+  font-weight: 500;
 }
 h3 {
- font-size: 1em;
- font-weight: 500;
+  font-size: 1em;
+  font-weight: 500;
 }
 section {
- margin-bottom: 250px;
+  margin-bottom: 250px;
 }
 button {
- border-radius: 5px;
- outline: none;
- border: none;
- padding: 1em;
- /*background-color: #ca9e7b;*/
- background-color: #e9cba7;
- width: 100%;
- margin-top: 1em;
- font-family: "Indie Flower", cursive;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 1em;
+  cursor: pointer;
+  background-color: #e9cba7;
+  width: 100%;
+  margin-top: 1em;
+  font-family: "Indie Flower", cursive;
 }
 input {
- font-family: "Indie Flower", cursive;
+  font-family: "Indie Flower", cursive;
 }
 textarea {
- font-family: "Indie Flower", cursive;
+  font-family: "Indie Flower", cursive;
 }
 p {
- font-size: 14px;
+  font-size: 14px;
 }
 a {
- text-decoration: none;
+  text-decoration: none;
 }
 .flex {
- display: flex;
+  display: flex;
 }
 .flex-col {
- flex-direction: column;
- justify-content: center;
- align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .flex-row {
- align-items: center;
+  align-items: center;
 }
 .gap-x {
- column-gap: 1em;
+  column-gap: 1em;
 }
 .gap-y {
- row-gap: 1em;
+  row-gap: 1em;
 }
 .hidden {
- display: none;
- opacity: 0;
- pointer-events: none;
+  display: none;
+  opacity: 0;
+  pointer-events: none;
 }
 .backdrop {
- inset: 0;
- opacity: 0;
- pointer-events: none;
- position: fixed;
- background-color: rgba(0, 0, 0, 0.2);
- z-index: 994;
- transition: 250ms ease-out;
+  inset: 0;
+  opacity: 0;
+  pointer-events: none;
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: 994;
+  transition: 250ms ease-out;
 }
 .backdrop.show {
- opacity: 1;
- pointer-events: all;
+  opacity: 1;
+  pointer-events: all;
 }
 
 @media (min-width: 640px) and (max-width: 767px) {
@@ -99,9 +99,9 @@ a {
 @media (min-width: 1024px) and (max-width: 1279px) {
 }
 @media (min-width: 1280px) {
- body {
-  padding: 0 350px;
- }
+  body {
+    padding: 0 350px;
+  }
 }
 
 /* @media (min-width: 640px) and (max-width: 767px) {

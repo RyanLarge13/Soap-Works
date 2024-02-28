@@ -89,4 +89,17 @@
   border-radius: 5px;
   padding: 0.5em 1em;
   border: 1px solid #eee;
+}
+
+@media (min-width: 1280px) {
+  .cart {
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: 100%;
+    width: 450px;
+  }
+  .cart.show {
+    transform: translateX(0) translateY(0);
+  }
 }/*# sourceMappingURL=Cart.css.map */

@@ -53,8 +53,10 @@
   border-radius: 10px;
 }
 .product .product-img img {
-  max-width: 100%;
-  min-width: 100%;
+  width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .product .title-and-price {
   text-align: center;
@@ -86,6 +88,12 @@
   padding: 10px 15px;
 }
 
-.footer-holder {
-  display: none;
+@media (min-width: 1280px) {
+  .filter-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: stretch;
+    justify-content: center;
+    gap: 1em;
+  }
 }/*# sourceMappingURL=filteredProducts.css.map */

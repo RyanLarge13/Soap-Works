@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1" />
-    <meta name="description" content="Clean up with the best. <%=product.Title%> will leave you feeling fresh, healthy & clean" />
+  <meta name="description" content="Clean up with the best. <%=product.Title%> will leave you feeling fresh, healthy & clean" />
   <meta http-equiv="X-UA-Compatible" content="IE=7,8,edge" />
   <meta http-equiv="refresh" content="text/html;charset=UTF-8" />
   <link rel="shortcut icon" href="<%=product.ImageUrl%>" type="image/x-icon">
@@ -16,71 +16,72 @@
 </head>
 
 <body>
-	  <%- include("../../partials/Header/Header.ejs") %>
+  <%- include("../../partials/Header/Header.ejs") %>
   <%- include("../../partials/Cart/Cart.ejs") %>
-    <div class="backdrop"></div>
-	<div class="image-container">
+  <div class="backdrop"></div>
+  <div class="image-container">
     <img src="<%=product.ImageUrl%>" alt="product">
-	</div>
-    <h1>
-        <%=product.Title%>
-    </h1>
-    <h2><%=product.Description%></h2>
-    <div class="pricing">
-    	<p>$<%=product.Price%> / bar</p>
-    	<p>$<%=(product.Price / 3).toFixed(1,2)%> / oz </p>
-    </div>
-    <div>
-    	<p>Item Weight: <%=product.ItemWeight%> oz</p>
-    	<p>Packaged Weight: <%=product.PackagedWeight%> oz</p>
-    </div>
-    <div class="gender-container">
-    	<% product.Gender?.map((gender) => { %>
-        <p class="gender"><%=gender%></p>
-      <% }) %>
-    </div>
-    <button class="buy-btn">Add To Cart</button>
-    <div class="uses">
-    	<h3>What this product is best known for</h3>
-    	<% product.Uses?.map((use) => { %>
-        <p class="gender"><%=use%></p>
-      <% }) %>
-    </div>
-    <div class="top-properties">
+  </div>
+  <h1>
+    <%=product.Title%>
+  </h1>
+  <h2><%=product.Description%></h2>
+  <div class="pricing">
+    <p>$<%=product.Price%> / bar</p>
+    <p>$<%=(product.Price / 3).toFixed(1,2)%> / oz </p>
+  </div>
+  <div>
+    <p>Item Weight: <%=product.ItemWeight%> oz</p>
+    <p>Packaged Weight: <%=product.PackagedWeight%> oz</p>
+  </div>
+  <div class="gender-container">
+    <% product.Gender?.map((gender) => { %>
+    <p class="gender"><%=gender%></p>
+    <% }) %>
+  </div>
+  <button class="buy-btn">Add To Cart</button>
+  <div class="uses">
+    <h3>What this product is best known for</h3>
+    <% product.Uses?.map((use) => { %>
+    <p class="gender"><%=use%></p>
+    <% }) %>
+  </div>
+  <div class="top-properties">
     <% product.Properties?.map((prop) => { %>
-      <% const highLowRange = prop.range.split("-"); %>
-      <% const difference = (Number(highLowRange[1]) - Number(highLowRange[0])); %>
-      <% const placement = prop.value - Number(highLowRange[0]); %>
-      <% const percentage = (100 / difference) * placement; %>
-    	  <div class="property">
-    	  	<p class="prop-title"><%=prop.type%></p>
-    	  	<p class="prop-percent"><%=Math.floor(percentage)%>%</p>
-    	  	<div class="graph-container">
-    	    	<div class="graph-bar" style="<%=`width: ${percentage}%;
+    <% const highLowRange = prop.range.split("-"); %>
+    <% const difference = (Number(highLowRange[1]) - Number(highLowRange[0])); %>
+    <% const placement = prop.value - Number(highLowRange[0]); %>
+    <% const percentage = (100 / difference) * placement; %>
+    <div class="property">
+      <p class="prop-title"><%=prop.type%></p>
+      <p class="prop-percent"><%=Math.floor(percentage)%>%</p>
+      <div class="graph-container">
+        <div class="graph-bar" style="<%=`width: ${percentage}%;
     	    	background-color:
     	    	#${String(Math.floor(percentage)).padStart(2,"0")}ddad; height:
     	    	10px;`%>"></div>
-    	  	</div>
-    	  </div>
-     <% }) %>
+      </div>
     </div>
-    <div class="ingredients">
-    	<h3>Ingredients before saponificacion</h3>
-    	<% product.Ingredients?.map((ingredient) => { %>
-    	  <div>
-    	  	<p><%=ingredient.title%></p>
-    	  	<p><%=ingredient.oz%> oz</p>
-    	  	<p><%=(ingredient.percentage * 19).toFixed(0,1)%>%</p>
-    	  </div>
-    	<% }) %>
-    	<h3>Additives</h3>
-    	<% product.Additives?.map((additive) => { %>
-    		 <div>
-    	  	<p><%=additive.title%></p>
-    	  	<p><%=additive.oz%> oz</p>
-    	  </div>
-      <% }) %>
+    <% }) %>
+  </div>
+  <div class="ingredients">
+    <h3>Ingredients before saponification</h3>
+    <% product.Ingredients?.map((ingredient) => { %>
+    <div>
+      <p><%=ingredient.title%></p>
+      <p><%=ingredient.oz%> oz</p>
+      <p><%=(ingredient.percentage * 19).toFixed(0,1)%>%</p>
     </div>
+    <% }) %>
+    <h3>Additives</h3>
+    <% product.Additives?.map((additive) => { %>
+    <div>
+      <p><%=additive.title%></p>
+      <p><%=additive.oz%> oz</p>
+    </div>
+    <% }) %>
+  </div>
+  <%- include('../../partials/Footer/Footer.ejs') %>
 </body>
 
 </html>
