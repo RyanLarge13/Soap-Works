@@ -44,25 +44,21 @@
   <section class="kits">
     <h3 class="second-heading">Kits</h3>
     <p class="intro">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
-      doloribus
-      iure nesciunt architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non
-      et
-      asperiores!
+      Check out our most popular kits, These kits include all of the necessary items one need for amazing hygiene, smooth skin and a perfect clean. View our kits and choose which one best fits you!
     </p>
     <h2>Kit Selections</h2>
     <div class="kit-item-container">
       <%kits.forEach((kit)=> {
 %>
       <div class="kit-item">
-        <img src="<%=kit.ImageUrl%>" alt="<%=kit.Title%>" />
+        <a href="/kits/<%=kit.Title%>">
+          <img src="<%=kit.ImageUrl%>" alt="<%=kit.Title%>" />
+        </a>
         <div class="text-container">
           <div class="kit-text">
-            <a href="/kits/<%=kit.Title%>">
-              <h2>
-                <%=kit.Title%>
-              </h2>
-            </a>
+            <h2>
+              <%=kit.Title%>
+            </h2>
             <p><%=kit.Description%></p>
           </div>
           <button class="buy-btn">Add To Cart</button>
@@ -75,25 +71,21 @@
   <section class="subs">
     <h3 class="second-heading">Subscription Boxes</h3>
     <p class="intro">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nam impedit pariatur mollitia
-      doloribus
-      iure nesciunt
-      architecto? Alias mollitia, qui quas eveniet tempora, quaerat quibusdam sed, nihil non et
-      asperiores!
+      Introduce yourself to an entire buddle of the dream products you want in one single box. Skip the hassle of remembering every item you purchase and save big on our custom made completely catered to you subscription boxes. Choose the box you like the most, and choose from a veriety or subscriptions to have your new boxes delivered monthly, bi-monthly or once every three months!
     </p>
     <h2>Boxes</h2>
     <div class="sub-container">
       <%subs.forEach((sub)=> {
 %>
       <div class="sub">
-        <img src="<%=sub.ImageUrl%>" alt="">
+        <a href="/subscriptions/<%=sub.Title%>">
+          <img src="<%=sub.ImageUrl%>" alt="">
+        </a>
         <div class="sub-text">
           <div class="title-and-price">
-            <a href="/subscriptions/<%=sub.Title%>">
-              <h2>
-                <%=sub.Title%>
-              </h2>
-            </a>
+            <h2>
+              <%=sub.Title%>
+            </h2>
             <p class="price">
               $<%=sub.Price%>
             </p>
@@ -102,20 +94,16 @@
             <%=sub.Description%>
           </p>
           <div class="sub-includes">
-            <h3>
-              <%=sub.Title%> Includes ..
-            </h3>
             <ul>
-              <%sub.Included.forEach((item)=> {
-%>
+              <%sub.Included.forEach((item)=> { %>
               <li class="sub-item">
                 <%=item%>
               </li>
               <%})%>
             </ul>
           </div>
-          <button class="buy-btn">Add To Cart</button>
         </div>
+        <button class="buy-btn">Add To Cart</button>
       </div>
       <%})%>
     </div>

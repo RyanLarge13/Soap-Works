@@ -8,9 +8,9 @@ soapItems.forEach((item) => {
   item.classList.add(`height-${random}`);
 });
 setTimeout(() => {
-  const masonry = new Masonry(soapGrid, {
+  new Masonry(soapGrid, {
     itemSelector: ".grid-item",
-    columnWidth: 2,
+    columnWidth: 3,
     percentPosition: true,
   });
   for (let i = 0; i < soapItems.length; i++) {

@@ -9,7 +9,7 @@
   <meta http-equiv="refresh" content="text/html;charset=UTF-8" />
   <link rel="shortcut icon" href="../../assets/images/logo.svg" type="image/x-icon">
   <link rel="stylesheet" href="/global/global.css" />
-  <link rel="stylesheet" href="/pages/FilteredProducts/css/filteredProducts.css" />
+  <link rel="stylesheet" href="pages/FilteredProducts/css/filteredProducts.css" />
   <script type="module" src="/global/global.js"></script>
   <script defer src="pages/FilteredProducts/js/filteredProducts.js"></script>
   <script src="https://kit.fontawesome.com/a673862905.js" crossorigin="anonymous"></script>
@@ -20,7 +20,7 @@
   <%- include("../../partials/Header/Header.ejs") %>
   <%- include("../../partials/Cart/Cart.ejs") %>
   <div class="backdrop"></div>
-  <!--<h1 class="filtered-title"></h1>-->
+  <h1 class="filtered-title"><%=type %></h1>
   <section class="filter-section">
     <%products.forEach((product)=> {
 %>
@@ -29,7 +29,7 @@
     </div>
     <div class="product">
       <div class="product-img">
-        <img src="<%=product.ImageUrl%>" alt="product image">
+        <img src="<%=product.ImageUrl%>" alt="product">
       </div>
       <div class="option-btns">
         <div id="expand">
