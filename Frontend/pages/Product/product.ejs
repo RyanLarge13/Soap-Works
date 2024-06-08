@@ -22,9 +22,9 @@
   <div class="image-container">
     <img src="<%=product.ImageUrl%>" alt="product">
   </div>
-  <h1>
+  <h2>
     <%=product.Title%>
-  </h1>
+  </h2>
   <h2><%=product.Description%></h2>
   <div class="pricing">
     <p>$<%=product.Price%> / bar</p>
@@ -56,10 +56,7 @@
       <p class="prop-title"><%=prop.type%></p>
       <p class="prop-percent"><%=Math.floor(percentage)%>%</p>
       <div class="graph-container">
-        <div class="graph-bar" style="<%=`width: ${percentage}%;
-    	    	background-color:
-    	    	#${String(Math.floor(percentage)).padStart(2,"0")}ddad; height:
-    	    	10px;`%>"></div>
+        <div class="graph-bar" style="<%=`width: ${percentage}%; background-color: #${String(Math.floor(percentage)).padStart(2,"0")}ddad; height: 10px;`%>"></div>
       </div>
     </div>
     <% }) %>

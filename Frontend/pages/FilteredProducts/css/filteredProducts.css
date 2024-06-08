@@ -88,6 +88,15 @@
   padding: 10px 15px;
 }
 
+@media (min-width: 640px) {
+  .filter-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: stretch;
+    justify-content: center;
+    gap: 1em;
+  }
+}
 @media (min-width: 1280px) {
   .filter-section {
     display: grid;
